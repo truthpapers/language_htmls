@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>الحروف</title>
+    <style>
+        *{
+            margin-top: 0;
+            margin-bottom: 0;
+            padding-top: 0;
+            padding-bottom: 0;
+        }
+        body{
+            display: flex;
+            background-color: black;
+            color: white;
+            justify-content: center;
+        }
+        #video{
+            height: 100vh;
+        }
+        .chars-with-examples{
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="chars-with-examples" id="chars-with-examples">
+        <span class="chars-with-example">a - Afraid خائف</span>
+        <span class="chars-with-example">b - Bad سيء</span>
+        <span class="chars-with-example">c - Centre مركز</span>
+        <span class="chars-with-example">d - Do يفعل</span>
+        <span class="chars-with-example">e - Education تعليم</span>
+        <span class="chars-with-example">f - Facts حقائق</span>
+        <span class="chars-with-example">g - Game لعبة</span>
+        <span class="chars-with-example">h - Have يملك</span>
+        <span class="chars-with-example">i - Information معلومات</span>
+        <span class="chars-with-example">j - Job عمل</span>
+        <span class="chars-with-example">Kk - Key مفتاح</span>
+        <span class="chars-with-example">l - Learn يتعلم</span>
+        <span class="chars-with-example">m - Make يصنع</span>
+        <span class="chars-with-example">n - Now الآن</span>
+        <span class="chars-with-example">o - Own يملك</span>
+        <span class="chars-with-example">p - Pen قلم</span> 
+        <span class="chars-with-example">q - Question سؤال</span>
+        <span class="chars-with-example">r - Read يقرأ</span>
+        <span class="chars-with-example">s - Same سواء</span> 
+        <span class="chars-with-example">t - Take يأخذ</span>
+        <span class="chars-with-example">u - Understand يفهم</span> 
+        <span class="chars-with-example">v - Visit يزور</span> 
+        <span class="chars-with-example">w - Wait ينتظر</span>
+        <span class="chars-with-example">x - Example مثال</span>
+        <span class="chars-with-example">y - Yesterday البارحة </span>
+        <span class="chars-with-example">z - Zone منطقة</span>
+     </div>
+    <video id="video" controls>
+        <source src="letters.mp4" type="video/mp4">
+        <source src="letters.mov" type="video/quicktime">
+        <source src="letters.mov" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+
+    <script>
+        const pronouncables = document.querySelectorAll('span');
+        for (let i = 0; i < pronouncables.length; i++) {
+            pronouncables[i].addEventListener('click', (e) => explainWord(e));
+        }
+        function explainWord(wordEvent) {
+            
+            const speech = new SpeechSynthesisUtterance();
+            speech.text = wordEvent.target.innerText;
+            speechSynthesis.speak(speech);
+
+        }
+    </script>
+
+</body>
+</html>

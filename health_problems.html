@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Health problems</title>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>الحروف</title>
+        <style>
+            body {
+            background-color: black;
+            color: white;
+
+        }
+
+        .popup-body {
+            margin-left: 10px;
+            font-weight: lighter;
+
+        }
+
+        .popup-heading {
+            font-weight: bolder;
+
+        }
+
+       
+
+        #popupArrow {
+            position: absolute;
+            width: 0;
+            height: 0;
+            border-left: 8px solid transparent;
+            border-right: 8px solid transparent;
+            border-bottom: 8px solid darkgray;
+            display: none;
+        }
+
+
+        p {
+            display: inline;
+        }
+
+        .hidden {
+            display: none;
+        }
+
+     
+
+        .indent1 {
+            margin-left: 30px;
+        }
+
+        p {
+            margin-top: 0px;
+            margin-bottom: 0px;
+            padding-top: 0px;
+            padding-bottom: 0px;
+        }
+
+        .highlight {
+            background-color: yellow;
+        }
+
+        .translation{
+            color: gray;
+        }
+        #popupBox{
+            position: absolute;
+            background-color: darkgray;
+            max-width: 2000px;
+            border-radius: 5%;
+            padding-top: 5px;
+            padding-left: 10px;
+            padding-right: 10px;
+            padding-bottom: 15px;
+            display: none;
+        }
+        
+        header a{ 
+        margin: 10px;
+    }
+    a{
+        color: lightblue;
+    }
+    .pronounce-sentence-btn{
+        margin: 10px;
+    }
+        </style>
+    </head>
+</head>
+<body>
+    <header>
+        <a href="alphabet.html">درس الحروف والهجاء</a>
+        <a href="airport.html"> في المطار </a>
+    </header>
+    <h2>الصحة</h2>
+    <main id="main">
+        <div class="conversion">
+            <h3><span>accident</span></h3>
+            <div class="sentence indent1"><button class="pronounce-sentence-btn">▶</button><p class="pronouncable-sentence"><span>He </span> <span>had </span> <span>a </span> <span>car </span> <span>accident </span> <span>because</span> <span>of</span> <span>his</span> <span>speed</span> </p> <span class="translation">سوى حادث بسبب سرعته</div>
+
+            <h3><span>ache</span></h3>
+            <h3><span>headache</span></h3>
+            <h3><span>bad</span></h3>
+            <h3><span>worse</span></h3>
+            <div class="sentence indent1"><button class="pronounce-sentence-btn">▶</button><p class="pronouncable-sentence"><span>His </span> <span>situation </span> <span>is </span> <span>getting </span> <span>worse </span> </p> <span class="translation">وضعها عم يزداد سوءاً</div>
+
+            <h3><span>better</span></h3>
+            <div class="sentence indent1"><button class="pronounce-sentence-btn">▶</button><p class="pronouncable-sentence"><span>His </span> <span>situation </span> <span>is </span> <span>better </span> <span>worse </span> </p> <span class="translation">وضعها عم يزداد سوءاً</div>
+
+            <h3><span>sick</span></h3>
+            <h3><span>sickness</span></h3>
+            
+            <h3><span>health</span></h3>
+            <div class="sentence indent1"><button class="pronounce-sentence-btn">▶</button><p class="pronouncable-sentence"><span>Smoking </span> <span>harms </span> <span>your </span> <span>health </span> </p> <span class="translation"> التدخين يضر بصحتك</div>
+            <h3><span>weak</span></h3>
+            <h3><span>strong</span></h3>
+            <h3>problem</h3>
+    
+        </div>
+    </main>
+    <div id="popupArrow"></div>
+        <div id="popupBox" dir="auto"></div>
+    <script>
+        const explainWordObj = {
+  "accident": "حادث",
+  "ache": " êşألم. بالإنكليزي: إيك بالكوردي: إيش",
+  "headache": "\n:وجع راس بالكوردي \nserêş",
+  "bad": "سيء",
+  "worse": "أسوء",
+  "better": "أفضل",
+  "broken": "مكسور",  
+  "hurt": "أذى",
+  "sick": "مريض",
+  "sickness": "مرض",
+  "ill": "مريض",
+  "illness": "مرض",
+  "health": "صحة",
+  "healthy": "صحي",
+  "unhealthy": "غير صحي",
+  "weak": "ضعيف",
+  "strong": "قوي",
+  "smoking":"التدخين",
+  "harms":"يضر",
+  "your":"ك في صحتك",
+  "health":"صحتك",
+  "he":"هو",
+  "had":"كان عنده",
+  "car":"سيارة",
+  "because":"لأن/بسبب",
+  "of":"because of بسبب",
+  "speed":"سرعة",
+  "his":"ـه في سرعته/وضعه",
+  "situation":"وضع",
+  "is":"عم/يكون",
+  "problem":"مشكلة",
+  "getting":"is getting عم يزداد",
+
+};
+
+const pronouncables = document.querySelectorAll('span');
+        const popupBox = document.getElementById('popupBox');
+        const popupArrow = document.getElementById('popupArrow');
+        //const sentenceContainer = document.getElementById('sentence-container');
+
+        for (let i = 0; i < pronouncables.length; i++) {
+            pronouncables[i].addEventListener('click', (e) => explainWord(e));
+        }
+
+        function explainWord(wordEvent) {
+            wordEvent.stopPropagation();
+            popupBox.innerText = '';
+            popupBox.style.display = 'block';
+            popupArrow.style.display = 'block';
+
+            const popupHeading = document.createElement('span');
+            popupHeading.classList.add('popup-heading')
+            popupHeading.innerText = wordEvent.target.innerText + ' ' + '🔊';
+            popupBox.append(popupHeading);
+
+            const speech = new SpeechSynthesisUtterance();
+            speech.text = wordEvent.target.innerText;
+            speechSynthesis.speak(speech);
+
+            popupHeading.addEventListener('click', function (e) {
+                e.stopPropagation();
+                const speech = new SpeechSynthesisUtterance();
+                speech.text = wordEvent.target.innerText;
+                speechSynthesis.speak(speech);
+            });
+
+            const popupBody = document.createElement('div');
+            popupBody.classList.add('popup-body')
+            popupBody.innerText = explainWordObj[wordEvent.target.innerText.trim().toLowerCase()] || '---';
+            popupBox.append(popupBody);
+
+
+            const rect = wordEvent.currentTarget.getBoundingClientRect();
+            const rectOfPopup = popupBox.getBoundingClientRect();
+            const middleOfWordCoord = rect.left + rect.width / 2;
+
+            
+            /////////////////////////
+            const popupLeftEdge = rectOfPopup.left;
+            const popupRightEdge = rectOfPopup.right;
+            const xOfLeftBorderOfPopup = middleOfWordCoord - rectOfPopup.width / 2 - 2;
+            if (xOfLeftBorderOfPopup < 0) {
+                popupArrow.style.left = middleOfWordCoord - 8 + 'px'
+                popupArrow.style.top = rect.bottom + 7 + 'px';
+                popupBox.style.top = rect.bottom + 15 + 'px';
+
+                popupBox.style.left = 0; 
+            } else if (popupRightEdge > window.innerWidth) {
+                popupArrow.style.left = middleOfWordCoord - 8 + 'px'
+                popupArrow.style.top = rect.bottom + 7 + 'px';
+                popupBox.style.top = rect.bottom + 15 + 'px';
+
+                popupBox.style.right = window.innerWidth;
+            }else{
+                popupArrow.style.left = middleOfWordCoord - 8 + 'px'
+                popupArrow.style.top = rect.bottom + 7 + 'px';
+                popupBox.style.left = middleOfWordCoord - rectOfPopup.width / 2 - 2 + 'px';
+                popupBox.style.top = rect.bottom + 15 + 'px';
+            }
+            //////////////////////////
+            document.addEventListener('click', closePopupOnClickOutside);
+        }
+
+
+        function closePopupOnClickOutside(e) {
+            if (!e.target.classList.contains('pronouncable') && e.target.id !== 'popupBox') {
+                popupBox.style.display = 'none';
+                popupArrow.style.display = 'none';
+                document.removeEventListener('click', closePopupOnClickOutside);
+            }
+        }
+        const pronounceBtns = document.getElementsByClassName('pronounce-sentence-btn')
+        for (let i = 0; i < pronounceBtns.length; i++) {
+            pronounceBtns[i].addEventListener('click', (e) => {
+                const speech = new SpeechSynthesisUtterance();
+                speech.text = e.target.nextElementSibling.textContent.trim();
+                speechSynthesis.speak(speech);
+            })
+        }
+
+        const translateBtns = document.getElementsByClassName('translate-btn')
+        for (let i = 0; i < translateBtns.length; i++) {
+            translateBtns[i].addEventListener('click', (e) => {
+
+                popupBox.style.display = 'none';
+                popupArrow.style.display = 'none';
+
+
+                if (e.target.parentElement.querySelector('.translation').classList.contains('hidden')) {
+                    e.target.parentElement.querySelector('.translation').classList.remove('hidden')
+
+                } else {
+
+                    e.target.parentElement.querySelector('.translation').classList.add('hidden')
+                }
+
+            })
+        }
+
+
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Health problems</title>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>الحروف</title>
+        <style>
+            body {
+            background-color: black;
+            color: white;
+
+        }
+
+        .popup-body {
+            margin-left: 10px;
+            font-weight: lighter;
+
+        }
+
+        .popup-heading {
+            font-weight: bolder;
+
+        }
+
+       
+
+        #popupArrow {
+            position: absolute;
+            width: 0;
+            height: 0;
+            border-left: 8px solid transparent;
+            border-right: 8px solid transparent;
+            border-bottom: 8px solid darkgray;
+            display: none;
+        }
+
+
+        p {
+            display: inline;
+        }
+
+        .hidden {
+            display: none;
+        }
+
+     
+
+        . {
+            margin-left: 20px;
+        }
+
+        p {
+            margin-top: 0px;
+            margin-bottom: 0px;
+            padding-top: 0px;
+            padding-bottom: 0px;
+        }
+
+        .highlight {
+            background-color: yellow;
+        }
+
+        .translation{
+            color: gray;
+        }
+        #popupBox{
+            position: absolute;
+            background-color: darkgray;
+            max-width: 2000px;
+            border-radius: 5%;
+            padding-top: 5px;
+            padding-left: 10px;
+            padding-right: 10px;
+            padding-bottom: 15px;
+            display: none;
+        }
+        
+        header a{ 
+        margin: 10px;
+        text-decoration: none;
+    }
+    a{
+        color: lightblue;
+    }
+    .pronounce-sentence-btn{
+        margin: 10px;
+    }
+    .conversation{
+        border: 1px solid white;
+    }
+        </style>
+    </head>
+</head>
+<body>
+    <header>
+        <a href="alphabet.html">درس الحروف والهجاء</a>
+        <a href="airport.html"> في المطار </a>
+        <a href="health_problems.html"> الصحة  </a>
+    </header>
+    <main id="main">
+       
+            <div class="sentence "><button class="pronounce-sentence-btn">▶</button><p class="pronouncable-sentence"> <span>About</span> <span>300</span> <span>kilometers.</span></p>  <span class="translation"> حوالي ٣٠٠ كيلومتر </span> </div>
+
+            <div class="sentence "><button class="pronounce-sentence-btn">▶</button><p class="pronouncable-sentence">  <span>Can</span> <span>I</span> <span>make</span> <span>an</span> <span>appointment?</span></p> <span class="translation"> أقدر أسوي/احجز موعد؟ </span> </div>
+            <div class="sentence "><button class="pronounce-sentence-btn">▶</button><p class="pronouncable-sentence"> <span>Can</span> <span>you</span> <span>repeat</span> <span>that</span> <span>?</span></p>  <span class="translation">تقدر تكرر ذلك؟  </span> </div>
+            <div class="sentence "><button class="pronounce-sentence-btn">▶</button><p class="pronouncable-sentence"> <span>Does</span> <span>this</span> <span>train</span> <span>go</span> <span>to</span> <span>New</span> <span>York?</span> </p>  <span class="translation"> هل هذا القطار يذهب إلى نيويورك </div>
+            <div class="sentence "><button class="pronounce-sentence-btn">▶</button><p class="pronouncable-sentence"><span>this</span> <span>train</span> <span>go</span> <span>to</span>  <span>New</span> <span>York?</span></p>  <span class="translation"> هذا القطار يذهب إلى نيو يورك ؟ </div>
+            <div class="sentence "><button class="pronounce-sentence-btn">▶</button><p class="pronouncable-sentence"> <span>to</span>  <span>New</span> <span>York?</span>     </p>  <span class="translation"> إلى نيو يورك؟ </div>
+            <div class="sentence "><button class="pronounce-sentence-btn">▶</button><p class="pronouncable-sentence"> <span>Follow</span> <span>me</span>    </p>  <span class="translation"> اتبع ني </div>
+
+                <div class="conversation">
+                    <h3>محادثة</h3>
+                    <div class="sentence"><button class="pronounce-sentence-btn">▶</button><p class="pronouncable-sentence"> <span>When?</span></p> <span class="translation">متى</span></div>
+                    <div class="sentence"><button class="pronounce-sentence-btn">▶</button><p class="pronouncable-sentence"> <span>Monaday</span> </p>  <span class="translation">الاثنين</span></div>
+                    <div class="sentence"><button class="pronounce-sentence-btn">▶</button><p class="pronouncable-sentence"> <span> What time on Monday?</span> </p>  <span class="translation">أي وقت الاثنين</span></div>
+                    <div class="sentence"><button class="pronounce-sentence-btn">▶</button><p class="pronouncable-sentence"> <span> 10:30</span> </p>  <span class="translation">عشرة ثلاثين</span></div>
+                </div>
+       
+    </main>
+    <div id="popupArrow"></div>
+        <div id="popupBox" dir="auto"></div>
+    <script>
+        const explainWordObj = {
+    "about": "حوالي",
+    "300": "300",
+    "kilometers.": "كيلومتر.",
+    "can": "السؤال يبدأ ب \n can أو do أو does \n can you help me? هل تقدر تساعدني؟\n do/does هل \n do they know هل هم يعرفون؟\n  واحد للمفرد واحد للجمع does do",
+    "i": "أنا",
+    "make": "أسوي ",
+    "an": "اً في موعداً",
+    "appointment?": "موعداً",
+    "you": "أنت/أنتم",
+    "repeat": " تكرار",
+    "that": "ذلك",
+    "does": "هل \n  للمفرد  does",
+    "this": "هذا",
+    "train": "القطار",
+    "go": "يذهب",
+    "to": "إلى",
+    "new": "نيو",
+    "york?": "يورك؟",
+    "train": "القطار",
+    "go": "يذهب",
+    "to": "إلى",
+    "to": "إلى",
+    "follow": "اتبع",
+    "me": "ني",
+    "when?": "متى؟",
+    "monday": "الاثنين",
+    "What": "ماذا",
+    "time": "الوقت",
+    "on": "في يوم ال",
+    "monday?": "الاثنين؟",
+    "10:30": "10:30"
+}
+
+
+const pronouncables = document.querySelectorAll('span');
+        const popupBox = document.getElementById('popupBox');
+        const popupArrow = document.getElementById('popupArrow');
+        //const sentenceContainer = document.getElementById('sentence-container');
+
+        for (let i = 0; i < pronouncables.length; i++) {
+            pronouncables[i].addEventListener('click', (e) => explainWord(e));
+        }
+
+        function explainWord(wordEvent) {
+            wordEvent.stopPropagation();
+            popupBox.innerText = '';
+            popupBox.style.display = 'block';
+            popupArrow.style.display = 'block';
+
+            const popupHeading = document.createElement('span');
+            popupHeading.classList.add('popup-heading')
+            popupHeading.innerText = wordEvent.target.innerText + ' ' + '🔊';
+            popupBox.append(popupHeading);
+
+            const speech = new SpeechSynthesisUtterance();
+            speech.text = wordEvent.target.innerText;
+            speechSynthesis.speak(speech);
+
+            popupHeading.addEventListener('click', function (e) {
+                e.stopPropagation();
+                const speech = new SpeechSynthesisUtterance();
+                speech.text = wordEvent.target.innerText;
+                speechSynthesis.speak(speech);
+            });
+
+            const popupBody = document.createElement('div');
+            popupBody.classList.add('popup-body')
+            popupBody.innerText = explainWordObj[wordEvent.target.innerText.trim().toLowerCase()] || '---';
+            popupBox.append(popupBody);
+
+
+            const rect = wordEvent.currentTarget.getBoundingClientRect();
+            const rectOfPopup = popupBox.getBoundingClientRect();
+            const middleOfWordCoord = rect.left + rect.width / 2;
+
+            
+            /////////////////////////
+            const popupLeftEdge = rectOfPopup.left;
+            const popupRightEdge = rectOfPopup.right;
+            const xOfLeftBorderOfPopup = middleOfWordCoord - rectOfPopup.width / 2 - 2;
+            if (xOfLeftBorderOfPopup < 0) {
+                popupArrow.style.left = middleOfWordCoord - 8 + 'px'
+                popupArrow.style.top = rect.bottom + 7 + 'px';
+                popupBox.style.top = rect.bottom + 15 + 'px';
+
+                popupBox.style.left = 0; 
+            } else if (popupRightEdge > window.innerWidth) {
+                popupArrow.style.left = middleOfWordCoord - 8 + 'px'
+                popupArrow.style.top = rect.bottom + 7 + 'px';
+                popupBox.style.top = rect.bottom + 15 + 'px';
+
+                popupBox.style.right = window.innerWidth;
+            }else{
+                popupArrow.style.left = middleOfWordCoord - 8 + 'px'
+                popupArrow.style.top = rect.bottom + 7 + 'px';
+                popupBox.style.left = middleOfWordCoord - rectOfPopup.width / 2 - 2 + 'px';
+                popupBox.style.top = rect.bottom + 15 + 'px';
+            }
+            //////////////////////////
+            document.addEventListener('click', closePopupOnClickOutside);
+        }
+
+
+        function closePopupOnClickOutside(e) {
+            if (!e.target.classList.contains('pronouncable') && e.target.id !== 'popupBox') {
+                popupBox.style.display = 'none';
+                popupArrow.style.display = 'none';
+                document.removeEventListener('click', closePopupOnClickOutside);
+            }
+        }
+        const pronounceBtns = document.getElementsByClassName('pronounce-sentence-btn')
+        for (let i = 0; i < pronounceBtns.length; i++) {
+            pronounceBtns[i].addEventListener('click', (e) => {
+                const speech = new SpeechSynthesisUtterance();
+                speech.text = e.target.nextElementSibling.textContent.trim();
+                speechSynthesis.speak(speech);
+            })
+        }
+
+        const translateBtns = document.getElementsByClassName('translate-btn')
+        for (let i = 0; i < translateBtns.length; i++) {
+            translateBtns[i].addEventListener('click', (e) => {
+
+                popupBox.style.display = 'none';
+                popupArrow.style.display = 'none';
+
+
+                if (e.target.parentElement.querySelector('.translation').classList.contains('hidden')) {
+                    e.target.parentElement.querySelector('.translation').classList.remove('hidden')
+
+                } else {
+
+                    e.target.parentElement.querySelector('.translation').classList.add('hidden')
+                }
+
+            })
+        }
+
+
+
+    </script>
+</body>
+</html>

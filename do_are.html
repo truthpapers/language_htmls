@@ -88,6 +88,9 @@
     .pronouncable-sentence{
         display: inline;
     }
+    .aqua{
+        color: aqua;
+    }
         </style>
     </head>
 </head>
@@ -105,28 +108,49 @@
             <h3 style="text-align: center;" dir="auto">الفرق بين do/are</h3>
                 <div class="conversation">
                     <p class="context">احمد اتصل بآدم، خلال المكالمة أحمد حس أن آدم عم ياكل فسأله هل أنت عم تاكل؟</p>
-                    <button class="pronounce-sentence-btn">▶</button><p class="pronouncable-sentence"> <span>Are</span> <span> you</span> <span> eating?</span> </p>  <div class="translation">هل انت عم تاكل؟</div>
+                    <button class="pronounce-sentence-btn">▶</button><p class="pronouncable-sentence"> <span class="aqua">Are</span> <span> you</span> <span>eating</span><span>?</span> </p>  <div class="translation">هل انت عم تاكل؟</div>
                 </div>
-                <br>
-                <br>
-                <br>
                 <br>
                 <br>
                 <div class="conversation">
                    <p class="context">شخصين عم يتعرفوا على بعض، الأول يسأل الثاني، هل أنت تدخن؟</p>
-                    <button class="pronounce-sentence-btn">▶</button><p class="pronouncable-sentence"> <span>Do</span> <span> you</span> <span> smoke?</span> </p>  <div class="translation">هل انت  تدخن؟</div>
+                    <button class="pronounce-sentence-btn">▶</button><p class="pronouncable-sentence"> <span class="aqua">Do</span> <span> you</span> <span> smoke</span><span>?</span> </p>  <div class="translation">هل انت  تدخن؟</div>
                 </div>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <div class="conversation" id="part2">
+                    <p class="context">شفت شخص عم يقرأ فحبيت تعرف شو عم يقرأ</p>
+                     <button class="pronounce-sentence-btn">▶</button><p class="pronouncable-sentence"> <span>What</span> <span class="aqua"> are </span> <span> you </span> <span>reading</span><span>?</span> </p>  <div class="translation">شو عم تقرأ؟</div>
+                 </div>
+                 <br>
+                 <br>
+                 <div class="conversation">
+                    <p class="context">حبيت تسأله سؤال عام، أين تعيش؟</p>
+                     <button class="pronounce-sentence-btn">▶</button><p class="pronouncable-sentence"> <span>Where</span> <span class="aqua"> do </span> <span> you </span> <span>live</span><span>?</span> </p>  <div class="translation"> أين تعيش/تسكن؟</div>
+                 </div>
+
        
     </main>
     <div id="popupArrow"></div>
         <div id="popupBox" dir="auto"></div>
     <script>
         const explainWordObj = {
-            "are":"هل",
+            "Are":"هل",
             "you":"أنت/أنتم",
-            "eating?":"عم تاكل \n g لا تُلفظ",
-            "do":"هل",
-            "smoke?":"تدخن؟",
+            "eating":"عم تاكل \n g لا تُلفظ",
+            "Do":"هل",
+            "smoke":"تدخن؟",
+            "What":"شو/ماذا",
+            "are":"عم",
+            "reading":"تقرأ\n لا تلفظ g",
+            "Where":"أين",
+            "do":"يعني بشكل عام",
+            "live":"تسكن/تعيش",
+          
         }
 
 
@@ -164,7 +188,7 @@
 
             const popupBody = document.createElement('div');
             popupBody.classList.add('popup-body')
-            popupBody.innerText = explainWordObj[wordEvent.target.innerText.trim().toLowerCase()] || '---';
+            popupBody.innerText = explainWordObj[wordEvent.target.innerText.trim()] || '---';
             popupBox.append(popupBody);
 
 

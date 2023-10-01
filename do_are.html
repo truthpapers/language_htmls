@@ -87,6 +87,9 @@ button{
 .aqua{
     color: aqua;
 }
+.hidden{
+    display: none;
+}
     </style>
 </head>
 <body>
@@ -103,39 +106,39 @@ button{
     <main id="main">
        
             
-                <div class="conversation">
+                <div class="conversation hidden">
                     <p class="context">احمد اتصل بآدم، خلال المكالمة أحمد حس أن آدم عم ياكل فسأله هل أنت عم تاكل؟</p>
                     <button class="pronounce-sentence-btn">▶</button><p class="pronouncable-sentence"> <span class="aqua">Are</span> <span> you</span> <span>eating</span><span>?</span> </p>  <div class="translation">هل انت عم تاكل؟</div>
                 </div>
-                <br>
-                <br>
-                <div class="conversation">
+                <!-- <br>
+                <br> -->
+                <div class="conversation hidden">
                    <p class="context">شخصين عم يتعرفوا على بعض، الأول يسأل الثاني، هل أنت تدخن؟</p>
                     <button class="pronounce-sentence-btn">▶</button><p class="pronouncable-sentence"> <span class="aqua">Do</span> <span> you</span> <span> smoke</span><span>?</span> </p>  <div class="translation">هل انت  تدخن؟</div>
                 </div>
+                <!-- <br>
                 <br>
                 <br>
                 <br>
                 <br>
-                <br>
-                <br>
-                <div class="conversation" id="part2">
+                <br> -->
+                <div class="conversation hidden" id="part2">
                     <p class="context">شفت شخص عم يقرأ فحبيت تعرف شو عم يقرأ</p>
                      <button class="pronounce-sentence-btn">▶</button><p class="pronouncable-sentence"> <span>What</span> <span class="aqua"> are </span> <span> you </span> <span>reading</span><span>?</span> </p>  <div class="translation">شو عم تقرأ؟</div>
                  </div>
                  <br>
                  <br>
-                 <div class="conversation">
+                 <div class="conversation hidden">
                     <p class="context">حبيت تسأله سؤال عام، أين تعيش؟</p>
                      <button class="pronounce-sentence-btn">▶</button><p class="pronouncable-sentence"> <span>Where</span> <span class="aqua"> do </span> <span> you </span> <span>live</span><span>?</span> </p>  <div class="translation"> أين تعيش/تسكن؟</div>
                  </div>
 
+                 <!-- <br>
                  <br>
                  <br>
                  <br>
                  <br>
-                 <br>
-                 <br>
+                 <br> -->
                  <div class="conversation" id="part3">
                     <div class="translation">  عم تدور على شغل فتقول: أنا عم أبحث عن عملٍ</div> <button class="pronounce-sentence-btn">▶</button><p class="pronouncable-sentence"> <span>I</span> <span class="aqua"> am </span> <span> looking </span> <span>for</span> <span> a </span> <span>job</span> </p>  
                     <div class="translation"> إذا أردت تسأل: تبحث عن عملٍ؟</div> <button class="pronounce-sentence-btn">▶</button><p class="pronouncable-sentence"> <span>You</span> <span class="aqua"> are </span> <span> looking </span> <span>for</span> <span> a </span> <span>job?</span> </p>  
@@ -144,13 +147,11 @@ button{
                       <br>
                       <div class="translation">أنا عم أبحث عن شقةٍ للإجار</div> <button class="pronounce-sentence-btn">▶</button><p class="pronouncable-sentence"> <span>I</span> <span class="aqua"> am </span> <span> looking </span> <span>for</span> <span>an</span> <span>appartment</span> <span>for </span> <span>rent</span></p> 
                       <div class="translation">أنت تبحث عن شقة؟</div> <button class="pronounce-sentence-btn">▶</button><p class="pronouncable-sentence"> <span>You</span> <span class="aqua"> are </span> <span> looking </span> <span>for</span> <span>an</span> <span>appartment?</span> </p>  
-                      <br>
+                      
 <!--                       <button class="pronounce-sentence-btn">▶</button><p class="pronouncable-sentence"> <span>I</span> <span> lost </span> <span> my </span> <span>keys </span><span>I</span> <span class="aqua">am</span> <span>looking</span> <span>for</span><span>them</span> </p>  <div class="translation">أنا ضيعت مفاتيحي. أنا عم أبحث عنهم </div>
 -->                      
                   </div>
-                  <br>
-                      <br>
-                      <br>
+                  
     </main>
     <div id="popupArrow"></div>
         <div id="popupBox" dir="auto"></div>
@@ -178,7 +179,8 @@ button{
             "job":"عمل",
             "appartment":"شقة",
             "You":"أنت/أنتم",
-            "rent":"آجار"
+            "rent":"آجار",
+            "appartment":"شقة"
 
         }
 

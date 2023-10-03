@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Oxford 3000 L1</title>
+    <style>
+        body {
+        background-color: black;
+        color: white;
+
+    }
+
+    .popup-body {
+        margin-left: 10px;
+        font-weight: lighter;
+
+    }
+
+    .popup-heading {
+        font-weight: bolder;
+
+    }
+
+   
+
+    #popupArrow {
+        position: absolute;
+        width: 0;
+        height: 0;
+        border-left: 8px solid transparent;
+        border-right: 8px solid transparent;
+        border-bottom: 8px solid darkgray;
+        display: none;
+    }
+
+
+
+
+    .hidden {
+        display: none;
+    }
+
+
+    
+
+    .highlight {
+        background-color: yellow;
+    }
+
+    .translation{
+        color: gray;
+    }
+    #popupBox{
+        position: absolute;
+        background-color: darkgray;
+        max-width: 2000px;
+        border-radius: 5%;
+        padding-top: 5px;
+        padding-left: 10px;
+        padding-right: 10px;
+        padding-bottom: 15px;
+        display: none;
+    }
+    
+    header a{ 
+    margin: 10px;
+    text-decoration: none;
+}
+a{
+    color: lightblue;
+}
+.pronounce-sentence-btn{
+    margin: 10px;
+}
+.conversation{
+    border: 1px solid white;
+    text-align: center;
+}
+button{
+    display: inline;
+    user-select: none;
+}
+.pronouncable-sentence{
+    display: inline;
+}
+.aqua{
+    color: aqua;
+}
+.hidden{
+    display: none;
+}
+p{
+    margin-left: 40px;
+}
+    </style>
+</head>
+<body>
+    <header>
+        <a href="alphabet.html">درس الحروف والهجاء</a>
+        <a href="airport.html"> في المطار </a>
+        <a href="health_problems.html"> الصحة  </a>
+        <a href="directions.html"> الاتجاهات  </a>
+        <a href="do_are.html"> are/do  </a>
+    </header>
+    
+    <br>
+    <br>
+    <h3 class="word"> <span>actions</span> أفعال</h3>
+    <p>الأفعال أعلى صوتا من الكلمات</p>
+    <p><span class="word">Actions</span> <span class="word">speak</span> <span class="word">louder</span> <span class="word">than</span> <span class="word">words</span></p>
+    <h3 class="word"><span>active</span> نشط</h3>
+    <p>هو شخص نشط</p>
+    <p><span class="word">He</span> <span class="word">is</span> <span class="word">an</span> <span class="word">active</span> <span class="word">person</span>.</p>
+    <h3 class="word"><span>actor</span> ممثل أو فاعل (حسب السياق)</h3>
+    <h3 class="word"><span>actress</span> ممثلة أو فاعلة (حسب السياق)</h3>
+    
+    <div id="popupArrow"></div>
+        <div id="popupBox" dir="auto"></div>
+        <script>
+            const explainWordObj = {
+                "actions":"أفعال",
+                "Actions":"أفعال",
+                "speak":"يتكلم",
+                "louder":"أعلى صوتا",
+                "than":"من",
+                "active":"نشط",
+                "He":"هو",
+                "is":"",
+                "an":"ـٌ",
+                "person":"شخص",
+                "actor":"ممثل أو فاعل (حسب السياق)",
+                "actress":"ممثلة أو فاعلة (حسب السياق)",
+            }
+    
+    
+        const pronouncables = document.querySelectorAll('span');
+            const popupBox = document.getElementById('popupBox');
+            const popupArrow = document.getElementById('popupArrow');
+            //const sentenceContainer = document.getElementById('sentence-container');
+    
+            for (let i = 0; i < pronouncables.length; i++) {
+                pronouncables[i].addEventListener('click', explainWord);
+            }
+    
+            function explainWord(wordEvent) {
+                console.log('tttttteeeeeeeeeeee')
+                wordEvent.stopPropagation();
+                popupBox.innerText = '';
+                popupBox.style.display = 'block';
+                popupArrow.style.display = 'block';
+    
+                const popupHeading = document.createElement('span');
+                popupHeading.classList.add('popup-heading')
+                popupHeading.innerText = wordEvent.target.innerText + ' ' + '🔊';
+                popupBox.append(popupHeading);
+    
+                const speech = new SpeechSynthesisUtterance();
+                speech.text = wordEvent.target.innerText;
+                speechSynthesis.speak(speech);
+    
+                popupHeading.addEventListener('click', function (e) {
+                    e.stopPropagation();
+                    const speech = new SpeechSynthesisUtterance();
+                    speech.text = wordEvent.target.innerText;
+                    speechSynthesis.speak(speech);
+                });
+    
+                const popupBody = document.createElement('div');
+                popupBody.classList.add('popup-body')
+                popupBody.innerText = explainWordObj[wordEvent.target.innerText.trim()] || '---';
+                popupBox.append(popupBody);
+    
+    
+                const rect = wordEvent.currentTarget.getBoundingClientRect();
+                const rectOfPopup = popupBox.getBoundingClientRect();
+                const middleOfWordCoord = rect.left + rect.width / 2;
+    
+                
+                /////////////////////////
+                const popupLeftEdge = rectOfPopup.left;
+                const popupRightEdge = rectOfPopup.right;
+                const xOfLeftBorderOfPopup = middleOfWordCoord - rectOfPopup.width / 2 - 2;
+                if (xOfLeftBorderOfPopup < 0) {
+                    popupArrow.style.left = middleOfWordCoord - 8 + 'px'
+                    popupArrow.style.top = rect.bottom + 7 + 'px';
+                    popupBox.style.top = rect.bottom + 15 + 'px';
+    
+                    popupBox.style.left = 0; 
+                } else if (popupRightEdge > window.innerWidth) {
+                    popupArrow.style.left = middleOfWordCoord - 8 + 'px'
+                    popupArrow.style.top = rect.bottom + 7 + 'px';
+                    popupBox.style.top = rect.bottom + 15 + 'px';
+    
+                    popupBox.style.right = window.innerWidth;
+                }else{
+                    popupArrow.style.left = middleOfWordCoord - 8 + 'px'
+                    popupArrow.style.top = rect.bottom + 7 + 'px';
+                    popupBox.style.left = middleOfWordCoord - rectOfPopup.width / 2 - 2 + 'px';
+                    popupBox.style.top = rect.bottom + 15 + 'px';
+                }
+                //////////////////////////
+                document.addEventListener('click', closePopupOnClickOutside);
+            }
+    
+    
+            function closePopupOnClickOutside(e) {
+                if (!e.target.classList.contains('pronouncable') && e.target.id !== 'popupBox') {
+                    popupBox.style.display = 'none';
+                    popupArrow.style.display = 'none';
+                    document.removeEventListener('click', closePopupOnClickOutside);
+                }
+            }
+            const pronounceBtns = document.getElementsByClassName('pronounce-sentence-btn')
+            for (let i = 0; i < pronounceBtns.length; i++) {
+                pronounceBtns[i].addEventListener('click', (e) => {
+                    const speech = new SpeechSynthesisUtterance();
+                    speech.text = e.target.nextElementSibling.innerText.trim();
+                    speechSynthesis.speak(speech);
+                })
+            }
+    
+    
+    
+    
+        </script>
+</body>
+
+
+</html>

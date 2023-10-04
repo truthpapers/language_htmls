@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Oxford 3000 L1</title>
+    <style>
+        body {
+        background-color: black;
+        color: white;
+
+    }
+
+    .popup-body {
+        margin-left: 10px;
+        font-weight: lighter;
+
+    }
+
+    .popup-heading {
+        font-weight: bolder;
+
+    }
+
+   
+
+    #popupArrow {
+        position: absolute;
+        width: 0;
+        height: 0;
+        border-left: 8px solid transparent;
+        border-right: 8px solid transparent;
+        border-bottom: 8px solid darkgray;
+        display: none;
+    }
+
+
+
+
+    .hidden {
+        display: none;
+    }
+
+
+    
+
+    .highlight {
+        background-color: yellow;
+    }
+
+    .translation{
+        color: gray;
+    }
+    #popupBox{
+        position: absolute;
+        background-color: darkgray;
+        max-width: 2000px;
+        border-radius: 5%;
+        padding-top: 5px;
+        padding-left: 10px;
+        padding-right: 10px;
+        padding-bottom: 15px;
+        display: none;
+    }
+    
+    header a{ 
+    margin: 10px;
+    text-decoration: none;
+}
+a{
+    color: lightblue;
+}
+.pronounce-sentence-btn{
+    margin: 10px;
+}
+.conversation{
+    border: 1px solid white;
+    text-align: center;
+}
+button{
+    display: inline;
+    user-select: none;
+}
+.pronouncable-sentence{
+    display: inline;
+}
+.aqua{
+    color: aqua;
+}
+.hidden{
+    display: none;
+}
+*{
+    margin-top: 0;
+    margin-right: 0;
+    margin-bottom: 0;
+    margin-left: 5px;
+    box-sizing: border-box;
+}
+.example, .example-translation{
+    margin-left: 40px;
+    margin-bottom: 0;
+}
+.example{
+    margin-bottom: 50px;
+}
+h3{
+    color: green;
+    margin-bottom: 30px;
+}
+    </style>
+</head>
+<body>
+    <header>
+        <a href="alphabet.html">درس الحروف والهجاء</a>
+        <a href="airport.html"> في المطار </a>
+        <a href="health_problems.html"> الصحة  </a>
+        <a href="directions.html"> الاتجاهات  </a>
+        <a href="do_are.html"> are/do  </a>
+    </header>
+    <br>
+    <br>
+    
+    <!-- <h3 class="word"> <span>actions</span> أفعال</h3>
+    <p>الأفعال أعلى صوتا من الكلمات</p>
+    <p><span class="word">Actions</span> <span class="word">speak</span> <span class="word">louder</span> <span class="word">than</span> <span class="word">words</span><span>.</span></p> -->
+    <div id="l1" class="todays-lesson">
+
+    </div>
+    
+    <div id="popupArrow"></div>
+        <div id="popupBox" dir="auto"></div>
+        <script>
+            const l1 = document.getElementById("l1")
+            
+/* 
+            a indefinite article
+I can only carry two at a time.
+
+There's a visitor for you.
+He's a teacher.
+a knife and fork
+SYNONYM per
+They cost 50p a kilo.
+I can type 50 words a minute.
+He was driving at 50 miles an hour.
+
+about adverb
+SYNONYM approximately
+It costs about $10.
+They waited (for) about an hour.
+He arrived (at) about ten.
+
+about preposition
+The book is about homeless people in the cities.
+What was all that about? (= what was the reason for what has just happened?)
+How about Ruth? Have you heard from her?
+I'm having fish. What about you?
+
+
+*/
+            const data = {
+                "a":{
+                    "translation":"أداة للتنكير، يقابلها بالعربية التنوين",
+                    "examples":["a student", "a teacher", "There's a visitor", "a knife and fork"],
+                    "examplesToAr":["طالبٌ", "معلمٌ", "هناك زائرٌ", "سكينة وشوكة"]
+                },
+                "about":{
+                    "translation":" حوالي أو عن",
+                    "examples":["It costs about 10 $", "They waited (for) about an hour","He arrived (at) about ten.", "Are you talking about residence permit?", "What are you talking about?", "Yes, I am talking about residence permit"],
+                    "examplesToAr":["هي تكلف حوالي ١٠ دولار", "هم انتظروا (لـ) حوالي شاعةً", "هو وصل حوالي (بـ) العاشرة", "عم تتحدث عن تصريح الإقامة؟", "ماذا تتحدث عن؟", "نعم، أنا أتحدث عن تصريح الإقامة"]
+                },
+                
+                "action":{
+                    "translation": "فعل",
+                    "examples":["Actions speak louder than words",],
+                    "examplesToAr":["الأفعال أعلى صوتا من الكلمات"]
+                },
+                "active":{
+                    "translation": "فعل",
+                    "examples":["He is an active person"],
+                    "examplesToAr":[" هو شخصٌ نشط"]
+                },
+                "actor":{
+                    "translation": "ممثل أو فاعل (حسب السياق)",
+                    "examples":[],
+                    "examplesToAr":[]
+                },
+                "actress":{
+                    "translation": "ممثلة أو فاعلة (حسب السياق)",
+                    "examples":[],
+                    "examplesToAr":[]
+                },
+            }
+            const explainWordObj = {
+                "actions":"أفعال",
+                "action":"فعل",
+                "Actions":"أفعال",
+                "speak":"يتكلم",
+                "louder":"أعلى صوتا",
+                "than":"من",
+                "words":"كلمات",
+                "active":"نشط",
+                "He":"هو",
+                "is":"",
+                "an":" تنوين ـٌ",
+                "a":" تنوين ـٌ",
+                "person":"شخصٌ",
+                "actor":"ممثل أو فاعل (حسب السياق)",
+                "actress":"ممثلة أو فاعلة (حسب السياق)",
+                "student":"طالب",
+                "teacher":"معلم",
+                "There's":"يوجد أو هناك",
+                "visitor": "visit يزور \nvisitor زائر",
+                "knife":"سكينة",
+                "fork":"شوكة",
+                "It":"هي أو هو لغير العاقل",
+                "costs":"تكلف",
+                "for":"لـ",
+                "(for)":"(لـ)",
+                "They":"هم",
+                "waited":"wait ينتظر \n ed مشان تصير ماضي \nwaited  انتظر \n",
+                "about":"عن أو حوالي",
+                "hour":"ساعة",
+                "arrived": "وصل",
+                "(at)": "(بـ)",
+                "ten":"عشرة",
+                "Are":"عم",
+                "you":"أنت أو أنتم",
+                "talking":"تتحدث",
+                "residence":"إقامة",
+                "permit?":"تصريح؟",
+                "What":"ماذا/شو",
+                "Yes,":"نعم،",
+                "I":"أنا",
+                "am":" I تجي مع ",
+                
+            }
+            
+            const startIndex = 0
+            const keys = Object.keys(data);
+for (let i = startIndex; i < startIndex + 2; i++) {
+  if (data.hasOwnProperty(keys[i])) {
+    console.log(keys[i])
+    const key = keys[i];
+    const wordTranslation = data[key].translation;
+    const examples = data[key].examples; //returns an array
+    console.log(examples)
+    const examplesToAr = data[key].examplesToAr; //returns an array
+
+    // Create the HTML structure for each entry
+    const entryDiv = document.createElement("div");
+
+    // Add the word and translation
+    entryDiv.innerHTML = `
+      <h3><span class="word">${key}</span> <span class="word-translation">${wordTranslation}</span> </h3>
+    `;
+
+    // Add examples and corresponding translations
+    for (let i = 0; i < examplesToAr.length; i++) {
+       entryDiv.innerHTML += `
+        <p class="example-translation">${examplesToAr[i]}</p>
+        <p class="example">${examples[i].split(" ").map(word => `<span class="word">${word}</span>`).join(" ")}</p>
+      `;
+
+    }
+
+    // Append the entryDiv to the container
+    l1.appendChild(entryDiv);
+  }
+}
+
+            
+        const pronouncables = document.querySelectorAll(".word");
+            const popupBox = document.getElementById("popupBox");
+            const popupArrow = document.getElementById("popupArrow");
+            //const sentenceContainer = document.getElementById("sentence-container");
+    
+            for (let i = 0; i < pronouncables.length; i++) {
+                pronouncables[i].addEventListener("click", explainWord);
+            }
+    
+            function explainWord(wordEvent) {
+                wordEvent.stopPropagation();
+                popupBox.innerText = "";
+                popupBox.style.display = "block";
+                popupArrow.style.display = "block";
+    
+                const popupHeading = document.createElement("span");
+                popupHeading.classList.add("popup-heading")
+                popupHeading.innerText = wordEvent.target.innerText + " " + "🔊";
+                popupBox.append(popupHeading);
+    
+                const speech = new SpeechSynthesisUtterance();
+                speech.text = wordEvent.target.innerText;
+                speechSynthesis.speak(speech);
+    
+                popupHeading.addEventListener("click", function (e) {
+                    e.stopPropagation();
+                    const speech = new SpeechSynthesisUtterance();
+                    speech.text = wordEvent.target.innerText;
+                    speechSynthesis.speak(speech);
+                });
+    
+                const popupBody = document.createElement("div");
+                popupBody.classList.add("popup-body")
+                popupBody.innerText = explainWordObj[wordEvent.target.innerText.trim()] || "---";
+                popupBox.append(popupBody);
+    
+    
+                const rect = wordEvent.currentTarget.getBoundingClientRect();
+                const rectOfPopup = popupBox.getBoundingClientRect();
+                const middleOfWordCoord = rect.left + rect.width / 2;
+    
+                
+                /////////////////////////
+                const popupLeftEdge = rectOfPopup.left;
+                const popupRightEdge = rectOfPopup.right;
+                const xOfLeftBorderOfPopup = middleOfWordCoord - rectOfPopup.width / 2 - 2;
+                if (xOfLeftBorderOfPopup < 0) {
+                    popupArrow.style.left = middleOfWordCoord - 8 + "px"
+                    popupArrow.style.top = rect.bottom + 7 + "px";
+                    popupBox.style.top = rect.bottom + 15 + "px";
+    
+                    popupBox.style.left = 0; 
+                } else if (popupRightEdge > window.innerWidth) {
+                    popupArrow.style.left = middleOfWordCoord - 8 + "px"
+                    popupArrow.style.top = rect.bottom + 7 + "px";
+                    popupBox.style.top = rect.bottom + 15 + "px";
+    
+                    popupBox.style.right = window.innerWidth;
+                }else{
+                    popupArrow.style.left = middleOfWordCoord - 8 + "px"
+                    popupArrow.style.top = rect.bottom + 7 + "px";
+                    popupBox.style.left = middleOfWordCoord - rectOfPopup.width / 2 - 2 + "px";
+                    popupBox.style.top = rect.bottom + 15 + "px";
+                }
+                //////////////////////////
+                document.addEventListener("click", closePopupOnClickOutside);
+            }
+    
+    
+            function closePopupOnClickOutside(e) {
+                if (!e.target.classList.contains("pronouncable") && e.target.id !== "popupBox") {
+                    popupBox.style.display = "none";
+                    popupArrow.style.display = "none";
+                    document.removeEventListener("click", closePopupOnClickOutside);
+                }
+            }
+            const pronounceBtns = document.getElementsByClassName("pronounce-sentence-btn")
+            for (let i = 0; i < pronounceBtns.length; i++) {
+                pronounceBtns[i].addEventListener("click", (e) => {
+                    const speech = new SpeechSynthesisUtterance();
+                    speech.text = e.target.nextElementSibling.innerText.trim();
+                    speechSynthesis.speak(speech);
+                })
+            }
+    
+    
+    
+    
+        </script>
+</body>
+
+
+</html>

@@ -48,9 +48,7 @@
         background-color: yellow;
     }
 
-    .translation{
-        color: gray;
-    }
+    
     #popupBox{
         position: absolute;
         background-color: darkgray;
@@ -66,10 +64,9 @@
     header a{ 
     margin: 10px;
     text-decoration: none;
-}
-a{
     color: lightblue;
 }
+
 .pronounce-sentence-btn{
     margin: 10px;
 }
@@ -84,12 +81,7 @@ button{
 .pronouncable-sentence{
     display: inline;
 }
-.aqua{
-    color: aqua;
-}
-.hidden{
-    display: none;
-}
+
 *{
     margin-top: 0;
     margin-right: 0;
@@ -103,6 +95,9 @@ button{
 }
 .example{
     margin-bottom: 50px;
+}
+.example-translation{
+    color: gray;
 }
 h3{
     color: green;
@@ -122,9 +117,6 @@ h3{
     <br>
     <br>
     
-    <!-- <h3 class="word"> <span>actions</span> أفعال</h3>
-    <p>الأفعال أعلى صوتا من الكلمات</p>
-    <p><span class="word">Actions</span> <span class="word">speak</span> <span class="word">louder</span> <span class="word">than</span> <span class="word">words</span><span>.</span></p> -->
     <div id="l1" class="todays-lesson">
 
     </div>
@@ -159,6 +151,20 @@ How about Ruth? Have you heard from her?
 I'm having fish. What about you?
 
 
+above adverb
+70 or above
+above preposition
+We were flying above the clouds.
+
+
+She's not above lying when it suits her.
+He's above suspicion (= he is completely trusted).
+Idioms
+above all
+​most important of all; especially
+Above all, keep in touch.
+
+
 */
             const data = {
                 "a":{
@@ -171,6 +177,12 @@ I'm having fish. What about you?
                     "examples":["It costs about 10 $", "They waited (for) about an hour","He arrived (at) about ten.", "Are you talking about residence permit?", "What are you talking about?", "Yes, I am talking about residence permit"],
                     "examplesToAr":["هي تكلف حوالي ١٠ دولار", "هم انتظروا (لـ) حوالي ساعةً", "هو وصل حوالي (بـ) العاشرة", "عم تتحدث عن تصريح الإقامة؟", "ماذا تتحدث عن؟", "نعم، أنا أتحدث عن تصريح الإقامة"]
                 },
+                "above":{
+                    "translation":"فوق",
+                    "examples":["70 or above.", "We were flying above the clouds.", "Your health is above everything.",],
+                    "examplesToAr": ["سبعين أو فوق", "نحن كنا نطير فوق الغيوم", "صحتك فوق كل شيء",]
+                },
+                
                 
                 "action":{
                     "translation": "فعل",
@@ -235,18 +247,26 @@ I'm having fish. What about you?
                 "Yes,":"نعم،",
                 "I":"أنا",
                 "am":" I تجي مع ",
-                
+                "or":"أو",
+                "above":"فوق",
+                "above.":"فوق",
+                "We":"نحن",
+                "were":"كنا/كان",
+                "flying":"نطير",
+                "the":"الـ",
+                "clouds.":"الغيوم.",
+                "Your":"ـك\n your health صحتك",
+                "health":"صحة",
+                "everything.":"كل شيء",
             }
             
-            const startIndex = 0
+            const startIndex = 2;
             const keys = Object.keys(data);
-for (let i = startIndex; i < startIndex + 2; i++) {
+for (let i = startIndex; i < startIndex + 1; i++) {
   if (data.hasOwnProperty(keys[i])) {
-    console.log(keys[i])
     const key = keys[i];
     const wordTranslation = data[key].translation;
     const examples = data[key].examples; //returns an array
-    console.log(examples)
     const examplesToAr = data[key].examplesToAr; //returns an array
 
     // Create the HTML structure for each entry

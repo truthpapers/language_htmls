@@ -82,7 +82,7 @@ button{
     display: inline;
 }
 
-*{
+ *{
     margin-top: 0;
     margin-right: 0;
     margin-bottom: 0;
@@ -280,7 +280,7 @@ let explainWordObj = {};
                     "examples":["Please, add my name to the list.", "Add 9 to the total."],
                     "examplesToAr":["رجاء، أضف اسمي إلي الليستا (يعني المجموعة)", "أضف ٩ إلى المجموع"],
                     "dict":{
-                        "Please":"رجاء",
+                        "Please,":"رجاء",
                         "add":"أضف",
                     "my":"ـي",
                     "name":"اسمي",
@@ -487,22 +487,23 @@ const explanationsInRange = getExplanationsInRange(explainWordObj, startIndex, e
                 const popupRightEdge = rectOfPopup.right;
                 const xOfLeftBorderOfPopup = middleOfWordCoord - rectOfPopup.width / 2 - 2;
                 if (xOfLeftBorderOfPopup < 0) {
-                    popupArrow.style.left = middleOfWordCoord - 8 + "px"
-                    popupArrow.style.top = rect.bottom + 7 + "px";
-                    popupBox.style.top = rect.bottom + 15 + "px";
-    
+                    popupArrow.style.left = middleOfWordCoord - 13 + "px"
+                    popupArrow.style.top = rect.bottom + 3 + "px";
+
+                    popupBox.style.top = rect.bottom + 8 + "px";
                     popupBox.style.left = 0; 
                 } else if (popupRightEdge > window.innerWidth) {
-                    popupArrow.style.left = middleOfWordCoord - 8 + "px"
-                    popupArrow.style.top = rect.bottom + 7 + "px";
-                    popupBox.style.top = rect.bottom + 15 + "px";
-    
+                    popupArrow.style.left = middleOfWordCoord - 13 + "px"
+                    popupArrow.style.top = rect.bottom + 3 + "px";
+
+                    popupBox.style.top = rect.bottom + 8 + "px";
                     popupBox.style.right = window.innerWidth;
                 }else{
-                    popupArrow.style.left = middleOfWordCoord - 8 + "px"
-                    popupArrow.style.top = rect.bottom + 7 + "px";
+                    popupArrow.style.left = middleOfWordCoord - 13 + "px"
+                    popupArrow.style.top = rect.bottom + 3 + "px";
+                    
                     popupBox.style.left = middleOfWordCoord - rectOfPopup.width / 2 - 2 + "px";
-                    popupBox.style.top = rect.bottom + 15 + "px";
+                    popupBox.style.top = rect.bottom + 8 + "px";
                 }
                 //////////////////////////
                 document.addEventListener("click", closePopupOnClickOutside);

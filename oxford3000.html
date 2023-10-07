@@ -171,6 +171,7 @@ address noun
 عنوان
 adult noun
 بالغ
+
 advice noun
 نصيحة
 afraid adjective
@@ -304,80 +305,42 @@ let explainWordObj = {};
                     
                 }
                 },
+                "afraid":{
+                    "translation": "خائف",
+                    "examples":["Don't be afraid to ask if you don't understand."],
+                    "examplesToAr":["لا تكن خائف أن تسأل إذا أنت لا تفهم",],
+                    "dict":{
+                        "Don't":"",
+                        "be":"تكن/يكون",
+                        "afraid":"خائف",
+                        "to":"إلى/أن/لـ",
+                        "ask":"يسأل",
+                        "if":"إذا",
+                        "you":"أنت/أنتم",
+                        "don't":"لا",
+                        "understand.":"يفهم",
+                       
+                    },
+                },
+                "after":{
+                        "translation": "بعد",
+                        "examples":["We will leave after lunch."],
+                        "examplesToAr": ["نحن سوف نغادر بعد الغداء"],
+                        "dict":{
+                            "We":"نحن",
+                            "will":"سوف",
+                            "leave":"نغادر",
+                            "after":"بعد",
+                            "lunch.":"الغداء",
+                        }
+        
+                    }
                 
 
             }
             
-            
-
-/* 
-            const explainWordObjTemp = [
-                {"a":"أداة للتنكير، يقابلها بالعربية التنوين",
-                "student":"طالب",
-                "teacher":"معلم",
-                "There's":"يوجد أو هناك",
-                "visitor": "visit يزور \nvisitor زائر",
-                "knife":"سكينة",
-                "fork":"شوكة",},
-
-                {"It":"هي أو هو لغير العاقل",
-                "costs":"تكلف",
-                "for":"لـ",
-                "(for)":"(لـ)",
-                "They":"هم",
-                "waited":"wait ينتظر \n ed مشان تصير ماضي \nwaited  انتظر \n",
-                "about":"عن أو حوالي",
-                "hour":"ساعة",
-                "arrived": "وصل",
-                "(at)": "(بـ)",
-                "ten":"عشرة",
-                "Are":"عم",
-                "you":"أنت أو أنتم",
-                "talking":"تتحدث",
-                "residence":"إقامة",
-                "permit?":"تصريح؟",
-                "What":"ماذا/شو",
-                "Yes,":"نعم،",
-                "I":"أنا",
-                "am":" I تجي مع ",},
-
-                {"or":"أو",
-                "above":"فوق",
-                "above.":"فوق",
-                "We":"نحن",
-                "were":"كنا/كان",
-                "flying":"نطير",
-                "the":"الـ",
-                "clouds.":"الغيوم.",
-                "Your":"ـك\n your health صحتك",
-                "health":"صحة",
-                "everything.":"كل شيء",},
                 
-                {"actions":"أفعال",
-                "action":"فعل",
-                "Actions":"أفعال",
-                "speak":"يتكلم",
-                "louder":"أعلى صوتا",
-                "than":"من",
-                "words":"كلمات",
-                },
-                
-                {"active":"نشط",
-                "He":"هو",
-                "is":"",
-                "an":" تنوين ـٌ",
-                "a":" تنوين ـٌ",
-                "person":"شخصٌ",},
-
-                {"actor":"ممثل أو فاعل (حسب السياق)",},
-
-                {"actress":"ممثلة أو فاعلة (حسب السياق)",},
-            
-                
-        ]
-         */
-            
-        const startIndex = 7; 
+        const startIndex = 9; 
         const endIndex = 2;
             const keys = Object.keys(data);
             //let dicts = {}

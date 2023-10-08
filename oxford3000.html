@@ -1,555 +1,283 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Oxford 3000</title>
-    <style>
-        body {
-        background-color: black;
-        color: white;
 
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Oxford 3000</title>
+  <style>
+    * {
+      margin-top: 0;
+      margin-right: 0;
+      margin-bottom: 0;
+      margin-left: 5px;
+      box-sizing: border-box;
+    }
+
+    body {
+      background-color: black;
+      color: white;
     }
 
     .popup-body {
-        margin-left: 10px;
-        font-weight: lighter;
-
+      margin-left: 10px;
+      font-weight: lighter;
     }
 
     .popup-heading {
-        font-weight: bolder;
-
+      font-weight: bolder;
     }
-
-   
 
     #popupArrow {
-        position: absolute;
-        width: 0;
-        height: 0;
-        border-left: 8px solid transparent;
-        border-right: 8px solid transparent;
-        border-bottom: 8px solid darkgray;
-        display: none;
+      position: absolute;
+      width: 0;
+      height: 0;
+      border-left: 8px solid transparent;
+      border-right: 8px solid transparent;
+      border-bottom: 8px solid darkgray;
+      display: none;
     }
-
-
-
 
     .hidden {
-        display: none;
+      display: none;
     }
-
-
-    
 
     .highlight {
-        background-color: yellow;
+      background-color: yellow;
     }
 
-    
-    #popupBox{
-        position: absolute;
-        background-color: darkgray;
-        max-width: 2000px;
-        border-radius: 5%;
-        padding-top: 5px;
-        padding-left: 10px;
-        padding-right: 10px;
-        padding-bottom: 15px;
-        display: none;
+    #popupBox {
+      position: absolute;
+      background-color: darkgray;
+      max-width: 2000px;
+      border-radius: 5%;
+      padding-top: 5px;
+      padding-left: 10px;
+      padding-right: 10px;
+      padding-bottom: 15px;
+      display: none;
     }
-    
-    header a{ 
-    margin: 10px;
-    text-decoration: none;
-    color: lightblue;
-}
 
-.pronounce-sentence-btn{
-    margin: 10px;
-}
-.conversation{
-    border: 1px solid white;
-    text-align: center;
-}
-button{
-    display: inline;
-    user-select: none;
-}
-.pronouncable-sentence{
-    display: inline;
-}
+    header a {
+      margin: 10px;
+      text-decoration: none;
+      color: lightblue;
+    }
 
- *{
-    margin-top: 0;
-    margin-right: 0;
-    margin-bottom: 0;
-    margin-left: 5px;
-    box-sizing: border-box;
-}
-.expalin-container{
-    margin-left: 40px;
-}
-.entry{
-    margin-bottom: 50px;
-}
-.example-translation{
-    color: gray;
-}
-h3{
-    color: rgb(249, 249, 102);
-    margin-bottom: 20px;
-    
-}
-.notes{
-    border: 1px solid green;
-    width: fit-content;
-    padding-left: 4px;
-    padding-right: 4px;
-    margin: 5px;
-}
-    </style>
+    .pronounce-sentence-btn {
+      margin: 10px;
+    }
+
+    .conversation {
+      border: 1px solid white;
+      text-align: center;
+    }
+
+    button {
+      display: inline;
+      user-select: none;
+    }
+
+    .pronouncable-sentence {
+      display: inline;
+    }
+
+    .expalin-container {
+      margin-left: 40px;
+    }
+
+    .entry {
+      margin-bottom: 50px;
+    }
+
+    .example-translation {
+      color: gray;
+    }
+
+    h3 {
+      color: rgb(249, 249, 102);
+      margin-bottom: 20px;
+    }
+
+    .notes {
+      border: 1px solid green;
+      width: fit-content;
+      padding-left: 4px;
+      padding-right: 4px;
+      margin: 5px;
+    }
+  </style>
 </head>
+
 <body>
-    <header>
-        <a href="alphabet.html">درس الحروف والهجاء</a>
-        <a href="airport.html"> في المطار </a>
-        <a href="health_problems.html"> الصحة  </a>
-        <a href="directions.html"> الاتجاهات  </a>
-        <a href="do_are.html"> are/do  </a>
-        <a style="border-bottom: 1px solid gray;" href="oxford3000.html"> Oxford 3000  </a>
-    </header>
-    <br>
-    <br>
-    
-    <div id="l1" class="todays-lesson">
+  <header>
+    <a href="alphabet.html">درس الحروف والهجاء</a>
+    <a href="airport.html"> في المطار </a>
+    <a href="health_problems.html"> الصحة </a>
+    <a href="directions.html"> الاتجاهات </a>
+    <a href="do_are.html"> are/do </a>
+    <a style="border-bottom: 1px solid gray" href="oxford3000.html">Oxford 3000</a>
+  </header>
+  <br />
+  <br />
 
-    </div>
-    
-    <div id="popupArrow"></div>
-        <div id="popupBox" dir="auto"></div>
-        <script>
-            const l1 = document.getElementById("l1")
-            
-/* 
-            a indefinite article
-I can only carry two at a time.
+  <div id="l1" class="todays-lesson"></div>
 
-There's a visitor for you.
-He's a teacher.
-a knife and fork
-SYNONYM per
-They cost 50p a kilo.
-I can type 50 words a minute.
-He was driving at 50 miles an hour.
+  <div id="popupArrow"></div>
+  <div id="popupBox" dir="auto"></div>
+  <script type="module">
+    import { oxford3000 } from "/data.js";
+    const l1 = document.getElementById("l1");
 
-about adverb
-SYNONYM approximately
-It costs about $10.
-They waited (for) about an hour.
-He arrived (at) about ten.
+    let explainWordObj = {};
 
-about preposition
-The book is about homeless people in the cities.
-What was all that about? (= what was the reason for what has just happened?)
-How about Ruth? Have you heard from her?
-I'm having fish. What about you?
+    const startIndex = 11;
+    const endIndex = 2;
+    const keys = Object.keys(oxford3000);
+    for (let i = startIndex; i < startIndex + endIndex; i++) {
+      if (oxford3000.hasOwnProperty(keys[i])) {
+        const dicts = oxford3000[keys[i]].dict;
+        for (const dictKey in dicts) {
+          explainWordObj[dictKey] = dicts[dictKey];
+        }
 
+        const key = keys[i];
+        const wordTranslation = oxford3000[key].translation;
+        const examples = oxford3000[key].examples; //returns an array
+        const examplesToAr = oxford3000[key].examplesToAr; //returns an array
 
-above adverb
-70 or above
-above preposition
-We were flying above the clouds.
+        const entryDiv = document.createElement("div");
+        entryDiv.classList.add("entry");
 
-
-She's not above lying when it suits her.
-He's above suspicion (= he is completely trusted).
-Idioms
-above all
-​most important of all; especially
-Above all, keep in touch.
-
-add verb
-يضيف
-address noun
-عنوان
-adult noun
-بالغ
-
-advice noun
-نصيحة
-afraid adjective
-
-
-*/
-let explainWordObj = {};
-            const data = {
-                "a":{
-                    "translation":"أداة للتنكير، يقابلها بالعربية التنوين",
-                    "examples":["a student", "a teacher", "There's a visitor", "a knife and fork"],
-                    "examplesToAr":["طالبٌ", "معلمٌ", "هناك زائرٌ", "سكينة وشوكة"],
-                    "dict":{"a":"أداة للتنكير، يقابلها بالعربية التنوين",
-                "student":"طالب",
-                "teacher":"معلم",
-                "There's":"يوجد أو هناك",
-                "visitor": "visit يزور \nvisitor زائر",
-                "knife":"سكينة",
-                "fork":"شوكة",
-                "and":"و"
-                
-            },
-                },
-                "about":{
-                    "translation":" حوالي أو عن",
-                    "examples":["It costs about 10 $", "They waited (for) about an hour","He arrived (at) about ten.", "Are you talking about residence permit?", "What are you talking about?", "Yes, I am talking about residence permit"],
-                    "examplesToAr":["هي تكلف حوالي ١٠ دولار", "هم انتظروا (لـ) حوالي ساعةً", "هو وصل حوالي (بـ) العاشرة", "عم تتحدث عن تصريح الإقامة؟", "ماذا تتحدث عن؟", "نعم، أنا أتحدث عن تصريح الإقامة"],
-                    "dict": {"It":"هي أو هو لغير العاقل",
-                "costs":"تكلف",
-                "for":"لـ",
-                "(for)":"(لـ)",
-                "They":"هم",
-                "waited":"wait ينتظر \n ed مشان تصير ماضي \nwaited  انتظر \n",
-                "about":"عن أو حوالي",
-                "hour":"ساعة",
-                "arrived": "وصل",
-                "(at)": "(بـ)",
-                "ten":"عشرة",
-                "Are":"عم",
-                "you":"أنت أو أنتم",
-                "talking":"تتحدث",
-                "residence":"إقامة",
-                "permit?":"تصريح؟",
-                "What":"ماذا/شو",
-                "Yes,":"نعم،",
-                "I":"أنا",
-                "am":" I تجي مع ",},
-                },
-                "above":{
-                    "translation":"فوق",
-                    "examples":["70 or above.", "We were flying above the clouds.", "Your health is above everything.",],
-                    "examplesToAr": ["سبعين أو فوق", "نحن كنا نطير فوق الغيوم", "صحتك فوق كل شيء",],
-                    "dict":{"or":"أو",
-                "above":"فوق",
-                "above.":"فوق",
-                "We":"نحن",
-                "were":"كنا/كان",
-                "flying":"نطير",
-                "the":"الـ",
-                "clouds.":"الغيوم.",
-                "Your":"ـك\n your health صحتك",
-                "health":"صحة",
-                "everything.":"كل شيء",},
-                },
-                
-                
-                "action":{
-                    "translation": "فعل",
-                    "examples":["Actions speak louder than words",],
-                    "examplesToAr":["الأفعال أعلى صوتا من الكلمات"],
-                    "dict":{
-                "actions":"أفعال",
-                "action":"فعل",
-                "Actions":"أفعال",
-                "speak":"يتكلم",
-                "louder":"أعلى صوتا",
-                "than":"من",
-                "words":"كلمات",
-                },},
-                "active":{
-                    "translation": "فعل",
-                    "examples":["He is an active person"],
-                    "examplesToAr":[" هو شخصٌ نشط"],
-                    "dict":{"active":"نشط",
-                "He":"هو",
-                "is":"",
-                "an":" تنوين ـٌ",
-                "a":" تنوين ـٌ",
-                "person":"شخصٌ",
-                }
-                },
-                "actor":{
-                    "translation": "ممثل أو فاعل (حسب السياق)",
-                    "examples":[],
-                    "examplesToAr":[],
-                    "dict":{"actor":"ممثل أو فاعل (حسب السياق)",
-               }
-                },
-                "actress":{
-                    "translation": "ممثلة أو فاعلة (حسب السياق)",
-                    "examples":[],
-                    "examplesToAr":[],
-                    "dict":{ "actress":"ممثلة أو فاعلة (حسب السياق)"}
-                },
-                "add":{
-                    "translation": "يضيف",
-                    "examples":["Please, add my name to the list.", "Add 9 to the total."],
-                    "examplesToAr":["رجاء، أضف اسمي إلي الليستا (يعني المجموعة)", "أضف ٩ إلى المجموع"],
-                    "dict":{
-                        "Please,":"رجاء",
-                        "add":"أضف",
-                    "my":"ـي",
-                    "name":"اسمي",
-                    "to":"إلى",
-                    "the":"الـ",
-                    "list.":"الليستا/المجموعة",
-                    "Add":"أضف",
-                    "total.":"المجموع",
-                    }
-                },
-                "address":{
-                    "translation": "عنوان",
-                    "examples":["What is your address?"],
-                    "examplesToAr":["ما هو عنوانك؟"],
-                    "dict":{
-                    "What":"ما/ماذا",
-                    "is":"هو",
-                    "your":"ـك",
-                    "address?":"عنوان",
-                    "address":"عنوان",
-                    
-                }
-                },
-                "afraid":{
-                    "translation": "خائف",
-                    "examples":["Don't be afraid to ask if you don't understand."],
-                    "examplesToAr":["لا تكن خائف أن تسأل إذا أنت لا تفهم",],
-                    "dict":{
-                        "Don't":"لا",
-                        "be":"تكن/يكون",
-                        "afraid":"خائف",
-                        "to":"إلى/أن/لـ",
-                        "ask":"يسأل",
-                        "if":"إذا",
-                        "you":"أنت/أنتم",
-                        "don't":"لا",
-                        "understand.":"يفهم",
-                       
-                    },
-                },
-                "after":{
-                        "translation": "بعد",
-                        "examples":["We will leave after lunch."],
-                        "examplesToAr": ["نحن سوف نغادر بعد الغداء"],
-                        "dict":{
-                            "We":"نحن",
-                            "will":"سوف",
-                            "leave":"نغادر",
-                            "after":"بعد",
-                            "lunch.":"الغداء",
-                        }
-        
-                    },
-                    "all":{
-                        "translation":"كل",
-                        "examples":["All people originate from Adam and Eve.",],
-                        "examplesToAr":["كل الناس ينحدرون/يتجذرون من آدم وحواء",],
-                        "notes":"<span class='wordsInsideNotes'>origin </span> <span class='speak-btn'> 🔊 </span>: اسم بمعنى أصل/جذر <br> <span class='wordsInsideNotes'>originate </span> <span class='speak-btn'> 🔊 </span>: فعل بمعنى يتجذر/ينحدر",
-                        "dict":{
-                            "All":"كل",
-                            "all":"كل",
-                            "people":"الناس",
-                            "originate":"originateينحدر\noriginأصل",
-                            "from":"من",
-                            "Adam":"آدم",
-                            "and":"و",
-                            "Eve.":"حواء",
-                        },
-                    },
-                    "another":{
-                        "translation":"آخر",
-                        "examples":["That's another thing.",],
-                        "examplesToAr":["ذلك شيء آخر"],
-                        "dict":{
-                            "That's":"ذلك",
-                            "another":"آخر",
-                            "thing.":"شيء",
-                        }
-                    }
-                
-
-            }
-            
-                
-        const startIndex = 11; 
-        const endIndex = 2;
-            const keys = Object.keys(data);
-            //let dicts = {}
-for (let i = startIndex; i < startIndex + endIndex; i++) {
-  if (data.hasOwnProperty(keys[i])) {
-   // explainWordObj.append(data[keys[i]].dict)
-    //explainWordObj[""] = data[keys[i]].dict;
-
-    /////////////////////////////////////////
-     const dicts = data[keys[i]].dict;
-      /////////////////////////////////////////
-for (const dictKey in dicts) {
-      // Add the key-value pair to the extractedKeyValues object
-      explainWordObj[dictKey] = dicts[dictKey];
-    }
-    /////////////////////////////////////////
-    
-    
-    const key = keys[i];
-    const wordTranslation = data[key].translation;
-    const examples = data[key].examples; //returns an array
-    const examplesToAr = data[key].examplesToAr; //returns an array
-    //const explainWordObj = data[key].dict
-    // Create the HTML structure for each entry
-    const entryDiv = document.createElement("div");
-    entryDiv.classList.add('entry')
-
-    // Add the word and translation
-    entryDiv.innerHTML = `
+        entryDiv.innerHTML = `
       <h3><span class="word">${key}</span> <span class="word-translation">${wordTranslation}</span> </h3>
     `;
 
-    //
-    // Add examples and corresponding translations
-    for (let i = 0; i < examplesToAr.length; i++) {
-       entryDiv.innerHTML += `
+        //
+        for (let i = 0; i < examplesToAr.length; i++) {
+          entryDiv.innerHTML += `
         
         <div class="expalin-container">
             <p class="example-translation">${examplesToAr[i]}</p>
-            <p class="example">${examples[i].split(" ").map(word => `<span class="word">${word}</span>`).join(" ")}</p> 
+            <p class="example">${examples[i]
+              .split(" ")
+              .map((word) => `<span class="word">${word}</span>`)
+              .join(" ")}</p> 
             
-            ${data[key].notes? data[key].notes && '<p class="notes">' + data[key].notes + '</p>': ''}
+            ${oxford3000[key].notes ? oxford3000[key].notes && '<p class="notes">' + oxford3000[key].notes + "</p>" : ""}
         </div>
        `;
+        }
+
+        l1.appendChild(entryDiv);
+      }
     }
 
- //<p class="notes">${data[key].notes? data[key].notes : ""}</p>
-    // Append the entryDiv to the container
-    l1.appendChild(entryDiv);
-  }
-}
+    function getExplanationsInRange(obj, startIndex, endIndex) {
+      const result = {};
 
-function getExplanationsInRange(obj, startIndex, endIndex) {
-  const result = {};
+      const keys = Object.keys(obj);
 
-  const keys = Object.keys(obj);
+      for (let i = startIndex; i <= startIndex + endIndex; i++) {
+        const key = keys[i];
+        result[key] = obj[key];
+      }
 
-  for (let i = startIndex; i <= startIndex + endIndex; i++) {
-    const key = keys[i];
-    result[key] = obj[key];
-  }
+      return result;
+    }
 
-  return result;
-}
+    const explanationsInRange = getExplanationsInRange(
+      explainWordObj,
+      startIndex,
+      endIndex
+    );
 
-const explanationsInRange = getExplanationsInRange(explainWordObj, startIndex, endIndex);
+    const pronouncables = document.querySelectorAll(".word");
+    const popupBox = document.getElementById("popupBox");
+    const popupArrow = document.getElementById("popupArrow");
 
+    for (let i = 0; i < pronouncables.length; i++) {
+      pronouncables[i].addEventListener("click", wordExplainPopup);
+    }
 
-            
-        const pronouncables = document.querySelectorAll(".word");
-            const popupBox = document.getElementById("popupBox");
-            const popupArrow = document.getElementById("popupArrow");
-            //const sentenceContainer = document.getElementById("sentence-container");
-    
-            for (let i = 0; i < pronouncables.length; i++) {
-                pronouncables[i].addEventListener("click", explainWord);
-            }
-    
-            function explainWord(wordEvent) {
-                wordEvent.stopPropagation();
-                popupBox.innerText = "";
-                popupBox.style.display = "block";
-                popupArrow.style.display = "block";
-    
-                const popupHeading = document.createElement("span");
-                popupHeading.classList.add("popup-heading")
-                popupHeading.innerText = wordEvent.target.innerText + " " + "🔊";
-                popupBox.append(popupHeading);
-    
-                const speech = new SpeechSynthesisUtterance();
-                speech.text = wordEvent.target.innerText;
-                speechSynthesis.speak(speech);
-    
-                popupHeading.addEventListener("click", function (e) {
-                    e.stopPropagation();
-                    const speech = new SpeechSynthesisUtterance();
-                    speech.text = wordEvent.target.innerText;
-                    speechSynthesis.speak(speech);
-                });
-    
-                const popupBody = document.createElement("div");
-                popupBody.classList.add("popup-body")
-                popupBody.innerText = explainWordObj[wordEvent.target.innerText.trim()] || "---";
-                popupBox.append(popupBody);
-    
-    
-                const rect = wordEvent.currentTarget.getBoundingClientRect();
-                const rectOfPopup = popupBox.getBoundingClientRect();
-                const middleOfWordCoord = rect.left + rect.width / 2;
-    
-                
-                /////////////////////////
-                const popupLeftEdge = rectOfPopup.left;
-                const popupRightEdge = rectOfPopup.right;
-                const xOfLeftBorderOfPopup = middleOfWordCoord - rectOfPopup.width / 2 - 2;
-                if (xOfLeftBorderOfPopup < 0) {
-                    popupArrow.style.left = middleOfWordCoord - 13 + "px"
-                    popupArrow.style.top = rect.bottom + 3 + "px";
+    function wordExplainPopup(wordEvent) {
+      wordEvent.stopPropagation();
 
-                    popupBox.style.top = rect.bottom + 8 + "px";
-                    popupBox.style.left = 0; 
-                } else if (popupRightEdge > window.innerWidth) {
-                    popupArrow.style.left = middleOfWordCoord - 13 + "px"
-                    popupArrow.style.top = rect.bottom + 3 + "px";
+      const speech = new SpeechSynthesisUtterance();
+      speech.text = wordEvent.target.innerText;
+      speechSynthesis.speak(speech);
 
-                    popupBox.style.top = rect.bottom + 8 + "px";
-                    popupBox.style.right = window.innerWidth;
-                }else{
-                    popupArrow.style.left = middleOfWordCoord - 13 + "px"
-                    popupArrow.style.top = rect.bottom + 3 + "px";
-                    
-                    popupBox.style.left = middleOfWordCoord - rectOfPopup.width / 2 - 2 + "px";
-                    popupBox.style.top = rect.bottom + 8 + "px";
-                }
-                //////////////////////////
-                document.addEventListener("click", closePopupOnClickOutside);
-            }
-    
-    
-            function closePopupOnClickOutside(e) {
-                if (!e.target.classList.contains("pronouncable") && e.target.id !== "popupBox") {
-                    popupBox.style.display = "none";
-                    popupArrow.style.display = "none";
-                    document.removeEventListener("click", closePopupOnClickOutside);
-                }
-            }
-            const pronounceBtns = document.getElementsByClassName("pronounce-sentence-btn")
-            for (let i = 0; i < pronounceBtns.length; i++) {
-                pronounceBtns[i].addEventListener("click", (e) => {
-                    const speech = new SpeechSynthesisUtterance();
-                    speech.text = e.target.nextElementSibling.innerText.trim();
-                    speechSynthesis.speak(speech);
-                })
-            }
-    
-    
-            const speakBtns = document.querySelectorAll('.speak-btn')
-            speakBtns.forEach(element => {
-                element.addEventListener('click', (e)=>{
-                const speech = new SpeechSynthesisUtterance();
-                speech.text = e.target.previousElementSibling.innerText.trim();
-                speechSynthesis.speak(speech);
-            })
-            });
+      popupBox.style.display = "block";
+      popupArrow.style.display = "block";
 
-            const wordsInsideNotes = document.querySelectorAll('.wordsInsideNotes')
-            wordsInsideNotes.forEach(element => {
-                element.addEventListener('click', (e)=>{
-                const speech = new SpeechSynthesisUtterance();
-                speech.text = e.target.innerText.trim();
-                speechSynthesis.speak(speech);
-            })
-            });
-            
-    
-        </script>
+      popupBox.innerHTML = `
+            <span class="popup-heading"> ${wordEvent.target.innerText} </span>
+            <div class="popup-body">${explainWordObj[wordEvent.target.innerText.trim()] || "---"}</div>
+        `
+
+      const rect = wordEvent.currentTarget.getBoundingClientRect();
+      const rectOfPopup = popupBox.getBoundingClientRect();
+      const middleOfWordCoord = rect.left + rect.width / 2;
+
+      const popupLeftEdge = rectOfPopup.left;
+      const popupRightEdge = rectOfPopup.right;
+      const xOfLeftBorderOfPopup = middleOfWordCoord - rectOfPopup.width / 2 - 2;
+      if (xOfLeftBorderOfPopup < 0) {
+        popupArrow.style.left = middleOfWordCoord - 13 + "px";
+        popupArrow.style.top = rect.bottom + 3 + "px";
+
+        popupBox.style.top = rect.bottom + 8 + "px";
+        popupBox.style.left = 0;
+      } else if (popupRightEdge > window.innerWidth) {
+        popupArrow.style.left = middleOfWordCoord - 13 + "px";
+        popupArrow.style.top = rect.bottom + 3 + "px";
+
+        popupBox.style.top = rect.bottom + 8 + "px";
+        popupBox.style.right = window.innerWidth;
+      } else {
+        popupArrow.style.left = middleOfWordCoord - 13 + "px";
+        popupArrow.style.top = rect.bottom + 3 + "px";
+
+        popupBox.style.left =
+          middleOfWordCoord - rectOfPopup.width / 2 - 2 + "px";
+        popupBox.style.top = rect.bottom + 8 + "px";
+      }
+      document.addEventListener("click", closePopupOnClickOutside);
+    }
+
+    function closePopupOnClickOutside(e) {
+      if (
+        !e.target.classList.contains("pronouncable") &&
+        e.target.id !== "popupBox"
+      ) {
+        popupBox.style.display = "none";
+        popupArrow.style.display = "none";
+        document.removeEventListener("click", closePopupOnClickOutside);
+      }
+    }
+
+    const speakBtns = document.querySelectorAll(".speakIcon");
+    if (speakBtns) {
+      speakBtns.forEach((element) => {
+        element.addEventListener("click", (e) => {
+          const speech = new SpeechSynthesisUtterance();
+          speech.text = e.target.previousElementSibling.innerText.trim();
+          speechSynthesis.speak(speech);
+        });
+      });
+    }
+
+    const wordsChildOfNotes = document.querySelectorAll(".wordsChildOfNotes");
+    if (wordsChildOfNotes) {
+      wordsChildOfNotes.forEach((element) => {
+        element.addEventListener("click", (e) => {
+          const speech = new SpeechSynthesisUtterance();
+          speech.text = e.target.innerText.trim();
+          speechSynthesis.speak(speech);
+        });
+      });
+    }
+  </script>
 </body>
-
 
 </html>

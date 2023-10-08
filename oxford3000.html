@@ -89,20 +89,26 @@ button{
     margin-left: 5px;
     box-sizing: border-box;
 }
-.example, .example-translation{
+.expalin-container{
     margin-left: 40px;
-    margin-bottom: 0;
 }
-.example{
+.entry{
     margin-bottom: 50px;
 }
 .example-translation{
     color: gray;
 }
 h3{
-    color: green;
-    margin-bottom: 30px;
+    color: blue;
+    margin-bottom: 20px;
     
+}
+.notes{
+    border: 1px solid green;
+    width: fit-content;
+    padding-left: 4px;
+    padding-right: 4px;
+    margin: 5px;
 }
     </style>
 </head>
@@ -334,13 +340,39 @@ let explainWordObj = {};
                             "lunch.":"الغداء",
                         }
         
+                    },
+                    "all":{
+                        "translation":"كل",
+                        "examples":["All people originate from Adam and Eve.",],
+                        "examplesToAr":["كل الناس ينحدرون/يتجذرون من آدم وحواء",],
+                        "notes":"origin: اسم بمعنى أصل/جذر <br> originate: فعل بمعنى يتجذر/ينحدر",
+                        "dict":{
+                            "All":"كل",
+                            "all":"كل",
+                            "people":"الناس",
+                            "originate":"originateينحدر\noriginأصل",
+                            "from":"من",
+                            "Adam":"آدم",
+                            "and":"و",
+                            "Eve.":"حواء",
+                        },
+                    },
+                    "another":{
+                        "translation":"آخر",
+                        "examples":["That's another thing.",],
+                        "examplesToAr":["ذلك شيء آخر"],
+                        "dict":{
+                            "That's":"ذلك",
+                            "another":"شيء",
+                            "thing.":"آخر",
+                        }
                     }
                 
 
             }
             
                 
-        const startIndex = 9; 
+        const startIndex = 11; 
         const endIndex = 2;
             const keys = Object.keys(data);
             //let dicts = {}
@@ -366,21 +398,28 @@ for (const dictKey in dicts) {
     //const explainWordObj = data[key].dict
     // Create the HTML structure for each entry
     const entryDiv = document.createElement("div");
+    entryDiv.classList.add('entry')
 
     // Add the word and translation
     entryDiv.innerHTML = `
       <h3><span class="word">${key}</span> <span class="word-translation">${wordTranslation}</span> </h3>
     `;
 
+    //
     // Add examples and corresponding translations
     for (let i = 0; i < examplesToAr.length; i++) {
        entryDiv.innerHTML += `
-        <p class="example-translation">${examplesToAr[i]}</p>
-        <p class="example">${examples[i].split(" ").map(word => `<span class="word">${word}</span>`).join(" ")}</p>
-      `;
-
+        
+        <div class="expalin-container">
+            <p class="example-translation">${examplesToAr[i]}</p>
+            <p class="example">${examples[i].split(" ").map(word => `<span class="word">${word}</span>`).join(" ")}</p> 
+            
+            ${data[key].notes? data[key].notes && '<p class="notes">' + data[key].notes + '</p>': ''}
+        </div>
+       `;
     }
 
+ //<p class="notes">${data[key].notes? data[key].notes : ""}</p>
     // Append the entryDiv to the container
     l1.appendChild(entryDiv);
   }

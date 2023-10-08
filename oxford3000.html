@@ -345,7 +345,7 @@ let explainWordObj = {};
                         "translation":"كل",
                         "examples":["All people originate from Adam and Eve.",],
                         "examplesToAr":["كل الناس ينحدرون/يتجذرون من آدم وحواء",],
-                        "notes":"<span>origin </span> <span class='speak-btn'> 🔊 </span>: اسم بمعنى أصل/جذر <br> <span>originate </span> <span class='speak-btn'> 🔊 </span>: فعل بمعنى يتجذر/ينحدر",
+                        "notes":"<span class='wordsInsideNotes'>origin </span> <span class='speak-btn'> 🔊 </span>: اسم بمعنى أصل/جذر <br> <span class='wordsInsideNotes'>originate </span> <span class='speak-btn'> 🔊 </span>: فعل بمعنى يتجذر/ينحدر",
                         "dict":{
                             "All":"كل",
                             "all":"كل",
@@ -537,6 +537,16 @@ const explanationsInRange = getExplanationsInRange(explainWordObj, startIndex, e
                 speechSynthesis.speak(speech);
             })
             });
+
+            const wordsInsideNotes = document.querySelectorAll('.wordsInsideNotes')
+            wordsInsideNotes.forEach(element => {
+                element.addEventListener('click', (e)=>{
+                const speech = new SpeechSynthesisUtterance();
+                speech.text = e.target.innerText.trim();
+                speechSynthesis.speak(speech);
+            })
+            });
+            
     
         </script>
 </body>

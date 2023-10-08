@@ -256,27 +256,28 @@
       }
     }
 
-    const speakBtns = document.querySelectorAll(".speakIcon");
-    if (speakBtns) {
-      speakBtns.forEach((element) => {
+    const speakIcons = document.querySelectorAll(".speakIcon");
+    if (speakIcons) {
+      speakIcons.forEach((element) => {
         element.addEventListener("click", (e) => {
           const speech = new SpeechSynthesisUtterance();
           speech.text = e.target.previousElementSibling.innerText.trim();
           speechSynthesis.speak(speech);
         });
       });
+
+      const wordsChildOfNotes = document.querySelectorAll(".wordsChildOfNotes");
+        wordsChildOfNotes.forEach((element) => {
+          element.addEventListener("click", (e) => {
+            const speech = new SpeechSynthesisUtterance();
+            speech.text = e.target.innerText.trim();
+            speechSynthesis.speak(speech);
+          });
+        });
+      
     }
 
-    const wordsChildOfNotes = document.querySelectorAll(".wordsChildOfNotes");
-    if (wordsChildOfNotes) {
-      wordsChildOfNotes.forEach((element) => {
-        element.addEventListener("click", (e) => {
-          const speech = new SpeechSynthesisUtterance();
-          speech.text = e.target.innerText.trim();
-          speechSynthesis.speak(speech);
-        });
-      });
-    }
+    
   </script>
 </body>
 

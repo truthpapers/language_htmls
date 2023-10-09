@@ -187,8 +187,30 @@ export const oxford3000 = {
             "another": "آخر",
             "thing.": "شيء",
         }
-    }
+    },
 
+    "answer":{
+        "translation": "جواب",
+        "examples": ["a question and answer session", "Do you know the answer?","Answer me! Where were you?"],
+        "examplesToAr": ["جلسة سؤال و جواب","هل تعرف الجواب","جاوبني! أين كنت؟",],
+        "dict": {
+            "a":"تنوين ـً",
+            "question":"سؤال",
+            "and":"و",
+            "answer":"جواب",
+            "session":"جلسة",
+            "Do":"هل",
+            "you":"أنت",
+            "know":"تعرف",
+            "the":"الـ",
+            "answer?":"جواب",
+            "Answer":"جاوب",
+            "me!":"ني",
+            "Where":"أين",
+            "were":"كان/كنت",
+            "you?":"أنت",
+        }
+    }
 
 }
 

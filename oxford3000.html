@@ -82,8 +82,9 @@
       display: inline;
     }
 
-    .expalin-container {
+    .example-container {
       margin-left: 40px;
+      margin-bottom: 30px;
     }
 
     .entry {
@@ -131,8 +132,8 @@
 
     let explainWordObj = {};
 
-    const startIndex = 11;
-    const endIndex = 2;
+    const startIndex = 13;
+    const endIndex = 1;
     const keys = Object.keys(oxford3000);
     for (let i = startIndex; i < startIndex + endIndex; i++) {
       if (oxford3000.hasOwnProperty(keys[i])) {
@@ -157,7 +158,7 @@
         for (let i = 0; i < examplesToAr.length; i++) {
           entryDiv.innerHTML += `
         
-        <div class="expalin-container">
+        <div class="example-container">
             <p class="example-translation">${examplesToAr[i]}</p>
             <p class="example">${examples[i]
               .split(" ")
@@ -213,7 +214,7 @@
       popupBox.innerHTML = `
             <h4 class="popup-heading"> ${wordEvent.target.innerText} </h4>
             <div class="popup-body">${explainWordObj[wordEvent.target.innerText.trim()] || "---"}</div>
-        `
+        `;
 
       const rect = wordEvent.currentTarget.getBoundingClientRect();
       const rectOfPopup = popupBox.getBoundingClientRect();
@@ -267,17 +268,17 @@
       });
 
       const wordsChildOfNotes = document.querySelectorAll(".wordsChildOfNotes");
-        wordsChildOfNotes.forEach((element) => {
-          element.addEventListener("click", (e) => {
-            const speech = new SpeechSynthesisUtterance();
-            speech.text = e.target.innerText.trim();
-            speechSynthesis.speak(speech);
-          });
+      wordsChildOfNotes.forEach((element) => {
+        element.addEventListener("click", (e) => {
+          const speech = new SpeechSynthesisUtterance();
+          speech.text = e.target.innerText.trim();
+          speechSynthesis.speak(speech);
         });
-      
+      });
+
     }
 
-    
+
   </script>
 </body>
 

@@ -214,7 +214,7 @@ export const oxford3000 = {
     "any":{
         "translation": "أي",
         "examples": ["Any questions?"],
-        "examplesToAr": ["أي سؤال؟"],
+        "examplesToAr": ["أي أسئلة؟"],
         "dict": {
             "any":"أي",
             "Any":"أي",

@@ -210,7 +210,39 @@ export const oxford3000 = {
             "were":"كان/كنت",
             "you?":"أنت",
         }
+    },
+    "any":{
+        "translation": "أي",
+        "examples": ["Any questions?"],
+        "examplesToAr": ["أي سؤال؟"],
+        "dict": {
+            "any":"أي",
+            "Any":"أي",
+            "questions?":"أسئلة",
+          
+        }
+    },
+    "anyone":{
+        "translation": "أي شخص",
+        "examples": ["Anyone can that"],
+        "examplesToAr": ["أي شخص يستطيع ذلك"],
+        "dict": {
+            "Anyone":"أي شخص",
+            "anyone":"أي شخص",
+            "can":"يستطيع",
+            "that":"ذلك",
+           
+        }
+    },
+    "anything":{
+        "translation": "أي شي",
+        "examples": ["Anything else?"],
+        "examplesToAr": ["أي شي تاني؟"],
+        "dict": {
+            "Anything":"أي شي",
+            "anything":"أي شي",
+            "else?":"تاني/آخر",
+        }
     }
-
 }
 

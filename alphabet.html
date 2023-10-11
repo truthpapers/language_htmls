@@ -11,7 +11,7 @@
             padding-top: 0;
             padding-bottom: 0;
         }
-        body{
+        .container{
             display: flex;
             background-color: black;
             color: white;
@@ -42,11 +42,9 @@
         <a href="do_are.html">are/do</a>
         <a href="oxford3000.html"> Oxford 3000  </a>
     </header>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
+    
+    <div class="container">
+
     <div class="chars-with-examples" id="chars-with-examples">
         <span class="chars-with-example">a - Afraid خائف</span>
         <span class="chars-with-example">b - Bad سيء</span>
@@ -81,7 +79,7 @@
         <source src="letters.mov" type="video/mp4">
         Your browser does not support the video tag.
     </video>
-
+</div>
     <script>
         const pronouncables = document.querySelectorAll('span');
         for (let i = 0; i < pronouncables.length; i++) {

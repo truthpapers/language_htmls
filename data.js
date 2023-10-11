@@ -243,6 +243,48 @@ export const oxford3000 = {
             "anything":"أي شي",
             "else?":"تاني/آخر",
         }
+    },
+    "apartment":{
+        "translation": "شقة",
+        "examples": ["I am looking for an apartment."],
+        "examplesToAr": ["أنا عم أبحث عن شقةٍ"],
+        "dict": {
+            "I":"أنا",
+            "am":"عم",
+            "looking":"أبحث/أنظر",
+            "for":"عن/لـ",
+            "an":"تنوين ـٍ",
+            "apartment.":"شقة",
+            "apartment":"شقة",
+           
+        }
+    },
+    "area":{
+        "translation": "منطقة",
+        "examples": ["Do you live in this area?"],
+        "examplesToAr": ["هل تسكن في هذه المنطقة؟"],
+        "dict": {
+            "Do":"هل",
+            "you":"انت/انتم",
+            "live":"تسكن",
+            "in":"في",
+            "this":"هذا/هذه",
+            "area":"المنطقة",
+            "area?":"المنطقة",
+        }
+    },
+    "around":{
+        "translation": "حول",
+        "examples": ["They were sitting around the fire."],
+        "examplesToAr": ["هم كانوا جالسين حول النار."],
+        "dict": {
+            "They":"هم",
+            "were":"كانوا",
+            "sitting":"جالسين",
+            "around":"حول",
+            "the":"الـ",
+            "fire.":"نار",
+        }
     }
 }
 

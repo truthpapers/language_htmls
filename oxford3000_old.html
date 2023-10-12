@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Testing</title>
+  <title>Oxford 3000</title>
   <style>
     * {
       margin-top: 0;
@@ -201,20 +201,6 @@
       pronouncables[i].addEventListener("click", wordExplainPopup);
     }
 
-    function getElementDocumentPosition(element) {
-  const rect = element.getBoundingClientRect();
-  
-  // Get the current scroll position of the document
-  const scrollX = window.scrollX || window.pageXOffset;
-  const scrollY = window.scrollY || window.pageYOffset;
-  
-  // Calculate the position relative to the document
-  const top = rect.top + scrollY;
-  const left = rect.left + scrollX;
-  
-  return { top, left, width: rect.width, height: rect.height, right: rect.right + scrollX, bottom: rect.bottom + scrollY };
-}
-
     function wordExplainPopup(wordEvent) {
       wordEvent.stopPropagation();
 
@@ -230,8 +216,8 @@
             <div class="popup-body">${explainWordObj[wordEvent.target.innerText.trim()] || "---"}</div>
         `;
 
-      const rect = getElementDocumentPosition(wordEvent.currentTarget);
-      const rectOfPopup = getElementDocumentPosition(popupBox);
+      const rect = wordEvent.currentTarget.getBoundingClientRect();
+      const rectOfPopup = popupBox.getBoundingClientRect();
       const middleOfWordCoord = rect.left + rect.width / 2;
 
       const popupLeftEdge = rectOfPopup.left;

@@ -321,7 +321,7 @@ export const oxford3000 = {
     "as":{
         "translation": "بـ / كما / بالنسبة لـ  ",
         "examples": ["as soon as possible", "As you know, Adam is leaving soon.","He behaved as if nothing had happened.","As for Max, he is fine."],
-        "examplesToAr": ["بأسرع وقت ممكن","كما تعلم، آدم عم يغادر قريباً = كما تعلم، آدم سيغادر قريباً","تصرف وكأن شيئًا لم يحدث", "بالنسبة لـماكس، هو بخير"],
+        "examplesToAr": ["بأسرع وقت ممكن","كما تعلم، آدم عم يغادر قريباً = كما تعلم، آدم سيغادر قريباً","تصرف وكأن شيئًا لم يحدث", "بالنسبة لـ ماكس، هو بخير"],
         "notes":[" as ... as ... ", '<span class="wordsChildOfNotes">Adam</span> <span class="wordsChildOfNotes">is</span> <span class="wordsChildOfNotes">leaving</span> <span class="wordsChildOfNotes">soon</span> = <span class="wordsChildOfNotes">Adam</span> <span class="wordsChildOfNotes">will</span> <span class="wordsChildOfNotes">leave</span> <span class="wordsChildOfNotes">soon</span> = <span class="wordsChildOfNotes">آدم</span> <span class="wordsChildOfNotes">سوف</span> <span class="wordsChildOfNotes">يغادر</span> <span class="wordsChildOfNotes">قريباً</span>', "وكأن as if",""],
         "dict": {
             "as":"بـ / كما / بالنسبة لـ  ",

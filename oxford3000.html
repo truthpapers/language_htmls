@@ -132,7 +132,7 @@
 
     let explainWordObj = {};
 
-    const startIndex = 17;
+    const startIndex = 20;
     const endIndex = 3;
     const keys = Object.keys(oxford3000);
     for (let i = startIndex; i < startIndex + endIndex; i++) {
@@ -165,7 +165,7 @@
               .map((word) => `<span class="word">${word}</span>`)
               .join(" ")}</p> 
             
-            ${oxford3000[key].notes ? oxford3000[key].notes && '<p class="notes">' + oxford3000[key].notes + "</p>" : ""}
+            ${oxford3000[key].notes ? oxford3000[key].notes[i] && '<p class="notes">' + oxford3000[key].notes[i] + "</p>" : ""}
         </div>
        `;
         }

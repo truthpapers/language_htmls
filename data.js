@@ -275,15 +275,75 @@ export const oxford3000 = {
     },
     "around":{
         "translation": "حول",
-        "examples": ["They were sitting around the fire."],
-        "examplesToAr": ["هم كانوا جالسين حول النار."],
+        "examples": ["They were sitting around the fire.", "He arrived around five o'clock."],
+        "examplesToAr": ["هم كانوا جالسين حول النار.", "هو وصل حوالي الساعة خمسة"],
         "dict": {
             "They":"هم",
             "were":"كانوا",
             "sitting":"جالسين",
-            "around":"حول",
+            "around":"حول/حوالي",
             "the":"الـ",
             "fire.":"نار",
+            "He":"هو",
+            "arrived":"وصل",
+            "five":"خمسة",
+            "o'clock.":"الساعة",
+        }
+    },
+    "arrive":{
+        "translation": "يصل",
+        "examples": ["I will wait until they arrive."],
+        "examplesToAr": ["أنا سوف أنتظر إلى أن يصلوا."],
+        "dict": {
+            "I":"أنا",
+            "will":"سوف",
+            "wait":"أنتظر",
+            "until":"حتى",
+            "they":"هم",
+            "arrive":"يصل",
+            "arrive.":"يصلون",
+          
+        }
+    },
+    "ask":{
+        "translation": "يسأل",
+        "examples": ["Can I ask a question?"],
+        "examplesToAr": ["أقدر أسئل سؤالاً؟"],
+        "dict": {
+            "Can":"أقدر",
+            "I":"أنا",
+            "ask":"أسئل",
+            "a":"اً",
+            "question?":"سؤال",
+           
+        }
+    },
+    "as":{
+        "translation": "بـ/كما/بالنسبة لـ/",
+        "examples": ["as soon as possible", "As you know, Adam is leaving soon.","He behaved as if nothing had happened.","As for Max, he is fine."],
+        "examplesToAr": ["بأسرع وقت ممكن","كما تعلم، آدم عم يغادر قريباً = كما تعلم، آدم سيغادر قريباً","تصرف وكأن شيئًا لم يحدث", "بالنسبة لماكس، هو بخير"],
+        "notes":["", '<span class="wordsChildOfNotes">Adam</span> <span class="wordsChildOfNotes">is</span> <span class="wordsChildOfNotes">leaving</span> <span class="wordsChildOfNotes">soon</span> = <span class="wordsChildOfNotes">Adam</span> <span class="wordsChildOfNotes">will</span> <span class="wordsChildOfNotes">leave</span> <span class="wordsChildOfNotes">soon</span> = <span class="wordsChildOfNotes">آدم</span> <span class="wordsChildOfNotes">سوف</span> <span class="wordsChildOfNotes">يغادر</span> <span class="wordsChildOfNotes">قريباً</span>', "",""],
+        "dict": {
+            "as":"بـ/كما/بالنسبة لـ/",
+            "As":"بـ/كما/بالنسبة لـ/",
+            "soon":"قريباً",
+            "possible":"ممكن",
+            "you":"أنت",
+            "know,":"تعلم",
+            "Adam":"آدم",
+            "is":"عم",
+            "leaving":"يغادر",
+            "soon.":"قريباً",
+            "He":"هو",
+            "behaved":"تصرف",
+            "if":"إذا",
+            "nothing":"لا شيء",
+            "had":"",
+            "happened.":"حدث",
+            "for":"لـ",
+            "Max,":"ماكس",
+            "he":"هو",
+            "fine.":"بخير",
         }
     }
 }

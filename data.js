@@ -324,6 +324,9 @@ export const oxford3000 = {
         "examplesToAr": ["بأقرب ما يمكن/بأسرع وقت ممكن","اركض بـاسرع ما يمكنك.","كما تعلم، آدم عم يغادر قريباً = كما تعلم، آدم سيغادر قريباً","تصرف وكأن شيئًا لم يحدث", "بالنسبة لـ ماكس، هو بخير"],
         "notes":[' ... <span class="wordsChildOfNotes">as</span> ... <span class="wordsChildOfNotes">as</span> ... <br> ... بـ ... ما ...  ',' <span class="wordsChildOfNotes">as</span> ... <span class="wordsChildOfNotes">as</span> ... <br> ... بـ ... ما ...  ', '<span class="wordsChildOfNotes">Adam</span> <span class="wordsChildOfNotes">is</span> <span class="wordsChildOfNotes">leaving</span> <span class="wordsChildOfNotes">soon</span> = <span class="wordsChildOfNotes">Adam</span> <span class="wordsChildOfNotes">will</span> <span class="wordsChildOfNotes">leave</span> <span class="wordsChildOfNotes">soon</span> = <span class="wordsChildOfNotes">آدم</span> <span class="wordsChildOfNotes">سوف</span> <span class="wordsChildOfNotes">يغادر</span> <span class="wordsChildOfNotes">قريباً</span>', '  <span class="wordsChildOfNotes">as if</span> وكأن   ',""],
         "dict": {
+            "Run":"أركض",
+            "fast":"سريع",
+            "can.":"تقدر",
             "as":"بـ / كما / بالنسبة لـ  ",
             "As":"بـ / كما / بالنسبة لـ  ",
             "soon":"قريباً",

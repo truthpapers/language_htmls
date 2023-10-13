@@ -352,8 +352,8 @@ export const oxford3000 = {
 
     "away": {
         "translation": "بعيد",
-        "examples": ["The beach is 500 metres away from here."],
-        "examplesToAr": ["الشاطئ بعيد ٥٠ متر من هنا."],
+        "examples": ["The beach is 500 metres away from here.", "Go away"],
+        "examplesToAr": ["الشاطئ بعيد ٥٠ متر من هنا.","ابتعد"],
         "dict": {
             "The":"الـ",
             "beach":"شاطئ",
@@ -363,6 +363,7 @@ export const oxford3000 = {
             "away":"بعيد",
             "from":"من",
             "here.":"هنا",
+            "Go":"أذهب",
        
         }
     },
@@ -375,6 +376,7 @@ export const oxford3000 = {
             "the":"الـ",
             "book":"كتاب",
             "back":" عودة / ظهر / خلف",
+            "back.":" عودة / ظهر / خلف",
             "on":"على",
             "shelf.":"رف",
             "It":"هي/هو لغير العاقل",

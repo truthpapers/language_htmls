@@ -8,7 +8,7 @@ export const oxford3000 = {
             "student": "طالب",
             "teacher": "معلم",
             "There's": "يوجد أو هناك",
-            "visitor": "visit يزور <br>visitor زائر",
+            "visitor": "visit يزور  \n visitor زائر",
             "knife": "سكينة",
             "fork": "شوكة",
             "and": "و"
@@ -25,7 +25,7 @@ export const oxford3000 = {
             "for": "لـ",
             "(for)": "(لـ)",
             "They": "هم",
-            "waited": "wait ينتظر <br> ed مشان تصير ماضي <br>waited  انتظر <br>",
+            "waited": "wait ينتظر  \n  ed مشان تصير ماضي  \n waited  انتظر  \n ",
             "about": "عن أو حوالي",
             "hour": "ساعة",
             "arrived": "وصل",
@@ -55,7 +55,7 @@ export const oxford3000 = {
             "flying": "نطير",
             "the": "الـ",
             "clouds.": "الغيوم.",
-            "Your": "ـك<br> your health صحتك",
+            "Your": "ـك \n  your health صحتك",
             "health": "صحة",
             "everything.": "كل شيء",
         },
@@ -166,12 +166,12 @@ export const oxford3000 = {
         "translation": "كل",
         "examples": ["All people originate from Adam and Eve.",],
         "examplesToAr": ["كل الناس ينحدرون/يتجذرون من آدم وحواء",],
-        "notes": "<span class='wordsChildOfNotes'>origin </span> <span class='speakIcon'> 🔊 </span>: اسم بمعنى أصل/جذر <br> <span class='wordsChildOfNotes'>originate </span> <span class='speakIcon'> 🔊 </span>: فعل بمعنى يتجذر/ينحدر",
+        "notes": "origin  🔊: اسم بمعنى أصل/جذر  \n   originate 🔊: فعل بمعنى يتجذر/ينحدر",
         "dict": {
             "All": "كل",
             "all": "كل",
             "people": "الناس",
-            "originate": "originateينحدر<br>originأصل",
+            "originate": "originateينحدر \n originأصل",
             "from": "من",
             "Adam": "آدم",
             "and": "و",
@@ -189,165 +189,218 @@ export const oxford3000 = {
         }
     },
 
-    "answer":{
+    "answer": {
         "translation": "جواب",
-        "examples": ["a question and answer session", "Do you know the answer?","Answer me! Where were you?"],
-        "examplesToAr": ["جلسة سؤال و جواب","هل تعرف الجواب","جاوبني! أين كنت؟",],
+        "examples": ["a question and answer session", "Do you know the answer?", "Answer me! Where were you?"],
+        "examplesToAr": ["جلسة سؤال و جواب", "هل تعرف الجواب", "جاوبني! أين كنت؟",],
         "dict": {
-            "a":"تنوين ـً",
-            "question":"سؤال",
-            "and":"و",
-            "answer":"جواب",
-            "session":"جلسة",
-            "Do":"هل",
-            "you":"أنت",
-            "know":"تعرف",
-            "the":"الـ",
-            "answer?":"جواب",
-            "Answer":"جاوب",
-            "me!":"ني",
-            "Where":"أين",
-            "were":"كان/كنت",
-            "you?":"أنت",
+            "a": "تنوين ـً",
+            "question": "سؤال",
+            "and": "و",
+            "answer": "جواب",
+            "session": "جلسة",
+            "Do": "هل",
+            "you": "أنت",
+            "know": "تعرف",
+            "the": "الـ",
+            "answer?": "جواب",
+            "Answer": "جاوب",
+            "me!": "ني",
+            "Where": "أين",
+            "were": "كان/كنت",
+            "you?": "أنت",
         }
     },
-    "any":{
+    "any": {
         "translation": "أي",
         "examples": ["Any questions?"],
         "examplesToAr": ["أي أسئلة؟"],
         "dict": {
-            "any":"أي",
-            "Any":"أي",
-            "questions?":"أسئلة",
-          
+            "any": "أي",
+            "Any": "أي",
+            "questions?": "أسئلة",
+
         }
     },
-    "anyone":{
+    "anyone": {
         "translation": "أي شخص",
         "examples": ["Anyone can that"],
         "examplesToAr": ["أي شخص يستطيع ذلك"],
         "dict": {
-            "Anyone":"أي شخص",
-            "anyone":"أي شخص",
-            "can":"يستطيع",
-            "that":"ذلك",
-           
+            "Anyone": "أي شخص",
+            "anyone": "أي شخص",
+            "can": "يستطيع",
+            "that": "ذلك",
+
         }
     },
-    "anything":{
+    "anything": {
         "translation": "أي شي",
         "examples": ["Anything else?"],
         "examplesToAr": ["أي شي تاني؟"],
         "dict": {
-            "Anything":"أي شي",
-            "anything":"أي شي",
-            "else?":"تاني/آخر",
+            "Anything": "أي شي",
+            "anything": "أي شي",
+            "else?": "تاني/آخر",
         }
     },
-    "apartment":{
+    "apartment": {
         "translation": "شقة",
         "examples": ["I am looking for an apartment."],
         "examplesToAr": ["أنا عم أبحث عن شقةٍ"],
         "dict": {
-            "I":"أنا",
-            "am":"عم",
-            "looking":"أبحث/أنظر",
-            "for":"عن/لـ",
-            "an":"تنوين ـٍ",
-            "apartment.":"شقة",
-            "apartment":"شقة",
-           
+            "I": "أنا",
+            "am": "عم",
+            "looking": "أبحث/أنظر",
+            "for": "عن/لـ",
+            "an": "تنوين ـٍ",
+            "apartment.": "شقة",
+            "apartment": "شقة",
+
         }
     },
-    "area":{
+    "area": {
         "translation": "منطقة",
         "examples": ["Do you live in this area?"],
         "examplesToAr": ["هل تسكن في هذه المنطقة؟"],
         "dict": {
-            "Do":"هل",
-            "you":"انت/انتم",
-            "live":"تسكن",
-            "in":"في",
-            "this":"هذا/هذه",
-            "area":"المنطقة",
-            "area?":"المنطقة",
+            "Do": "هل",
+            "you": "انت/انتم",
+            "live": "تسكن",
+            "in": "في",
+            "this": "هذا/هذه",
+            "area": "المنطقة",
+            "area?": "المنطقة",
         }
     },
-    "around":{
+    "around": {
         "translation": "حول",
         "examples": ["They were sitting around the fire.", "He arrived around five o'clock."],
         "examplesToAr": ["هم كانوا جالسين حول النار.", "هو وصل حوالي الساعة خمسة"],
         "dict": {
-            "They":"هم",
-            "were":"كانوا",
-            "sitting":"جالسين",
-            "around":"حول/حوالي",
-            "the":"الـ",
-            "fire.":"نار",
-            "He":"هو",
-            "arrived":"وصل",
-            "five":"خمسة",
-            "o'clock.":"الساعة",
+            "They": "هم",
+            "were": "كانوا",
+            "sitting": "جالسين",
+            "around": "حول/حوالي",
+            "the": "الـ",
+            "fire.": "نار",
+            "He": "هو",
+            "arrived": "وصل",
+            "five": "خمسة",
+            "o'clock.": "الساعة",
         }
     },
-    "arrive":{
+    "arrive": {
         "translation": "يصل",
         "examples": ["I will wait until they arrive."],
         "examplesToAr": ["أنا سوف أنتظر إلى أن يصلوا."],
         "dict": {
-            "I":"أنا",
-            "will":"سوف",
-            "wait":"أنتظر",
-            "until":"حتى",
-            "they":"هم",
-            "arrive":"يصل",
-            "arrive.":"يصلون",
-          
+            "I": "أنا",
+            "will": "سوف",
+            "wait": "أنتظر",
+            "until": "حتى",
+            "they": "هم",
+            "arrive": "يصل",
+            "arrive.": "يصلون",
+
         }
     },
-    "ask":{
+    "ask": {
         "translation": "يسأل",
         "examples": ["Can I ask a question?"],
         "examplesToAr": ["أقدر أسئل سؤالاً؟"],
         "dict": {
-            "Can":"أقدر",
-            "I":"أنا",
-            "ask":"أسئل",
-            "a":"اً",
-            "question?":"سؤال",
-           
+            "Can": "أقدر",
+            "I": "أنا",
+            "ask": "أسئل",
+            "a": "اً",
+            "question?": "سؤال",
+
         }
     },
-    "as":{
-        "translation": "بـ / كما / بالنسبة لـ  ",
-        "examples": ["as soon as possible", "Run as fast as you can.", "As you know, Adam is leaving soon.","He behaved as if nothing had happened.","As for Max, he is fine."],
-        "examplesToAr": ["بأقرب ما يمكن/بأسرع وقت ممكن","اركض بـاسرع ما يمكنك.","كما تعلم، آدم عم يغادر قريباً = كما تعلم، آدم سيغادر قريباً","تصرف وكأن شيئًا لم يحدث", "بالنسبة لـ ماكس، هو بخير"],
-        "notes":[' ... <span class="wordsChildOfNotes">as</span> ... <span class="wordsChildOfNotes">as</span> ... <br> ... بـ ... ما ...  ',' <span class="wordsChildOfNotes">as</span> ... <span class="wordsChildOfNotes">as</span> ... <br> ... بـ ... ما ...  ', '<span class="wordsChildOfNotes">Adam</span> <span class="wordsChildOfNotes">is</span> <span class="wordsChildOfNotes">leaving</span> <span class="wordsChildOfNotes">soon</span> = <span class="wordsChildOfNotes">Adam</span> <span class="wordsChildOfNotes">will</span> <span class="wordsChildOfNotes">leave</span> <span class="wordsChildOfNotes">soon</span> = <span class="wordsChildOfNotes">آدم</span> <span class="wordsChildOfNotes">سوف</span> <span class="wordsChildOfNotes">يغادر</span> <span class="wordsChildOfNotes">قريباً</span>', '  <span class="wordsChildOfNotes">as if</span> وكأن   ',""],
+    "as": {
+        "translation": "بـ / كما ",
+        "examples": ["as soon as possible", "Run as fast as you can.", "As you know, Adam is leaving soon.", "He behaved as if nothing had happened.", "As for Max, he is fine."],
+        "examplesToAr": ["بأقرب ما يمكن/بأسرع وقت ممكن", "اركض بـاسرع ما يمكنك.", "كما تعلم، آدم عم يغادر قريباً = كما تعلم، آدم سيغادر قريباً", "تصرف وكأن شيئًا لم يحدث", "بالنسبة لـ ماكس، هو بخير"],
+        "notes": [" ... as ... as ...  \n  ... بـ ... ما ...  ", "... as ... as ...  \n  ... بـ ... ما ...  ", " Adam is leaving soon = Adam will leave soon = آدم سوف يغادر قريباً", "  as if وكأن ", ""],
         "dict": {
-            "Run":"أركض",
-            "fast":"سريع",
-            "can.":"تقدر",
-            "as":"بـ / كما / بالنسبة لـ  ",
-            "As":"بـ / كما / بالنسبة لـ  ",
-            "soon":"قريباً",
-            "possible":"ممكن",
-            "you":"أنت",
-            "know,":"تعلم",
-            "Adam":"آدم",
-            "is":"عم",
-            "leaving":"يغادر",
-            "soon.":"قريباً",
-            "He":"هو",
-            "behaved":"تصرف",
-            "if":"إذا",
-            "nothing":"لا شيء",
-            "had":"",
-            "happened.":"حدث",
-            "for":"لـ",
-            "Max,":"ماكس",
-            "he":"هو",
-            "fine.":"بخير",
+            "Run": "أركض",
+            "fast": "سريع",
+            "can.": "تقدر",
+            "as": "بـ / كما ",
+            "As": "بـ / كما ",
+            "soon": "قريباً",
+            "possible": "ممكن",
+            "you": "أنت",
+            "know,": "تعلم",
+            "Adam": "آدم",
+            "is": "عم",
+            "leaving": "يغادر",
+            "soon.": "قريباً",
+            "He": "هو",
+            "behaved": "تصرف",
+            "if": "إذا",
+            "nothing": "لا شيء",
+            "had": "",
+            "happened.": "حدث",
+            "for": "لـ",
+            "Max,": "ماكس",
+            "he": "هو",
+            "fine.": "بخير",
         }
-    }
+    },
+
+    "away": {
+        "translation": "بعيد",
+        "examples": ["The beach is 500 metres away from here."],
+        "examplesToAr": ["الشاطئ بعيد ٥٠ متر من هنا."],
+        "dict": {
+            "The":"الـ",
+            "beach":"شاطئ",
+            "is":"يكون",
+            "500":"٥٠٠",
+            "metres":"متر",
+            "away":"بعيد",
+            "from":"من",
+            "here.":"هنا",
+       
+        }
+    },
+    "back": {
+        "translation": " ظهر / خلف",
+        "examples": ["Put the book back on the shelf.","It takes me an hour to walk there and back.", "Go back", "I have pain in my back", "We were sitting in the back row not the front row"],
+        "examplesToAr": ["ضع الكتاب مرة أخرى على الرف.","يستغرق مني ساعةٍ للمشي هناك والعودة.","عُد/أرجع", "أنا عندي ألم في ظهري", "نحن كنا نجلس في الصف الخلفي وليس الصف الأمامي"],
+        "dict": {
+            "Put":"ضع",
+            "the":"الـ",
+            "book":"كتاب",
+            "back":" عودة / ظهر / خلف",
+            "on":"على",
+            "shelf.":"رف",
+            "It":"هي/هو لغير العاقل",
+            "takes":"يأخذ",
+            "me":"مني/ ـي ",
+            "an":"تنوين ـٍ",
+            "hour":"ساعة",
+            "to":"لـ/إلى",
+            "walk":"يمشي",
+            "there":"هناك",
+            "and":"و",
+            "Go":"أذهب",
+            "I":"أنا",
+            "have":"عندي/أملك",
+            "pain":"وجع",
+            "in":"في",
+            "my":"ـي",
+            "We":"نحن",
+            "were":"كنا/كانوا",
+            "sitting":"جالسين",
+            "in":"في",
+            "row":"صف",
+            "front":"أمامي",
+
+        }
+    },
+    
 }
 

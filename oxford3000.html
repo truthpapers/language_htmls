@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Testing</title>
+  <title>Oxford 3000</title>
   <style>
     * {
       margin-top: 0;
@@ -132,8 +132,8 @@
 
     let explainWordObj = {};
 
-    const startIndex = 20;
-    const endIndex = 3;
+    const startIndex = 23;
+    const endIndex = 2;
     const keys = Object.keys(oxford3000);
     for (let i = startIndex; i < startIndex + endIndex; i++) {
       if (oxford3000.hasOwnProperty(keys[i])) {
@@ -165,7 +165,7 @@
               .map((word) => `<span class="word">${word}</span>`)
               .join(" ")}</p> 
             
-            ${oxford3000[key].notes ? oxford3000[key].notes[i] && '<p class="notes">' + oxford3000[key].notes[i] + "</p>" : ""}
+            ${oxford3000[key].notes ? oxford3000[key].notes[i] && '<p class="notes">' + oxford3000[key].notes[i].trim().split(" ").map(element => element == "\n"? "<br>" : `<span class='wordsChildOfNotes'>${element}</span>`).join(" ") + "</p>" : ""}
         </div>
        `;
         }

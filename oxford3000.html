@@ -163,7 +163,7 @@
             <p class="example">${examples[i]
               .split(" ")
               .map((word) => `<span class="word">${word}</span>`)
-              .join(" ")}</p> 
+              .join(" ")}.</p> 
             
             ${oxford3000[key].notes ? oxford3000[key].notes[i] && '<p class="notes">' + oxford3000[key].notes[i].trim().split(" ").map(element => element == "\n"? "<br>" : `<span class='wordsChildOfNotes'>${element}</span>`).join(" ") + "</p>" : ""}
         </div>
@@ -281,7 +281,7 @@
           speech.text = e.target.innerText.trim();
           speechSynthesis.speak(speech);
         });
-        
+
       });
 
     }

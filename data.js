@@ -17,7 +17,7 @@ export const oxford3000 = {
     },
     "about": {
         "translation": " حوالي أو عن",
-        "examples": ["It costs about 10 $", "They waited (for) about an hour", "He arrived (at) about ten.", "Are you talking about residence permit?", "What are you talking about?", "Yes, I am talking about residence permit"],
+        "examples": ["It costs about 10 $", "They waited (for) about an hour", "He arrived (at) about ten", "Are you talking about residence permit?", "What are you talking about?", "Yes, I am talking about residence permit"],
         "examplesToAr": ["هي تكلف حوالي ١٠ دولار", "هم انتظروا (لـ) حوالي ساعةً", "هو وصل حوالي (بـ) العاشرة", "عم تتحدث عن تصريح الإقامة؟", "ماذا تتحدث عن؟", "نعم، أنا أتحدث عن تصريح الإقامة"],
         "dict": {
             "It": "هي أو هو لغير العاقل",
@@ -44,20 +44,20 @@ export const oxford3000 = {
     },
     "above": {
         "translation": "فوق",
-        "examples": ["70 or above.", "We were flying above the clouds.", "Your health is above everything.",],
+        "examples": ["70 or above", "We were flying above the clouds", "Your health is above everything",],
         "examplesToAr": ["سبعين أو فوق", "نحن كنا نطير فوق الغيوم", "صحتك فوق كل شيء",],
         "dict": {
             "or": "أو",
             "above": "فوق",
-            "above.": "فوق",
+            "above": "فوق",
             "We": "نحن",
             "were": "كنا/كان",
             "flying": "نطير",
             "the": "الـ",
-            "clouds.": "الغيوم.",
+            "clouds": "الغيوم",
             "Your": "ـك \n  your health صحتك",
             "health": "صحة",
-            "everything.": "كل شيء",
+            "everything": "كل شيء",
         },
     },
 
@@ -105,7 +105,7 @@ export const oxford3000 = {
     },
     "add": {
         "translation": "يضيف",
-        "examples": ["Please, add my name to the list.", "Add 9 to the total."],
+        "examples": ["Please, add my name to the list", "Add 9 to the total"],
         "examplesToAr": ["رجاء، أضف اسمي إلي الليستا (يعني المجموعة)", "أضف ٩ إلى المجموع"],
         "dict": {
             "Please,": "رجاء",
@@ -114,9 +114,9 @@ export const oxford3000 = {
             "name": "اسمي",
             "to": "إلى",
             "the": "الـ",
-            "list.": "الليستا/المجموعة",
+            "list": "الليستا/المجموعة",
             "Add": "أضف",
-            "total.": "المجموع",
+            "total": "المجموع",
         }
     },
     "address": {
@@ -134,7 +134,7 @@ export const oxford3000 = {
     },
     "afraid": {
         "translation": "خائف",
-        "examples": ["Don't be afraid to ask if you don't understand."],
+        "examples": ["Don't be afraid to ask if you don't understand"],
         "examplesToAr": ["لا تكن خائف أن تسأل إذا أنت لا تفهم",],
         "dict": {
             "Don't": "لا",
@@ -145,26 +145,26 @@ export const oxford3000 = {
             "if": "إذا",
             "you": "أنت/أنتم",
             "don't": "لا",
-            "understand.": "يفهم",
+            "understand": "يفهم",
 
         },
     },
     "after": {
         "translation": "بعد",
-        "examples": ["We will leave after lunch."],
+        "examples": ["We will leave after lunch"],
         "examplesToAr": ["نحن سوف نغادر بعد الغداء"],
         "dict": {
             "We": "نحن",
             "will": "سوف",
             "leave": "نغادر",
             "after": "بعد",
-            "lunch.": "الغداء",
+            "lunch": "الغداء",
         }
 
     },
     "all": {
         "translation": "كل",
-        "examples": ["All people originate from Adam and Eve.",],
+        "examples": ["All people originate from Adam and Eve",],
         "examplesToAr": ["كل الناس ينحدرون/يتجذرون من آدم وحواء",],
         "notes": "origin  🔊: اسم بمعنى أصل/جذر  \n   originate 🔊: فعل بمعنى يتجذر/ينحدر",
         "dict": {
@@ -175,17 +175,17 @@ export const oxford3000 = {
             "from": "من",
             "Adam": "آدم",
             "and": "و",
-            "Eve.": "حواء",
+            "Eve": "حواء",
         },
     },
     "another": {
         "translation": "آخر",
-        "examples": ["That's another thing.",],
+        "examples": ["That's another thing",],
         "examplesToAr": ["ذلك شيء آخر"],
         "dict": {
             "That's": "ذلك",
             "another": "آخر",
-            "thing.": "شيء",
+            "thing": "شيء",
         }
     },
 
@@ -246,7 +246,7 @@ export const oxford3000 = {
     },
     "apartment": {
         "translation": "شقة",
-        "examples": ["I am looking for an apartment."],
+        "examples": ["I am looking for an apartment"],
         "examplesToAr": ["أنا عم أبحث عن شقةٍ"],
         "dict": {
             "I": "أنا",
@@ -254,7 +254,7 @@ export const oxford3000 = {
             "looking": "أبحث/أنظر",
             "for": "عن/لـ",
             "an": "تنوين ـٍ",
-            "apartment.": "شقة",
+            "apartment": "شقة",
             "apartment": "شقة",
 
         }
@@ -275,25 +275,25 @@ export const oxford3000 = {
     },
     "around": {
         "translation": "حول",
-        "examples": ["They were sitting around the fire.", "He arrived around five o'clock."],
-        "examplesToAr": ["هم كانوا جالسين حول النار.", "هو وصل حوالي الساعة خمسة"],
+        "examples": ["They were sitting around the fire", "He arrived around five o'clock"],
+        "examplesToAr": ["هم كانوا جالسين حول النار", "هو وصل حوالي الساعة خمسة"],
         "dict": {
             "They": "هم",
             "were": "كانوا",
             "sitting": "جالسين",
             "around": "حول/حوالي",
             "the": "الـ",
-            "fire.": "نار",
+            "fire": "نار",
             "He": "هو",
             "arrived": "وصل",
             "five": "خمسة",
-            "o'clock.": "الساعة",
+            "o'clock": "الساعة",
         }
     },
     "arrive": {
         "translation": "يصل",
-        "examples": ["I will wait until they arrive."],
-        "examplesToAr": ["أنا سوف أنتظر إلى أن يصلوا."],
+        "examples": ["I will wait until they arrive"],
+        "examplesToAr": ["أنا سوف أنتظر إلى أن يصلوا"],
         "dict": {
             "I": "أنا",
             "will": "سوف",
@@ -301,7 +301,7 @@ export const oxford3000 = {
             "until": "حتى",
             "they": "هم",
             "arrive": "يصل",
-            "arrive.": "يصلون",
+            "arrive": "يصلون",
 
         }
     },
@@ -320,13 +320,13 @@ export const oxford3000 = {
     },
     "as": {
         "translation": "بـ / كما ",
-        "examples": ["as soon as possible", "Run as fast as you can.", "As you know, Adam is leaving soon.", "He behaved as if nothing had happened.", "As for Max, he is fine."],
-        "examplesToAr": ["بأقرب ما يمكن/بأسرع وقت ممكن", "اركض بـاسرع ما يمكنك.", "كما تعلم، آدم عم يغادر قريباً = كما تعلم، آدم سيغادر قريباً", "تصرف وكأن شيئًا لم يحدث", "بالنسبة لـ ماكس، هو بخير"],
+        "examples": ["as soon as possible", "Run as fast as you can", "As you know, Adam is leaving soon", "He behaved as if nothing had happened", "As for Max, he is fine"],
+        "examplesToAr": ["بأقرب ما يمكن/بأسرع وقت ممكن", "اركض بـاسرع ما يمكنك", "كما تعلم، آدم عم يغادر قريباً = كما تعلم، آدم سيغادر قريباً", "تصرف وكأن شيئًا لم يحدث", "بالنسبة لـ ماكس، هو بخير"],
         "notes": [" ... as ... as ...  \n  ... بـ ... ما ...  ", "... as ... as ...  \n  ... بـ ... ما ...  ", " Adam is leaving soon = Adam will leave soon = آدم سوف يغادر قريباً", "  as if وكأن ", ""],
         "dict": {
             "Run": "أركض",
             "fast": "سريع",
-            "can.": "تقدر",
+            "can": "تقدر",
             "as": "بـ / كما ",
             "As": "بـ / كما ",
             "soon": "قريباً",
@@ -336,24 +336,24 @@ export const oxford3000 = {
             "Adam": "آدم",
             "is": "عم",
             "leaving": "يغادر",
-            "soon.": "قريباً",
+            "soon": "قريباً",
             "He": "هو",
             "behaved": "تصرف",
             "if": "إذا",
             "nothing": "لا شيء",
             "had": "",
-            "happened.": "حدث",
+            "happened": "حدث",
             "for": "لـ",
             "Max,": "ماكس",
             "he": "هو",
-            "fine.": "بخير",
+            "fine": "بخير",
         }
     },
 
     "away": {
         "translation": "بعيد",
-        "examples": ["The beach is 500 metres away from here.", "Go away"],
-        "examplesToAr": ["الشاطئ بعيد ٥٠ متر من هنا.","ابتعد"],
+        "examples": ["The beach is 500 metres away from here", "Go away"],
+        "examplesToAr": ["الشاطئ بعيد ٥٠ متر من هنا","ابتعد"],
         "dict": {
             "The":"الـ",
             "beach":"شاطئ",
@@ -362,23 +362,23 @@ export const oxford3000 = {
             "metres":"متر",
             "away":"بعيد",
             "from":"من",
-            "here.":"هنا",
+            "here":"هنا",
             "Go":"أذهب",
        
         }
     },
     "back": {
         "translation": " ظهر / خلف",
-        "examples": ["Put the book back on the shelf.","It takes me an hour to walk there and back.", "Go back", "I have pain in my back", "We were sitting in the back row not the front row"],
-        "examplesToAr": ["ضع الكتاب مرة أخرى على الرف.","يستغرق مني ساعةٍ للمشي هناك والعودة.","عُد/أرجع", "أنا عندي ألم في ظهري", "نحن كنا نجلس في الصف الخلفي ليس الصف الأمامي"],
+        "examples": ["Put the book back on the shelf","It takes me an hour to walk there and back", "Go back", "I have pain in my back", "We were sitting in the back row not the front row"],
+        "examplesToAr": ["ضع الكتاب مرة أخرى على الرف","يستغرق مني ساعةٍ للمشي هناك والعودة","عُد/أرجع", "أنا عندي ألم في ظهري", "نحن كنا نجلس في الصف الخلفي ليس الصف الأمامي"],
         "dict": {
             "Put":"ضع",
             "the":"الـ",
             "book":"كتاب",
             "back":" عودة / ظهر / خلف",
-            "back.":" عودة / ظهر / خلف",
+            "back":" عودة / ظهر / خلف",
             "on":"على",
-            "shelf.":"رف",
+            "shelf":"رف",
             "It":"هي/هو لغير العاقل",
             "takes":"يأخذ",
             "me":"مني/ ـي ",

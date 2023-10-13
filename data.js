@@ -387,6 +387,7 @@ export const oxford3000 = {
             "sitting":"جالسين",
             "in":"في",
             "row":"صف",
+            "not":"ليس/لا",
             "front":"أمامي",
         }
     },

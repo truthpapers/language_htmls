@@ -369,7 +369,7 @@ export const oxford3000 = {
     "back": {
         "translation": " ظهر / خلف",
         "examples": ["Put the book back on the shelf.","It takes me an hour to walk there and back.", "Go back", "I have pain in my back", "We were sitting in the back row not the front row"],
-        "examplesToAr": ["ضع الكتاب مرة أخرى على الرف.","يستغرق مني ساعةٍ للمشي هناك والعودة.","عُد/أرجع", "أنا عندي ألم في ظهري", "نحن كنا نجلس في الصف الخلفي وليس الصف الأمامي"],
+        "examplesToAr": ["ضع الكتاب مرة أخرى على الرف.","يستغرق مني ساعةٍ للمشي هناك والعودة.","عُد/أرجع", "أنا عندي ألم في ظهري", "نحن كنا نجلس في الصف الخلفي ليس الصف الأمامي"],
         "dict": {
             "Put":"ضع",
             "the":"الـ",

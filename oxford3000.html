@@ -93,6 +93,7 @@
 
     .example-translation {
       color: gray;
+      text-align: end;
     }
 
     h3 {
@@ -160,7 +161,7 @@
           entryDiv.innerHTML += `
         
             <div class="example-container">
-                <p class="example-translation">${examplesToAr[i]}</p>
+                <p dir="rtl" class="example-translation">${punctuationRegex.test( examplesToAr[i].split(" ")[examplesToAr[i].split(" ")-1] ) ? examplesToAr[i] : examplesToAr[i]+"." }</p>
                 <p class="example">${examples[i].split(" ").map((word) => `<span class="word">${word}</span>`).join(" ")}${punctuationRegex.test( examples[i].split(" ")[examples[i].split(" ").length-1] )? "" : "."}</p>${oxford3000[key].notes ? oxford3000[key].notes[i] && '<p class="notes">' + oxford3000[key].notes[i].trim().split(" ").map(element => element == "\n"? "<br>" : `<span class='wordsChildOfNotes'>${element}</span>`).join(" ") + "</p>" : ""}
             </div>
           `;

@@ -396,7 +396,7 @@ export const oxford3000 = {
         "related":["عكسها: goodخير/مفيد"],
         "examples": ["Smoking is bad for you."],
         
-        "examplesToAr":["التدخين مضرٌ لك"],
+        "examplesToAr":["التدخين مضرٌ لك."],
         "dict": {
             "smoking":"التدخين",
             "is":"ـٌ",
@@ -410,7 +410,7 @@ export const oxford3000 = {
         "translation": "كيس/حقيبة",
         "related": "جمع: bags ",
         "examples": ["would you like a bag?","I packed my bags and left."],
-        "examplesToAr":["هل تود كيساً","حزمت حقائبي وغادرت"],
+        "examplesToAr":["هل تود كيساً؟","حزمت حقائبي وغادرت."],
         "notes":["would you like ... أتود ...","pack حزمة"],
         "dict": {
             "would":"would you like أتود",

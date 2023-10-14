@@ -10,13 +10,24 @@
       margin-top: 0;
       margin-right: 0;
       margin-bottom: 0;
-      margin-left: 5px;
+
       box-sizing: border-box;
     }
 
     body {
       background-color: black;
       color: white;
+    }
+    #popupBox {
+      position: absolute;
+      background-color: darkgray;
+      max-width: 2000px;
+      border-radius: 5%;
+      padding-top: 5px;
+      padding-left: 10px;
+      padding-right: 10px;
+      padding-bottom: 15px;
+      display: none;
     }
 
     .popup-body {
@@ -46,17 +57,7 @@
       background-color: yellow;
     }
 
-    #popupBox {
-      position: absolute;
-      background-color: darkgray;
-      max-width: 2000px;
-      border-radius: 5%;
-      padding-top: 5px;
-      padding-left: 10px;
-      padding-right: 10px;
-      padding-bottom: 15px;
-      display: none;
-    }
+    
 
     header a {
       margin: 10px;
@@ -64,29 +65,14 @@
       color: lightblue;
     }
 
-    .pronounce-sentence-btn {
-      margin: 10px;
-    }
+  
 
-    .conversation {
-      border: 1px solid white;
-      text-align: center;
-    }
 
-    button {
-      display: inline;
-      user-select: none;
-    }
-
-    .pronouncable-sentence {
-      display: inline;
-    }
+   
 
     .example-container {
-      margin-left: 40px;
       margin-bottom: 30px;
       /* border-left: 1px solid gray; */
-
     }
 
     .entry-container {
@@ -96,13 +82,19 @@
     .example-translation {
       color: gray;
       text-align: end;
+      
+    }
+    .ar-en{
+      display: flex;
+      gap: 5px;
     }
     .entry-title{
       margin-bottom: 20px;
+      border-bottom: 1px solid gray;
     }
     .entry-title .word, .word-translation {
       color: rgb(249, 249, 102);
-     /*  margin-bottom: 0; */
+     
     }
 
     .notes {
@@ -113,9 +105,11 @@
       margin: 5px;
     }
     .related{
-      color: lightseagreen;
+     
       font-size: medium;
+      color: white;
     }
+   
   </style>
 </head>
 
@@ -184,10 +178,11 @@
           ul.innerHTML += `
         
             <div class="example-container">
-              
-                <p dir="rtl" class="example-translation">${examplesToAr[i]}</p>
+              <div class="ar-en">
                 <li class="example">${examples[i].split(" ").map((word) => `<span class="word">${word}</span>`).join(" ")}</li>
-                ${oxford3000[key].notes ? oxford3000[key].notes[i] && '<p class="notes">' + oxford3000[key].notes[i].trim().split(" ").map(element => element == "\n"? "<br>" : `<span class='wordsChildOfNotes'>${element}</span>`).join(" ") + "</p>" : ""}
+                <span dir="rtl" class="example-translation">${examplesToAr[i]}</span>
+              </div>
+              ${oxford3000[key].notes ? oxford3000[key].notes[i] && '<p class="notes">' + oxford3000[key].notes[i].trim().split(" ").map(element => element == "\n"? "<br>" : `<span class='wordsChildOfNotes'>${element}</span>`).join(" ") + "</p>" : ""}
               
             </div>
           `;

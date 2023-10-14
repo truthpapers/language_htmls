@@ -85,6 +85,8 @@
     .example-container {
       margin-left: 40px;
       margin-bottom: 30px;
+      /* border-left: 1px solid gray; */
+
     }
 
     .entry-container {
@@ -155,10 +157,11 @@
         const examples = oxford3000[key].examples; //returns an array
         const examplesToAr = oxford3000[key].examplesToAr; //returns an array
 
-        const entryDiv = document.createElement("div");
-        entryDiv.classList.add("entry-container");
+        const entryContainer = document.createElement("div");
+        entryContainer.classList.add("entry-container");
+        const ul = document.createElement("ul")
 
-        entryDiv.innerHTML = `
+        entryContainer.innerHTML = `
       <h3 class="entry-title">
         <span class="word">${key}</span> 
         <span class="word-translation">${wordTranslation}</span> 
@@ -170,16 +173,28 @@
 
         //
         for (let i = 0; i < examplesToAr.length; i++) {
-          entryDiv.innerHTML += `
+          /* entryContainer.innerHTML += `
         
             <div class="example-container">
                 <p dir="rtl" class="example-translation">${punctuationRegex.test( examplesToAr[i].split(" ")[examplesToAr[i].split(" ")-1] ) ? examplesToAr[i] : examplesToAr[i]+"." }</p>
                 <p class="example">${examples[i].split(" ").map((word) => `<span class="word">${word}</span>`).join(" ")}${punctuationRegex.test( examples[i].split(" ")[examples[i].split(" ").length-1] )? "" : "."}</p>${oxford3000[key].notes ? oxford3000[key].notes[i] && '<p class="notes">' + oxford3000[key].notes[i].trim().split(" ").map(element => element == "\n"? "<br>" : `<span class='wordsChildOfNotes'>${element}</span>`).join(" ") + "</p>" : ""}
             </div>
+          `; */
+          
+          ul.innerHTML += `
+        
+            <div class="example-container">
+              
+                <p dir="rtl" class="example-translation">${examplesToAr[i]}</p>
+                <li class="example">${examples[i].split(" ").map((word) => `<span class="word">${word}</span>`).join(" ")}</li>
+                ${oxford3000[key].notes ? oxford3000[key].notes[i] && '<p class="notes">' + oxford3000[key].notes[i].trim().split(" ").map(element => element == "\n"? "<br>" : `<span class='wordsChildOfNotes'>${element}</span>`).join(" ") + "</p>" : ""}
+              
+            </div>
           `;
         }
 
-        l1.appendChild(entryDiv);
+        l1.appendChild(entryContainer);
+        entryContainer.append(ul)
       }
     }
 
@@ -228,6 +243,7 @@
       wordEvent.stopPropagation();
 
       const speech = new SpeechSynthesisUtterance();
+      speech.lang = "en-GB";
       speech.text = wordEvent.target.innerText;
       speechSynthesis.speak(speech);
 
@@ -287,6 +303,7 @@
 
         element.addEventListener("click", (e) => {
           const speech = new SpeechSynthesisUtterance();
+          speech.lang = "en-GB";
           speech.text = e.target.innerText.trim();
           speechSynthesis.speak(speech);
         });
@@ -295,6 +312,15 @@
 
     }
 
+    const exampleTranslation = document.querySelectorAll(".example-translation")
+    exampleTranslation.forEach(element =>{
+      element.addEventListener("click",()=>{
+          const utterance = new SpeechSynthesisUtterance();
+          utterance.text = element.innerText.trim()
+          utterance.lang = "ar-SA"; // Set the language to Arabic (Saudi Arabia)
+          speechSynthesis.speak(utterance);
+      })
+    })
 
   </script>
 </body>

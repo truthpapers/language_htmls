@@ -393,7 +393,7 @@ export const oxford3000 = {
     },
     "bad":{
         "translation": "سيء/شر/عيب/ضار",
-        "related":["عكسها: good"],
+        "related":["عكسها: goodخير/مفيد"],
         "examples": ["Smoking is bad for you."],
         
         "examplesToAr":["التدخين مضرٌ لك"],

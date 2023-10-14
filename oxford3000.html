@@ -87,7 +87,7 @@
       margin-bottom: 30px;
     }
 
-    .entry {
+    .entry-container {
       margin-bottom: 50px;
     }
 
@@ -95,10 +95,12 @@
       color: gray;
       text-align: end;
     }
-
-    h3 {
-      color: rgb(249, 249, 102);
+    .entry-title{
       margin-bottom: 20px;
+    }
+    .entry-title .word, .word-translation {
+      color: rgb(249, 249, 102);
+     /*  margin-bottom: 0; */
     }
 
     .notes {
@@ -107,6 +109,10 @@
       padding-left: 4px;
       padding-right: 4px;
       margin: 5px;
+    }
+    .related{
+      color: lightseagreen;
+      font-size: medium;
     }
   </style>
 </head>
@@ -133,7 +139,7 @@
 
     let explainWordObj = {};
 
-    const startIndex = 23;
+    const startIndex = 25;
     const endIndex = 2;
     const keys = Object.keys(oxford3000);
     const punctuationRegex = /[.,\/#!$%^&*;:{}=\-_`~()?!]/;
@@ -150,10 +156,16 @@
         const examplesToAr = oxford3000[key].examplesToAr; //returns an array
 
         const entryDiv = document.createElement("div");
-        entryDiv.classList.add("entry");
+        entryDiv.classList.add("entry-container");
 
         entryDiv.innerHTML = `
-      <h3><span class="word">${key}</span> <span class="word-translation">${wordTranslation}</span> </h3>
+      <h3 class="entry-title">
+        <span class="word">${key}</span> 
+        <span class="word-translation">${wordTranslation}</span> 
+        <br>
+        <span class="related">${oxford3000[key].related}</span>
+      </h3>
+      
     `;
 
         //
@@ -224,7 +236,7 @@
 
       popupBox.innerHTML = `
             <h4 class="popup-heading"> ${wordEvent.target.innerText} </h4>
-            <div class="popup-body">${explainWordObj[wordEvent.target.innerText.trim().toLowerCase()] || "---"}</div>
+            <div class="popup-body">${explainWordObj[wordEvent.target.innerText.trim().toLowerCase().replace(/[^a-zA-Z]+/g, '')] || "---"}</div>
         `;
 
       const rect = getElementDocumentPosition(wordEvent.currentTarget);

@@ -1,32 +1,269 @@
 <!DOCTYPE html>
-<html lang="auto">
+<html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home</title>
-</head>
-<style>
-    header a{
-        margin: 10px;
-        color: lightblue;
-        text-decoration: none;
-    }
-    body{
-        background-color: black;
-        color: white;
-    }
-</style>
-<body>
-    <header>
-        <a href="alphabet.html">درس الحروف والهجاء</a>
-        <a href="airport.html"> في المطار </a>
-        <a href="health_problems.html"> الصحة  </a>
-        <a href="directions.html">الاتجاهات</a>
-        <a href="do_are.html">are/do</a>
-        <a href="oxford3000.html"> Oxford 3000  </a>
-    </header>
-    <h1>Welcome</h1>
+    <title>Collections to learn and memorise</title>
+    <style>
+        body{
+            background-color: black;
+            color: rgb(197, 197, 197);
+        }
+        .appWrapper{
+            max-width: 700px;
+            margin: auto;
+        }
+        #hoursInput, #numOfitemsInput{
+            max-width: 50px;
+        }
+        .translatePageBtn{
+            border: .5px solid gray;
+            padding: 5px;
+            border-radius: 5px;
+        }
+       
+        #collectionForm{
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+        }
+        .mainLabel{
+            color: yellow;
+        }
+      
+        .day{
+            border: 1px solid gray;
+            border-radius: 50%; 
+            /* padding-left: 6px;
+            padding-right: 6px;
+            padding-top: 3px;
+            padding-bottom: 3px; */
+            display: flex;
+            margin: 5px;
+            width: 20px;
+            height: 20px;
+            user-select: none;
+            font-size: small;
+            justify-content: center;
+            align-items: center;
+            
 
+        }
+        .dayCheckbox{
+            display: none;
+        }
+        a{
+            color: lightblue;
+        }
+        form{
+            border: 1px solid gray;
+            padding: 10px;
+        }
+        
+        #interval-container{
+            display: flex;
+            
+        }
+    </style>
+</head>
+
+<body>
+    
+    <div class="appWrapper">
+        <div>
+            <span class="translatePageBtn">ترجم</span>
+            <span class="translatePageBtn">translate</span>
+        </div>
+        <h1>Collections to learn and memorise</h1>
+        <h2><a href="#">Browse availavle collections</a></h2>
+      
+            <form action="" id="collectionForm">
+                <div class="input-label-container">
+                    <label class="mainLabel" for="numOfitemsInput">Number of items to receive: </label>
+                    <input type="number" name="" id="numOfitemsInput" value="5">
+                </div>
+
+                <div class="input-label-container">
+                    <label class="mainLabel" for="collectionsInput">Collections:</label>
+                    <select id="collectionsInput">
+                        <optgroup label="">
+                            <option value="ours">Choose collection</option>
+                        </optgroup>
+                        <optgroup label="Language Learning">
+                            <option value="2a">2a</option>
+                            <option value="2b">2b</option>
+                            <option value="3c">3c</option>
+                        </optgroup>
+                        <optgroup label="Islam Learning">
+                            <option value="3a">3a</option>
+                            <option value="3b">3b</option>
+                            <option value="3c">3c</option>
+                        </optgroup>
+                    </select>
+                    <label for="fileInput"> Or upload yours </label>
+                    <input type="file" name="" id="fileInput">
+                </div>
+
+                <label class="mainLabel" for="time">Notify me at: </label>
+                <div id="interval-container">
+                    <input type="time" name="" id="time"><label class="day" for="sat">S</label><input class="dayCheckbox" type="checkbox" name="" id="sat"><label class="day" for="sun">S</label><input class="dayCheckbox" type="checkbox" name="" id="sun"><label class="day" for="mon">M</label><input class="dayCheckbox" type="checkbox" name="" id="mon"><label class="day" for="tue">T</label><input class="dayCheckbox" type="checkbox" name="" id="tue"><label class="day" for="wed">W</label><input class="dayCheckbox" type="checkbox" name="" id="wed"><label class="day"  for="thu">T</label><input class="dayCheckbox" type="checkbox" name="" id="thu"><label class="day"  for="fri">F</label><input class="dayCheckbox" type="checkbox" name="" id="fri">
+                   <button id="addAlarmBtn">➕</button>
+                </div>
+                
+                
+                <input type="submit" value="Submit">
+            </form>
+
+       
+    </div>
+    <script>
+        const dayCheckboxs = document.querySelectorAll('.dayCheckbox')
+        dayCheckboxs.forEach(element => {
+            if(element.checked){
+                    element.previousElementSibling.style.backgroundColor = 'blue'
+                }else{
+                    element.previousElementSibling.style.backgroundColor = 'black'
+                }
+        });
+
+         dayCheckboxs.forEach(element => {
+            element.addEventListener('click', ()=>{
+                if(element.checked){
+                    element.previousElementSibling.style.backgroundColor = 'blue'
+                }else{
+                    element.previousElementSibling.style.backgroundColor = 'black'
+                }
+                
+            })
+        }); 
+        const daysOfWeek = ['sat', 'sun', 'mon', 'tue', 'wed', 'thu', 'fri'];
+        const addAlarmBtn = document.getElementById('addAlarmBtn')
+        const intervalContainer = document.getElementById('interval-container')
+        addAlarmBtn.addEventListener('click', ()=>{
+            
+            const div = document.createElement('div')
+            intervalContainer.insertAdjacentElement('afterend', div);
+            const time = document.createElement('input')
+                time.type = 'time'
+                div.append(time)
+            for (let i = 0; i < daysOfWeek.length; i++) {
+
+                const label = document.createElement('label')
+                label.innerText = daysOfWeek[i][0].toUpperCase()
+                label.for = daysOfWeek[i]
+                label.classList.add('day')
+
+                const input = document.createElement('input')
+                input.classList.add('dayCheckbox')
+                input.type = 'checkbox'
+                input.id = daysOfWeek[i]
+                input.addEventListener('click', () => {
+                console.log('test test')
+            });
+
+
+                div.append(label,input)
+            }
+        })
+
+
+    </script>
+    
+    <script>
+        //const uploadBtn = document.getElementById('uploadBtn')
+        //uploadBtn.addEventListener('click', () => {
+        //    alert('This feature will be availavle soon, God willing.\n In the meantime, you can choose from our collections.')
+        //})
+    </script>
+    <script>
+        //const collectionForm = document.getElementById('collectionForm');
+        //collectionForm.addEventListener('submit', function (event) {
+        //    event.preventDefault(); 
+        //    
+        //    const numOfItems = document.getElementById('numOfitemsInput').value;
+        //    const selectedCollection = document.getElementById('collectionsInput').value;
+        //    const selectedTime = document.getElementById('time').value;
+        //    const days = [
+        //        document.getElementById('sat').checked,
+        //        document.getElementById('sun').checked,
+        //        document.getElementById('mon').checked,
+        //        document.getElementById('tue').checked,
+        //        document.getElementById('wed').checked,
+        //        document.getElementById('thu').checked,
+        //        document.getElementById('fri').checked
+        //    ];
+        //
+        //    console.log('Number of items:', numOfItems);
+        //    console.log('Selected Collection:', selectedCollection);
+        //    console.log('Selected Time:', selectedTime);
+        //    console.log('Days:', days);
+        //});
+    </script>
+    <script>
+        const collectionForm = document.getElementById('collectionForm');
+        collectionForm.addEventListener('submit', function (event) {
+            event.preventDefault();
+            const selectedTime = document.getElementById('time').value;
+            //const daysOfWeek = ['sun', 'mon', 'tue', 'wed', 'thu', 'fri', 'sat'];
+            const days = daysOfWeek.map(day => document.getElementById(day).checked);
+    
+            days.forEach((selected, dayOfWeek) => {
+                if (selected) {
+                    requestNotificationPermission(selectedTime, dayOfWeek);
+                }
+            });
+        });
+    
+        function requestNotificationPermission(selectedTime, dayOfWeek) {
+            if ("Notification" in window) {
+                Notification.requestPermission()
+                    .then((permission) => {
+                        if (permission === "granted") {
+                            scheduleNotification(selectedTime, dayOfWeek);
+                        } else {
+                            alert("Notification permission denied.");
+                        }
+                    })
+                    .catch((error) => {
+                        console.error("Error requesting notification permission:", error);
+                    });
+            } else {
+                alert("Notifications not supported in this browser.");
+            }
+        }
+    
+        function scheduleNotification(selectedTime, dayOfWeek) {
+            const now = new Date();
+            const targetDay = dayOfWeek - now.getDay(); // Calculate days until the target day
+            if (targetDay < 0) targetDay += 7; // Ensure the target day is in the future
+    
+            const targetTime = selectedTime.split(':');
+            const notificationDate = new Date();
+            notificationDate.setDate(now.getDate() + targetDay);
+            notificationDate.setHours(Number(targetTime[0]), Number(targetTime[1]), 0, 0);
+    
+            // Adjust the notification time based on the user's time zone offset
+            const userTimeZoneOffset = notificationDate.getTimezoneOffset();
+            notificationDate.setMinutes(notificationDate.getMinutes() - userTimeZoneOffset);
+    
+            // Calculate the time until the notification
+            const timeUntilNotification = notificationDate - now;
+    
+            if (timeUntilNotification > 0) {
+                setTimeout(function () {
+                    const notification = new Notification("Reminder", {
+                        body: "It's time for your English lesson!"
+                    });
+    
+                    notification.onclick = () => {
+                        window.open("https://example.com"); // Open "example.com" when the notification is clicked
+                    };
+                }, timeUntilNotification);
+            }
+        }
+    </script>
     
 </body>
+
 </html>

@@ -1,7 +1,7 @@
 export const oxford3000 = {
     "a": {
         "translation": "أداة للتنكير، يقابلها بالعربية التنوين",
-        "examples": ["a student", "a teacher", "There's a visitor", "a knife and fork"],
+        "examples": ["a student.", "a teacher", "There's a visitor", "a knife and fork"],
         "examplesToAr": ["طالبٌ", "معلمٌ", "هناك زائرٌ", "سكينة وشوكة"],
         "dict": {
             "a": "أداة للتنكير، يقابلها بالعربية التنوين",
@@ -391,6 +391,43 @@ export const oxford3000 = {
             "front":"أمامي",
         }
     },
-    
+    "bad":{
+        "translation": "سيء/شر/عيب/ضار",
+        "related":["عكسها: good"],
+        "examples": ["Smoking is bad for you."],
+        
+        "examplesToAr":["التدخين مضرٌ لك"],
+        "dict": {
+            "smoking":"التدخين",
+            "is":"ـٌ",
+            "bad":"سيء/شر/عيب/ضار",
+            "for":"لـ",
+            "you":"ـك",
+        },
+    },
+
+    "bag":{
+        "translation": "كيس/حقيبة",
+        "related": "جمع: bags ",
+        "examples": ["would you like a bag?","I packed my bags and left."],
+        "examplesToAr":["هل تود كيساً","حزمت حقائبي وغادرت"],
+        "notes":["would you like ... أتود ...","pack حزمة"],
+        "dict": {
+            "would":"would you like أتود",
+            "you":"أنت",
+            "like":"تحب",
+            "a":"ـاً",
+            "bag":"كيس/حقيبة",
+            "i":"أنا",
+            "packed":"محزوم/حزمت",
+            "my":"ـي",
+            "bags":"حقائب",
+            "and":"و",
+            "left":"غادرت",
+          
+        } 
+    }
 }
 
+// for performance, no need to check whether the last word contains punctua-tion. 
+// str.replace(/[^a-zA-Z]+/g, '') 

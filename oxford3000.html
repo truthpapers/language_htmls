@@ -88,27 +88,15 @@
       display: flex;
       gap: 5px;
     }
-    .entry-title{
+    .entry-head{
       margin-bottom: 20px;
       border-bottom: 1px solid gray;
     }
-    .entry-title .word, .word-translation {
-      color: rgb(249, 249, 102);
+    .entry-head .word, .word-translation {
+      color: rgb(102, 157, 252);
      
     }
 
-    .notes {
-      border: 1px solid green;
-      width: fit-content;
-      padding-left: 4px;
-      padding-right: 4px;
-      margin: 5px;
-    }
-    .related{
-     
-      font-size: medium;
-      color: white;
-    }
    
   </style>
 </head>
@@ -156,12 +144,13 @@
         const ul = document.createElement("ul")
 
         entryContainer.innerHTML = `
-      <h3 class="entry-title">
+        <div class="entry-head">
+      <h3>
         <span class="word">${key}</span> 
         <span class="word-translation">${wordTranslation}</span> 
-        <br>
-        <span class="related">${oxford3000[key].related}</span>
       </h3>
+      <span class="related">${oxford3000[key].related}</span>
+      </div>
       
     `;
 
@@ -182,7 +171,7 @@
                 <li class="example">${examples[i].split(" ").map((word) => `<span class="word">${word}</span>`).join(" ")}</li>
                 <span dir="rtl" class="example-translation">${examplesToAr[i]}</span>
               </div>
-              ${oxford3000[key].notes ? oxford3000[key].notes[i] && '<p class="notes">' + oxford3000[key].notes[i].trim().split(" ").map(element => element == "\n"? "<br>" : `<span class='wordsChildOfNotes'>${element}</span>`).join(" ") + "</p>" : ""}
+              ${oxford3000[key].notes ? '<p class="notes">↳ ' + oxford3000[key].notes[i].trim().split(" ").map(element => element == "\n"? "<br>" : `<span class='wordsChildOfNotes'>${element}</span>`).join(" ") + "</p>" : ""}
               
             </div>
           `;

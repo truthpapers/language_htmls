@@ -193,11 +193,11 @@
             <div class="example-container">
               <div class="ar-en">
                 <li class="example">
-                  <span class="en-part">${examples[i].split(" ").map((word) => `<span class="word">${word}</span>`).join(" ")} </span> <span class="ar-part" dir="rtl"> ${examplesToAr[i]} </span>
+                  <span class="en-part">${examples[i].split(" ").map((word) => `<span class="word">${word}</span>`).join(" ")} </span> <span class="ar-part ar-readable" dir="rtl"> ${examplesToAr[i]} </span>
                   
                   <div class="notes">
                     <span class="notes-arrow"></span> 
-                    <span class="box-after-arrow" dir="auto">${note ? note : ""}</span>
+                    <span class="box-after-arrow ar-readable" dir="auto">${note ? note : ""}</span>
                 </div>
                 </li>
                 
@@ -326,7 +326,7 @@
 
     }
 
-    const exampleTranslation = document.querySelectorAll(".ar-part")
+    const exampleTranslation = document.querySelectorAll(".ar-readable")
     exampleTranslation.forEach(element =>{
       element.addEventListener("click",()=>{
           const utterance = new SpeechSynthesisUtterance();

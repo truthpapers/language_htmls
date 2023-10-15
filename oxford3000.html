@@ -105,9 +105,11 @@
     
     padding: 5px;
     text-align: start;
+    border-right: 1px solid green;
    }
    .notes{
     display: flex;
+    
    }
    .notes .notes-arrow{
     display: flex;
@@ -195,11 +197,7 @@
               <div class="ar-en">
                 <li class="example">
                   <span class="en-part">${examples[i].split(" ").map((word) => `<span class="en-word">${word}</span>`).join(" ")} </span> <span class="ar-part ar-sentence" dir="rtl"> ${examplesToAr[i]} </span>
-                  
-                  <div class="notes">
-                    <span class="notes-arrow"></span> 
-                    <span class="box-after-arrow ar-sentence" dir="auto">${note ? note : ""}</span>
-                </div>
+                    ${note ? `<span class="box-after-arrow ar-sentence" dir="auto"> ${note}</span>` : ""}
                 </li>
                 
               </div>

@@ -452,7 +452,7 @@ export const oxford3000 = {
         "examplesToAr":["دعنا نبدأ من الصفحة ٩."],
         "notes":[],
         "dict":{
-            "Let's":"دعنا",
+            "let's":"دعنا",
             "begin":"نبدأ",
             "from":"من",
             "page":"صفحة",

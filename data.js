@@ -450,7 +450,7 @@ export const oxford3000 = {
         "translation": 'يبدأ',
         "examples": ["Let's begin from page 9."],
         "examplesToAr":["دعنا نبدأ من الصفحة ٩."],
-        "notes":[],
+        "notes":["أصل Let us : Let's دعـنا"],
         "dict":{
             "let's":"دعنا",
             "begin":"نبدأ",

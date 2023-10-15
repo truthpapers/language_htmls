@@ -73,11 +73,9 @@
 
    
 
-    .example-container {
+    .example{
       margin-bottom: 30px;
-      /* border-left: 1px solid gray; */
     }
-
     .entry-container {
       margin-bottom: 50px;
     }
@@ -118,6 +116,10 @@
    }
    .ar-part{
     color: gray;
+    display: inline;
+   }
+   .en-part{
+    display: inline;
    }
   </style>
 </head>
@@ -193,16 +195,16 @@
           console.log(note)
           ul.innerHTML += `
         
-            <div class="example-container">
-              <div class="ar-en">
+            
+              
                 <li class="example">
-                  <span class="en-part">${examples[i].split(" ").map((word) => `<span class="en-word">${word}</span>`).join(" ")} </span> <span class="ar-part ar-sentence" dir="rtl"> ${examplesToAr[i]} </span>
-                    ${note ? `<span class="box-after-arrow ar-sentence" dir="auto"> ${note}</span>` : ""}
+                  <p class="en-part">${examples[i].split(" ").map((word) => `<span class="en-word">${word}</span>`).join(" ")} </p> <p class="ar-part ar-sentence" dir="rtl"> ${examplesToAr[i]} </p>
+                    ${note ? `<p class="box-after-arrow ar-sentence" dir="auto"> ${note}</p>` : ""}
                 </li>
                 
-              </div>
               
-            </div>
+              
+          
           `;
         }
 

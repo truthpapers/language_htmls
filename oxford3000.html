@@ -93,12 +93,12 @@
       border-bottom: 1px solid gray;
       margin-left: 5px;
     }
-    .entry-head .en-word, .en-word-translation {
+    .entry-head .en-word, .ar-word {
       color: rgb(102, 157, 252);
      
     }
 
-   .box-after-arrow{
+   .note-on-example{
     display: flex;
     
     padding: 5px;
@@ -114,11 +114,11 @@
     justify-content: center;
     align-items: center;
    }
-   .ar-part{
+   .sentence-translation{
     color: gray;
     display: inline;
    }
-   .en-part{
+   .en-sentence{
     display: inline;
    }
   </style>
@@ -165,14 +165,15 @@
         const entryContainer = document.createElement("div");
         entryContainer.classList.add("entry-container");
         const ul = document.createElement("ul")
+        ul.classList.add("entry-body")
 
         entryContainer.innerHTML = `
         <div class="entry-head">
       <h3>
         <span class="en-word">${key}</span> 
-        <span class="en-word-translation">${wordTranslation}</span> 
+        <span class="ar-word">${wordTranslation}</span> 
       </h3>
-      <span class="related">${oxford3000[key].related? oxford3000[key].related : ""}</span>
+      ${ oxford3000[key].related? `<span class="related">${oxford3000[key].related}</span>` : `` }
       </div>
       
     `;
@@ -198,8 +199,8 @@
             
               
                 <li class="example">
-                  <p class="en-part">${examples[i].split(" ").map((word) => `<span class="en-word">${word}</span>`).join(" ")} </p> <p class="ar-part ar-sentence" dir="rtl"> ${examplesToAr[i]} </p>
-                    ${note ? `<p class="box-after-arrow ar-sentence" dir="auto"> ${note}</p>` : ""}
+                  <p class="en-sentence">${examples[i].split(" ").map((word) => `<span class="en-word">${word}</span>`).join(" ")} </p> <p class="sentence-translation ar-sentence" dir="rtl"> ${examplesToAr[i]} </p>
+                    ${note ? `<p class="note-on-example ar-sentence" dir="auto"> ${note}</p>` : ""}
                 </li>
                 
               
@@ -327,19 +328,29 @@
 
     }
 
-    const exampleTranslation = document.querySelectorAll(".ar-sentence")
-    exampleTranslation.forEach(element =>{
+    const exampleTranslations = document.querySelectorAll(".ar-sentence")
+    exampleTranslations.forEach(element =>{
       element.addEventListener("click",()=>{
           const utterance = new SpeechSynthesisUtterance();
-          utterance.text = element.innerText.trim()
+          utterance.text = element.innerText
           utterance.lang = "ar-SA"; // Set the language to Arabic (Saudi Arabia)
           speechSynthesis.speak(utterance);
       })
     })
 
-    const boxAfterArrow = document.querySelectorAll('.box-after-arrow')
+    const wordTranslations = document.querySelectorAll(".ar-word")
+    wordTranslations.forEach(element =>{
+      element.addEventListener("click",()=>{
+          const utterance = new SpeechSynthesisUtterance();
+          utterance.text = element.innerText
+          utterance.lang = "ar-SA"; // Set the language to Arabic (Saudi Arabia)
+          speechSynthesis.speak(utterance);
+      })
+    })
+
+    const boxAfterArrow = document.querySelectorAll('.note-on-example')
     boxAfterArrow.forEach(element=>{
-      element.style.width = element.parentElement.parentElement.querySelector(".en-part").offsetWidth + "px"
+      element.style.width = element.parentElement.parentElement.querySelector(".en-sentence").offsetWidth + "px"
     })
 
   </script>

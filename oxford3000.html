@@ -282,13 +282,13 @@
 
         popupBox.style.top = rect.bottom + 8 + "px";
         popupBox.style.left = 0;
-      } else if (popupRightEdge > window.innerWidth) {
+      } else if (popupRightEdge >= window.innerWidth) {
         popupArrow.style.left = middleOfWordCoord - 13 + "px";
         popupArrow.style.top = rect.bottom + 3 + "px";
 
         popupBox.style.top = rect.bottom + 8 + "px";
         popupBox.style.right = window.innerWidth;
-      } else {
+      } else if (popupRightEdge < window.innerWidth) {
         popupArrow.style.left = middleOfWordCoord - 13 + "px";
         popupArrow.style.top = rect.bottom + 3 + "px";
 

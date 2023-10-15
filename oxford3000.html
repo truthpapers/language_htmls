@@ -94,7 +94,7 @@
       margin-bottom: 20px;
       border-bottom: 1px solid gray;
     }
-    .entry-head .word, .word-translation {
+    .entry-head .en-word, .en-word-translation {
       color: rgb(102, 157, 252);
      
     }
@@ -164,8 +164,8 @@
         entryContainer.innerHTML = `
         <div class="entry-head">
       <h3>
-        <span class="word">${key}</span> 
-        <span class="word-translation">${wordTranslation}</span> 
+        <span class="en-word">${key}</span> 
+        <span class="en-word-translation">${wordTranslation}</span> 
       </h3>
       <span class="related">${oxford3000[key].related? oxford3000[key].related : ""}</span>
       </div>
@@ -193,11 +193,11 @@
             <div class="example-container">
               <div class="ar-en">
                 <li class="example">
-                  <span class="en-part">${examples[i].split(" ").map((word) => `<span class="word">${word}</span>`).join(" ")} </span> <span class="ar-part ar-readable" dir="rtl"> ${examplesToAr[i]} </span>
+                  <span class="en-part">${examples[i].split(" ").map((word) => `<span class="en-word">${word}</span>`).join(" ")} </span> <span class="ar-part ar-sentence" dir="rtl"> ${examplesToAr[i]} </span>
                   
                   <div class="notes">
                     <span class="notes-arrow"></span> 
-                    <span class="box-after-arrow ar-readable" dir="auto">${note ? note : ""}</span>
+                    <span class="box-after-arrow ar-sentence" dir="auto">${note ? note : ""}</span>
                 </div>
                 </li>
                 
@@ -231,7 +231,7 @@
       endIndex
     );
 
-    const pronouncables = document.querySelectorAll(".word");
+    const pronouncables = document.querySelectorAll(".en-word");
     const popupBox = document.getElementById("popupBox");
     const popupArrow = document.getElementById("popupArrow");
 
@@ -326,7 +326,7 @@
 
     }
 
-    const exampleTranslation = document.querySelectorAll(".ar-readable")
+    const exampleTranslation = document.querySelectorAll(".ar-sentence")
     exampleTranslation.forEach(element =>{
       element.addEventListener("click",()=>{
           const utterance = new SpeechSynthesisUtterance();

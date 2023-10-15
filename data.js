@@ -429,7 +429,7 @@ export const oxford3000 = {
     "become":{
         "translation": 'أصبح',
         "examples": ["the situation has become very dangerous", "How can I become a doctor?",],
-        "examplesToAr":["أصْبَحَ الوَضْعُ خَطيراً جِدّاً", "كيف أستطيع أصبح  دكتوراً"],
+        "examplesToAr":["أصْبَحَ الوَضْعُ خطيراً جِدّاً", "كيف أستطيع أصبح  دكتوراً"],
         "notes":["يعني صار خطير وإلى الآن خطير . لو مافي has معناها عم يتحدث عن شي بالماضي البعيد والوضع الآن آمن.  ",""],
         "dict":{
             "the":"الـ",

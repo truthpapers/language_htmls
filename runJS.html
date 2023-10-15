@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+        const arabicText = "الكتاب جميل والكتّاب مبدعون في كتابة صائم  باع صوم أولياء يوالون وال صام الكتب.";
+        const rootToSearch = "ولي";
+        const rootToSearch1 = "صوم";
+        const rootToSearch3 = "صام";
+        const arLetters = 'جحخهعغفقثصضكمنتلبسشرزدذطظ'
+        const illaLetters = 'اإأآىةيوؤئء'
+        const illTrio = 'اوي'
+        
+        // 
+        function searchText(textInput, searchInput) {
+            textInputArr = textInput.split(" ")
+            searchInputArr = searchInput.split("").filter((element) => arLetters.includes(element) || illaLetters.includes(element))
+            const searchInputArrWithAleph = earchInputArr.map(element => element == "و" ? "ا" : element)
+
+            /* 
+                        for (let i = 0; i < searchInputArr.length; i++) {
+                            if (searchInputArr[i] == "و") {
+                                const searchInputArrWithAleph = earchInputArr.map(element => element == "")
+                            }
+                        }
+             */
+            // Return the array of matched words
+
+            //return matches || [];
+        }
+
+        //const matches = searchText(arabicText, rootToSearch);
+        //console.log(matches);
+        const searchInputArr = rootToSearch.split("").filter((element) => arLetters.includes(element) || illaLetters.includes(element))
+
+        const replacementMap = {
+            "ا":["و","ي"],
+            "و":["ا","ي"],
+            "ي":["ا","و"],
+        }
+        for (let i = 0; i < searchInputArr.length; i++) {
+            if(searchInputArr[i]=== "و"){
+                const searchInputArrWithAleph1 = searchInputArr.map(element => element == "و" ? "ا" : element)
+                const searchInputArrWithYa2 = searchInputArr.map(element => element == "و" ? "ي" : element)
+                console.log(searchInputArrWithAleph1)
+                console.log(searchInputArrWithYa2)
+                console.log('t')
+            }
+            else if(searchInputArr[i]=== "ي"){
+                const searchInputArrWithAleph3 = searchInputArr.map(element => element == "ي" ? "ا" : element)
+                const searchInputArrWithWa4 = searchInputArr.map(element => element == "ي" ? "و" : element)
+                console.log(searchInputArrWithAleph3)
+                console.log(searchInputArrWithWa4)
+            }
+            else if(searchInputArr[i]=== "ا"){
+                const searchInputArrWithWa5 = searchInputArr.map(element => element == "ا" ? "و" : element)
+                const searchInputArrWithYa6 = searchInputArr.map(element => element == "ا" ? "ي" : element)
+                console.log(searchInputArrWithWa5)
+                console.log(searchInputArrWithYa6)
+            }
+            
+        }
+        
+        console.log(searchInputArr)
+        
+        //console.log(rootToSearch.split("").filter((element) => arLetters.includes(element) || illaLetters.includes(element)))
+
+
+
+    </script>
+
+
+</body>
+
+</html>

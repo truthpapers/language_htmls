@@ -9,6 +9,7 @@
     * {
       margin-top: 0;
       margin-right: 0;
+      margin-left: 0;
       margin-bottom: 0;
 
       box-sizing: border-box;
@@ -17,6 +18,8 @@
     body {
       background-color: black;
       color: white;
+      margin-left: 7px;
+      margin-right: 5px;
     }
     #popupBox {
       position: absolute;
@@ -81,8 +84,7 @@
 
     .example-translation {
       color: gray;
-      text-align: end;
-      
+      display: inline;
     }
     .ar-en{
       display: flex;
@@ -97,7 +99,23 @@
      
     }
 
-   
+   .box-after-arrow{
+    display: flex;
+    
+    padding: 5px;
+    text-align: start;
+   }
+   .notes{
+    display: flex;
+   }
+   .notes .notes-arrow{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   }
+   .ar-part{
+    color: gray;
+   }
   </style>
 </head>
 
@@ -123,7 +141,7 @@
 
     let explainWordObj = {};
 
-    const startIndex = 25;
+    const startIndex = 27;
     const endIndex = 2;
     const keys = Object.keys(oxford3000);
     const punctuationRegex = /[.,\/#!$%^&*;:{}=\-_`~()?!]/;
@@ -149,7 +167,7 @@
         <span class="word">${key}</span> 
         <span class="word-translation">${wordTranslation}</span> 
       </h3>
-      <span class="related">${oxford3000[key].related}</span>
+      <span class="related">${oxford3000[key].related? oxford3000[key].related : ""}</span>
       </div>
       
     `;
@@ -163,15 +181,27 @@
                 <p class="example">${examples[i].split(" ").map((word) => `<span class="word">${word}</span>`).join(" ")}${punctuationRegex.test( examples[i].split(" ")[examples[i].split(" ").length-1] )? "" : "."}</p>${oxford3000[key].notes ? oxford3000[key].notes[i] && '<p class="notes">' + oxford3000[key].notes[i].trim().split(" ").map(element => element == "\n"? "<br>" : `<span class='wordsChildOfNotes'>${element}</span>`).join(" ") + "</p>" : ""}
             </div>
           `; */
+          // oxford3000[key].notes[i].trim()
+          let  note
+          if(oxford3000[key].notes[i]){
+             note = oxford3000[key].notes[i]
+          }
           
+          console.log(note)
           ul.innerHTML += `
         
             <div class="example-container">
               <div class="ar-en">
-                <li class="example">${examples[i].split(" ").map((word) => `<span class="word">${word}</span>`).join(" ")}</li>
-                <span dir="rtl" class="example-translation">${examplesToAr[i]}</span>
+                <li class="example">
+                  <span class="en-part">${examples[i].split(" ").map((word) => `<span class="word">${word}</span>`).join(" ")} </span> <span class="ar-part" dir="rtl"> ${examplesToAr[i]} </span>
+                  
+                  <div class="notes">
+                    <span class="notes-arrow"></span> 
+                    <span class="box-after-arrow" dir="auto">${note ? note : ""}</span>
+                </div>
+                </li>
+                
               </div>
-              ${oxford3000[key].notes ? '<p class="notes">↳ ' + oxford3000[key].notes[i].trim().split(" ").map(element => element == "\n"? "<br>" : `<span class='wordsChildOfNotes'>${element}</span>`).join(" ") + "</p>" : ""}
               
             </div>
           `;
@@ -304,6 +334,11 @@
           utterance.lang = "ar-SA"; // Set the language to Arabic (Saudi Arabia)
           speechSynthesis.speak(utterance);
       })
+    })
+
+    const boxAfterArrow = document.querySelectorAll('.box-after-arrow')
+    boxAfterArrow.forEach(element=>{
+      element.style.width = element.parentElement.parentElement.querySelector(".en-part").offsetWidth + "px"
     })
 
   </script>

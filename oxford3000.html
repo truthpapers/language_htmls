@@ -18,12 +18,14 @@
     body {
       background-color: black;
       color: white;
-      
+
     }
-    h1{
+
+    h1 {
       text-align: center;
       margin-bottom: 40px;
     }
+
     #popupBox {
       position: absolute;
       background-color: darkgray;
@@ -63,24 +65,26 @@
       background-color: yellow;
     }
 
-    
-    header{
+
+    header {
       margin-bottom: 50px;
     }
+
     header a {
       margin: 10px;
       text-decoration: none;
       color: lightblue;
     }
 
-  
 
 
-   
 
-    .example{
+
+
+    .example {
       margin-bottom: 30px;
     }
+
     .entry-container {
       margin-bottom: 50px;
     }
@@ -89,43 +93,51 @@
       color: gray;
       display: inline;
     }
-    .ar-en{
+
+    .ar-en {
       display: flex;
       gap: 5px;
     }
-    .entry-head{
+
+    .entry-head {
       margin-bottom: 20px;
       border-bottom: 1px solid gray;
       margin-left: 5px;
     }
-    .entry-head .en-word, .ar-word {
+
+    .entry-head .en-word,
+    .ar-word {
       color: rgb(102, 157, 252);
-     
+
     }
 
-   .note-on-example{
-    display: flex;
-    
-    padding: 5px;
-    text-align: start;
-    border-right: 2px solid green;
-   }
-   .notes{
-    display: flex;
-    
-   }
-   .notes .notes-arrow{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-   }
-   .sentence-translation{
-    color: gray;
-    display: inline;
-   }
-   .en-sentence{
-    display: inline;
-   }
+    .note-on-example {
+      display: flex;
+
+      padding: 5px;
+      text-align: start;
+      border-right: 2px solid green;
+    }
+
+    .notes {
+      display: flex;
+
+    }
+
+    .notes .notes-arrow {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .sentence-translation {
+      color: gray;
+      display: inline;
+    }
+
+    .en-sentence {
+      display: inline;
+    }
   </style>
 </head>
 
@@ -150,8 +162,8 @@
 
     let explainWordObj = {};
 
-    const startIndex = 27;
-    const endIndex = 2;
+    const startIndex = 28;
+    const endIndex = 4;
     const keys = Object.keys(oxford3000);
     const punctuationRegex = /[.,\/#!$%^&*;:{}=\-_`~()?!]/;
     for (let i = startIndex; i < startIndex + endIndex; i++) {
@@ -163,8 +175,8 @@
 
         const key = keys[i];
         const wordTranslation = oxford3000[key].translation;
-        const examples = oxford3000[key].examples; //returns an array
-        const examplesToAr = oxford3000[key].examplesToAr; //returns an array
+        const examples = oxford3000[key].examples || []//returns an array
+        const examplesToAr = oxford3000[key].examplesToAr || []; //returns an array
 
         const entryContainer = document.createElement("div");
         entryContainer.classList.add("entry-container");
@@ -177,26 +189,19 @@
         <span class="en-word">${key}</span> 
         <span class="ar-word">${wordTranslation}</span> 
       </h3>
-      ${ oxford3000[key].related? `<span class="related">${oxford3000[key].related}</span>` : `` }
+      ${oxford3000[key].related ? `<p class="related">${ oxford3000[key].related.split(" ").map(element => element == "\n"? `<br>` : `<span class="${/^[a-zA-Z\s]+$/.test(element)?'en-word':'ar-word'}">${element}</span>`).join(" ") }</p>` : ``}
       </div>
       
     `;
 
         //
         for (let i = 0; i < examplesToAr.length; i++) {
-          /* entryContainer.innerHTML += `
-        
-            <div class="example-container">
-                <p dir="rtl" class="example-translation">${punctuationRegex.test( examplesToAr[i].split(" ")[examplesToAr[i].split(" ")-1] ) ? examplesToAr[i] : examplesToAr[i]+"." }</p>
-                <p class="example">${examples[i].split(" ").map((word) => `<span class="word">${word}</span>`).join(" ")}${punctuationRegex.test( examples[i].split(" ")[examples[i].split(" ").length-1] )? "" : "."}</p>${oxford3000[key].notes ? oxford3000[key].notes[i] && '<p class="notes">' + oxford3000[key].notes[i].trim().split(" ").map(element => element == "\n"? "<br>" : `<span class='wordsChildOfNotes'>${element}</span>`).join(" ") + "</p>" : ""}
-            </div>
-          `; */
-          // oxford3000[key].notes[i].trim()
-          let  note
-          if(oxford3000[key].notes[i]){
-             note = oxford3000[key].notes[i]
+
+          let note
+          if (oxford3000[key] && oxford3000[key].notes && oxford3000[key].notes[i]) {
+            note = oxford3000[key].notes[i];
           }
-          
+
           console.log(note)
           ul.innerHTML += `
         
@@ -246,18 +251,18 @@
     }
 
     function getElementDocumentPosition(element) {
-  const rect = element.getBoundingClientRect();
-  
-  // Get the current scroll position of the document
-  const scrollX = window.scrollX || window.pageXOffset;
-  const scrollY = window.scrollY || window.pageYOffset;
-  
-  // Calculate the position relative to the document
-  const top = rect.top + scrollY;
-  const left = rect.left + scrollX;
-  
-  return { top, left, width: rect.width, height: rect.height, right: rect.right + scrollX, bottom: rect.bottom + scrollY };
-}
+      const rect = element.getBoundingClientRect();
+
+      // Get the current scroll position of the document
+      const scrollX = window.scrollX || window.pageXOffset;
+      const scrollY = window.scrollY || window.pageYOffset;
+
+      // Calculate the position relative to the document
+      const top = rect.top + scrollY;
+      const left = rect.left + scrollX;
+
+      return { top, left, width: rect.width, height: rect.height, right: rect.right + scrollX, bottom: rect.bottom + scrollY };
+    }
 
     function wordExplainPopup(wordEvent) {
       wordEvent.stopPropagation();
@@ -333,27 +338,27 @@
     }
 
     const exampleTranslations = document.querySelectorAll(".ar-sentence")
-    exampleTranslations.forEach(element =>{
-      element.addEventListener("click",()=>{
-          const utterance = new SpeechSynthesisUtterance();
-          utterance.text = element.innerText
-          utterance.lang = "ar-SA"; // Set the language to Arabic (Saudi Arabia)
-          speechSynthesis.speak(utterance);
+    exampleTranslations.forEach(element => {
+      element.addEventListener("click", () => {
+        const utterance = new SpeechSynthesisUtterance();
+        utterance.text = element.innerText
+        utterance.lang = "ar-SA"; // Set the language to Arabic (Saudi Arabia)
+        speechSynthesis.speak(utterance);
       })
     })
 
     const wordTranslations = document.querySelectorAll(".ar-word")
-    wordTranslations.forEach(element =>{
-      element.addEventListener("click",()=>{
-          const utterance = new SpeechSynthesisUtterance();
-          utterance.text = element.innerText
-          utterance.lang = "ar-SA"; // Set the language to Arabic (Saudi Arabia)
-          speechSynthesis.speak(utterance);
+    wordTranslations.forEach(element => {
+      element.addEventListener("click", () => {
+        const utterance = new SpeechSynthesisUtterance();
+        utterance.text = element.innerText
+        utterance.lang = "ar-SA"; // Set the language to Arabic (Saudi Arabia)
+        speechSynthesis.speak(utterance);
       })
     })
 
     const boxAfterArrow = document.querySelectorAll('.note-on-example')
-    boxAfterArrow.forEach(element=>{
+    boxAfterArrow.forEach(element => {
       element.style.width = element.parentElement.parentElement.querySelector(".en-sentence").offsetWidth + "px"
     })
 

@@ -447,7 +447,7 @@ export const oxford3000 = {
         }
     },
     "begin":{
-        "translation": 'يبدأ',
+        "translation": 'فعل بمعنى يبدأ',
         "examples": ["Let's begin from page 9."],
         "examplesToAr":["دعنا نبدأ من الصفحة ٩."],
         "notes":["أصل Let us : Let's دعـنا"],
@@ -458,7 +458,38 @@ export const oxford3000 = {
             "page":"صفحة",
             "9.":"٩",
         }
-    }
+    },
+    "beginning":{
+        "translation": 'اسم بمعنى بداية',
+        "examples": ["The beginning, the middle, the end"],
+        "examplesToAr":["البداية، الوسط، النهاية"],
+        "notes":["أصل Let us : Let's دعـنا"],
+        "dict":{
+            "the":"الـ",
+            "beginning":"بداية",
+            "middle":"وسط",
+            "end":"نهاية",
+        }
+    },
+    "behind":{
+        "translation": 'خلف',
+        "related": "عكسها: in front of أمام",
+        "examples": ["who is behind this proposal?"],
+        "examplesToAr":["مَنْ وَراءَ هذا الاقْتِراحِ؟"],
+        
+        "dict":{
+           "who":"من",
+           "is":"يكون",
+           "behind":"وراء",
+           "this":"هذا",
+           "proposal":"الاقتراح",
+           
+        }
+    },
+    "below":{
+        "translation": 'تحت',
+        "related": "Below تحت \n Above فوق \n Low منخفض \n Law قانون \n High عالي"
+    },
 }
 
 

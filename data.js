@@ -488,7 +488,7 @@ export const oxford3000 = {
     },
     "below":{
         "translation": 'تحت',
-        "related": "Below تحت \n Above فوق \n Low منخفض \n Law قانون \n High عالي"
+        "related": " Above فوق \n Low منخفض \n Law قانون \n High عالي"
     },
 }
 

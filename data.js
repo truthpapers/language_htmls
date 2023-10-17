@@ -508,14 +508,14 @@ export const oxford3000 = {
         }
     },
     "break":{
-        "translation": "استراحة أو يكسر",
+        "translation": "( حسب السياق )استراحة أو يكسر",
         "examples":["Let's take a break.", "Don't break it."],
         "examplesToAr":["دعنا نأخذ استراحةً.","لا تكسرها"],
         
             "dict":{"Let's":"دعنا",
             "take":"نأخذ",
             "a":"ـً",
-            "break":"استراحة",
+            "break":"استراحة أو يكسر ، حسب السياق",
             "don't":"لا",
             "it":"ضمير ها في تكسرها",
             }

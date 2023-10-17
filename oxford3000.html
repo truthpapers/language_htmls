@@ -162,8 +162,8 @@
 
     let explainWordObj = {};
 
-    const startIndex = 28;
-    const endIndex = 4;
+    const startIndex = 32;
+    const endIndex = 3;
     const keys = Object.keys(oxford3000);
     const punctuationRegex = /[.,\/#!$%^&*;:{}=\-_`~()?!]/;
     for (let i = startIndex; i < startIndex + endIndex; i++) {
@@ -175,8 +175,8 @@
 
         const key = keys[i];
         const wordTranslation = oxford3000[key].translation;
-        const examples = oxford3000[key].examples || []//returns an array
-        const examplesToAr = oxford3000[key].examplesToAr || []; //returns an array
+        const examples = oxford3000[key].examples || [""]//returns an array
+        const examplesToAr = oxford3000[key].examplesToAr || [""]; //returns an array
 
         const entryContainer = document.createElement("div");
         entryContainer.classList.add("entry-container");
@@ -202,7 +202,6 @@
             note = oxford3000[key].notes[i];
           }
 
-          console.log(note)
           ul.innerHTML += `
         
             

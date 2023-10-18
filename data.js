@@ -535,6 +535,50 @@ export const oxford3000 = {
             "you":"ـك",
             }
     },
+    "build":{
+        "translation":"يبني",
+        "examples": ["I like software because I like building apps."],
+        "notes":["g لا تلفظ building"],
+"examplesToAr": ["أنا أحب السوفتوير لأني أنا أحب بناء الأشياء"],
+"dict":{
+    "i":"أنا",
+    "like":"أحب",
+    "software":"السوفتوير(البرمجة)",
+    "because":"لأن",
+    "building":"بناء",
+    "apps":"تطبيقات",
+  
+}
+
+    },
+    "busy":{
+        "translation":"مشغول",
+        "examples": ["I am busy. call later."],
+"examplesToAr": ["أنا مشغولٌ. اتصل لاحقاً."],
+"dict":{
+    "i":"",
+    "am":"ـٌ",
+    "busy":"",
+    "call":"اتصل",
+    "later":"لاحقاً",
+  
+}
+
+    },
+    "business":{
+        "translation":"شغل/شركة",
+        "examples": ["I have my own business",],
+"examplesToAr": ["أنا عندي شُغْلْي الخاص",],
+"dict":{
+    "i":"أنا",
+    "have":"أملك",
+    "my":"ـي",
+    "own":"خاص",
+    "business":"شغل/عمل/شركة",
+  
+}
+
+    }
 
 }
 

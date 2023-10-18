@@ -162,7 +162,7 @@
 
     let explainWordObj = {};
 
-    const startIndex = 32;
+    const startIndex = 35;
     const endIndex = 3;
     const keys = Object.keys(oxford3000);
     const punctuationRegex = /[.,\/#!$%^&*;:{}=\-_`~()?!]/;
@@ -208,7 +208,7 @@
               
                 <li class="example">
                   <p class="en-sentence">${examples[i].split(" ").map((word) => `<span class="en-word">${word}</span>`).join(" ")} </p> <p class="sentence-translation ar-sentence" dir="rtl"> ${examplesToAr[i]} </p>
-                    ${note ? `<p class="note-on-example ar-sentence" dir="auto"> ${note}</p>` : ""}
+                    ${note ? `<p class="note-on-example ar-sentence" dir="rtl"> ${note}</p>` : ""}
                 </li>
                 
               

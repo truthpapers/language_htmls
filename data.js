@@ -556,9 +556,9 @@ export const oxford3000 = {
         "examples": ["I am busy. call later."],
 "examplesToAr": ["أنا مشغولٌ. اتصل لاحقاً."],
 "dict":{
-    "i":"",
+    "i":"أنا",
     "am":"ـٌ",
-    "busy":"",
+    "busy":"مشغول",
     "call":"اتصل",
     "later":"لاحقاً",
   

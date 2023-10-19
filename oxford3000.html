@@ -278,7 +278,7 @@
 
         popupBox.innerHTML = `
             <h4 class="popup-heading"> ${wordEvent.target.innerText} </h4>
-            <div class="popup-body">${explainWordObj[wordEvent.target.innerText.trim().toLowerCase().replace(/[^a-zA-Z']+/g, '')] || "---"}</div>
+            <div class="popup-body" dir="rtl">${explainWordObj[wordEvent.target.innerText.trim().toLowerCase().replace(/[^a-zA-Z']+/g, '')] || "---"}</div>
         `;
 
         const rect = getElementDocumentPosition(wordEvent.currentTarget);

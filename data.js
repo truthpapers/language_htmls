@@ -342,243 +342,313 @@ export const oxford3000 = {
     "away": {
         "translation": "بعيد",
         "examples": ["The beach is 500 metres away from here", "Go away"],
-        "examplesToAr": ["الشاطئ بعيد ٥٠ متر من هنا","ابتعد"],
+        "examplesToAr": ["الشاطئ بعيد ٥٠ متر من هنا", "ابتعد"],
         "dict": {
-            "the":"الـ",
-            "beach":"شاطئ",
-            "is":"يكون",
-            "500":"٥٠٠",
-            "metres":"متر",
-            "away":"بعيد",
-            "from":"من",
-            "here":"هنا",
-            "go":"أذهب",
-       
+            "the": "الـ",
+            "beach": "شاطئ",
+            "is": "يكون",
+            "500": "٥٠٠",
+            "metres": "متر",
+            "away": "بعيد",
+            "from": "من",
+            "here": "هنا",
+            "go": "أذهب",
+
         }
     },
     "back": {
         "translation": " ظهر / خلف",
-        "examples": ["Put the book back on the shelf","It takes me an hour to walk there and back", "Go back", "I have pain in my back", "We were sitting in the back row not the front row"],
-        "examplesToAr": ["ضع الكتاب مرة أخرى على الرف","يستغرق مني ساعةٍ للمشي هناك والعودة","عُد/أرجع", "أنا عندي ألم في ظهري", "نحن كنا نجلس في الصف الخلفي ليس الصف الأمامي"],
+        "examples": ["Put the book back on the shelf", "It takes me an hour to walk there and back", "Go back", "I have pain in my back", "We were sitting in the back row not the front row"],
+        "examplesToAr": ["ضع الكتاب مرة أخرى على الرف", "يستغرق مني ساعةٍ للمشي هناك والعودة", "عُد/أرجع", "أنا عندي ألم في ظهري", "نحن كنا نجلس في الصف الخلفي ليس الصف الأمامي"],
         "dict": {
-            "put":"ضع",
-            "the":"الـ",
-            "book":"كتاب",
-            "back":" عودة / ظهر / خلف",
-            "on":"على",
-            "shelf":"رف",
-            "it":"هي/هو لغير العاقل",
-            "takes":"يأخذ",
-            "me":"مني/ ـي ",
-            "an":"تنوين ـٍ",
-            "hour":"ساعة",
-            "to":"لـ/إلى",
-            "walk":"يمشي",
-            "there":"هناك",
-            "and":"و",
-            "Go":"أذهب",
-            "i":"أنا",
-            "have":"عندي/أملك",
-            "pain":"وجع",
-            "in":"في",
-            "my":"ـي",
-            "We":"نحن",
-            "were":"كنا/كانوا",
-            "sitting":"جالسين",
-            "in":"في",
-            "row":"صف",
-            "not":"ليس/لا",
-            "front":"أمامي",
+            "put": "ضع",
+            "the": "الـ",
+            "book": "كتاب",
+            "back": " عودة / ظهر / خلف",
+            "on": "على",
+            "shelf": "رف",
+            "it": "هي/هو لغير العاقل",
+            "takes": "يأخذ",
+            "me": "مني/ ـي ",
+            "an": "تنوين ـٍ",
+            "hour": "ساعة",
+            "to": "لـ/إلى",
+            "walk": "يمشي",
+            "there": "هناك",
+            "and": "و",
+            "Go": "أذهب",
+            "i": "أنا",
+            "have": "عندي/أملك",
+            "pain": "وجع",
+            "in": "في",
+            "my": "ـي",
+            "We": "نحن",
+            "were": "كنا/كانوا",
+            "sitting": "جالسين",
+            "in": "في",
+            "row": "صف",
+            "not": "ليس/لا",
+            "front": "أمامي",
         }
     },
-    "bad":{
+    "bad": {
         "translation": "سيء/شر/عيب/ضار",
-        "related":["عكسها: goodخير/مفيد"],
+        "related": "عكسها: goodخير/مفيد",
         "examples": ["Smoking is bad for you."],
-        
-        "examplesToAr":["التدخين مضرٌ لك."],
+
+        "examplesToAr": ["التدخين مضرٌ لك."],
         "dict": {
-            "smoking":"التدخين",
-            "is":"ـٌ",
-            "bad":"سيء/شر/عيب/ضار",
-            "for":"لـ",
-            "you":"ـك",
+            "smoking": "التدخين",
+            "is": "ـٌ",
+            "bad": "سيء/شر/عيب/ضار",
+            "for": "لـ",
+            "you": "ـك",
         },
     },
 
-    "bag":{
+    "bag": {
         "translation": "كيس/حقيبة",
         "related": "جمع: bags ",
-        "examples": ["would you like a bag?","I packed my bags and left."],
-        "examplesToAr":["هل تود كيساً؟","حزمت حقائبي وغادرت."],
-        "notes":["would you like ... أتود ...","pack حزمة"],
+        "examples": ["would you like a bag?", "I packed my bags and left."],
+        "examplesToAr": ["هل تود كيساً؟", "حزمت حقائبي وغادرت."],
+        "notes": ["would you like ... أتود ...", "pack حزمة"],
         "dict": {
-            "would":"would you like أتود",
-            "you":"أنت",
-            "like":"تحب",
-            "a":"ـاً",
-            "bag":"كيس/حقيبة",
-            "i":"أنا",
-            "packed":"محزوم/حزمت",
-            "my":"ـي",
-            "bags":"حقائب",
-            "and":"و",
-            "left":"غادرت",
-        } 
+            "would": "would you like أتود",
+            "you": "أنت",
+            "like": "تحب",
+            "a": "ـاً",
+            "bag": "كيس/حقيبة",
+            "i": "أنا",
+            "packed": "محزوم/حزمت",
+            "my": "ـي",
+            "bags": "حقائب",
+            "and": "و",
+            "left": "غادرت",
+        }
     },
-    "become":{
+    "become": {
         "translation": 'أصبح',
         "examples": ["the situation has become very dangerous", "How can I become a doctor?",],
-        "examplesToAr":["أصْبَحَ الوَضْعُ خطيراً جِدّاً", "كيف أستطيع أصبح  دكتوراً؟"],
-        "notes":["يعني صار خطير وإلى الآن خطير . لو مافي has معناها عم يتحدث عن شي بالماضي البعيد والوضع الآن آمن.  ",""],
-        "dict":{
-            "the":"الـ",
-            "situation":"وضع",
-            "has":"يعني صار خطير وإلى الآن خطير . لو مافي has معناها عم يتحدث عن شي بالماضي البعيد والوضع الآن آمن.  ",
-            "become":"أصبح",
-            "very":"كثير",
-            "dangerous":"خطير",
-            "how":"كيف",
-            "can":"أستطيع",
-            "i":"أنا",
-            "become":"أصبح",
-            "a":"اً",
-            "doctor":"دكتور",
+        "examplesToAr": ["أصْبَحَ الوَضْعُ خطيراً جِدّاً", "كيف أستطيع أصبح  دكتوراً؟"],
+        "notes": ["يعني صار خطير وإلى الآن خطير . لو مافي has معناها عم يتحدث عن شي بالماضي البعيد والوضع الآن آمن.  ", ""],
+        "dict": {
+            "the": "الـ",
+            "situation": "وضع",
+            "has": "يعني صار خطير وإلى الآن خطير . لو مافي has معناها عم يتحدث عن شي بالماضي البعيد والوضع الآن آمن.  ",
+            "become": "أصبح",
+            "very": "كثير",
+            "dangerous": "خطير",
+            "how": "كيف",
+            "can": "أستطيع",
+            "i": "أنا",
+            "become": "أصبح",
+            "a": "اً",
+            "doctor": "دكتور",
         }
     },
-    "begin":{
+    "begin": {
         "translation": 'فعل بمعنى يبدأ',
         "examples": ["Let's begin from page 9."],
-        "examplesToAr":["دعنا نبدأ من الصفحة ٩."],
-        "notes":["أصل Let us : Let's دعـنا"],
-        "dict":{
-            "let's":"دعنا",
-            "begin":"نبدأ",
-            "from":"من",
-            "page":"صفحة",
-            "9.":"٩",
+        "examplesToAr": ["دعنا نبدأ من الصفحة ٩."],
+        "notes": ["أصل Let us : Let's دعـنا"],
+        "dict": {
+            "let's": "دعنا",
+            "begin": "نبدأ",
+            "from": "من",
+            "page": "صفحة",
+            "9.": "٩",
         }
     },
-    "beginning":{
+    "beginning": {
         "translation": 'اسم بمعنى بداية',
         "examples": ["The beginning, the middle, the end"],
-        "examplesToAr":["البداية، الوسط، النهاية"],
-        "notes":["أصل Let us : Let's دعـنا"],
-        "dict":{
-            "the":"الـ",
-            "beginning":"بداية",
-            "middle":"وسط",
-            "end":"نهاية",
+        "examplesToAr": ["البداية، الوسط، النهاية"],
+        "notes": ["أصل Let us : Let's دعـنا"],
+        "dict": {
+            "the": "الـ",
+            "beginning": "بداية",
+            "middle": "وسط",
+            "end": "نهاية",
         }
     },
-    "behind":{
+    "behind": {
         "translation": 'خلف',
         "related": "عكسها: in front of أمام",
         "examples": ["who is behind this proposal?"],
-        "examplesToAr":["مَنْ وَراءَ هذا الاقْتِراحِ؟"],
-        
-        "dict":{
-           "who":"من",
-           "is":"يكون",
-           "behind":"وراء",
-           "this":"هذا",
-           "proposal":"الاقتراح",
-           
+        "examplesToAr": ["مَنْ وَراءَ هذا الاقْتِراحِ؟"],
+
+        "dict": {
+            "who": "من",
+            "is": "يكون",
+            "behind": "وراء",
+            "this": "هذا",
+            "proposal": "الاقتراح",
+
         }
     },
-    "below":{
+    "below": {
         "translation": 'تحت',
         "related": " Above فوق \n Low منخفض \n Law قانون \n High عالي"
     },
-    "both":{
+    "both": {
         "translation": "كلاهما",
-        "examples":["Both are good", "I have 2 brothers. Both live in London",],
-        "examplesToAr":["كلاهما طيب", "أنا عندي أخوين. الاثنين يعيشان في لندن",],
-        "dict":{
-            "both":"كلاهما",
-            "are":"",
-            "good":"طيب",
-            "i":"أنا",
-            "have":"عندي",
-            "2":"٢",
-            "brothers":"إخوة",
-            "live":"يعيش",
-            "in":"في",
-            "london":"لندن",
+        "examples": ["Both are good", "I have 2 brothers. Both live in London",],
+        "examplesToAr": ["كلاهما طيب", "أنا عندي أخوين. الاثنين يعيشان في لندن",],
+        "dict": {
+            "both": "كلاهما",
+            "are": "",
+            "good": "طيب",
+            "i": "أنا",
+            "have": "عندي",
+            "2": "٢",
+            "brothers": "إخوة",
+            "live": "يعيش",
+            "in": "في",
+            "london": "لندن",
         }
     },
-    "break":{
+    "break": {
         "translation": "( حسب السياق )استراحة أو يكسر",
-        "examples":["Let's take a break.", "Don't break it."],
-        "examplesToAr":["دعنا نأخذ استراحةً.","لا تكسرها"],
-        
-            "dict":{"Let's":"دعنا",
-            "take":"نأخذ",
-            "a":"ـً",
-            "break":"استراحة أو يكسر ، حسب السياق",
-            "don't":"لا",
-            "it":"ضمير 'ها' في تكسرها",
-            }
+        "examples": ["Let's take a break.", "Don't break it."],
+        "examplesToAr": ["دعنا نأخذ استراحةً.", "لا تكسرها"],
+
+        "dict": {
+            "Let's": "دعنا",
+            "take": "نأخذ",
+            "a": "ـً",
+            "break": "استراحة أو يكسر ، حسب السياق",
+            "don't": "لا",
+            "it": "ضمير 'ها' في تكسرها",
+        }
     },
-    "bring":{
+    "bring": {
         "translation": "جلب/جاب",
-        "examples":["Don't forget to bring your books with you."],
-        "examplesToAr":["لا تنسى تجيب كتبك معك"],
-        "dict":{
-            "don't":"لا",
-            "forget":"تنسى",
-            "to":"أن",
-            "bring":"تجلب",
-            "your":"ـك",
-            "books":"كتب",
-            "with":"مع",
-            "you":"ـك",
-            }
+        "examples": ["Don't forget to bring your books with you."],
+        "examplesToAr": ["لا تنسى تجيب كتبك معك"],
+        "dict": {
+            "don't": "لا",
+            "forget": "تنسى",
+            "to": "أن",
+            "bring": "تجلب",
+            "your": "ـك",
+            "books": "كتب",
+            "with": "مع",
+            "you": "ـك",
+        }
     },
-    "build":{
-        "translation":"يبني",
+    "build": {
+        "translation": "يبني",
         "examples": ["I like software because I like building apps."],
-        "notes":["g لا تلفظ building"],
-"examplesToAr": ["أنا أحب السوفتوير لأني أنا أحب بناء الأشياء"],
-"dict":{
-    "i":"أنا",
-    "like":"أحب",
-    "software":"السوفتوير(البرمجة)",
-    "because":"لأن",
-    "building":"بناء",
-    "apps":"تطبيقات",
-  
-}
+        "notes": ["g لا تلفظ building"],
+        "examplesToAr": ["أنا أحب السوفتوير لأني أنا أحب بناء الأشياء"],
+        "dict": {
+            "i": "أنا",
+            "like": "أحب",
+            "software": "السوفتوير(البرمجة)",
+            "because": "لأن",
+            "building": "بناء",
+            "apps": "تطبيقات",
+
+        }
 
     },
-    "busy":{
-        "translation":"مشغول",
+    "busy": {
+        "translation": "مشغول",
         "examples": ["I am busy. call later."],
-"examplesToAr": ["أنا مشغولٌ. اتصل لاحقاً."],
-"dict":{
-    "i":"أنا",
-    "am":"ـٌ",
-    "busy":"مشغول",
-    "call":"اتصل",
-    "later":"لاحقاً",
-  
-}
+        "examplesToAr": ["أنا مشغولٌ. اتصل لاحقاً."],
+        "dict": {
+            "i": "أنا",
+            "am": "ـٌ",
+            "busy": "مشغول",
+            "call": "اتصل",
+            "later": "لاحقاً",
+
+        }
 
     },
-    "business":{
-        "translation":"شغل/شركة",
+    "business": {
+        "translation": "شغل/شركة",
         "examples": ["I have my own business",],
-"examplesToAr": ["أنا عندي شُغْلْي الخاص",],
-"dict":{
-    "i":"أنا",
-    "have":"أملك",
-    "my":"ـي",
-    "own":"خاص",
-    "business":"شغل/عمل/شركة",
-  
-}
+        "examplesToAr": ["أنا عندي شُغْلْي الخاص",],
+        "dict": {
+            "i": "أنا",
+            "have": "أملك",
+            "my": "ـي",
+            "own": "خاص",
+            "business": "شغل/عمل/شركة",
 
-    }
+        }
+
+    },
+
+    "carry": {
+        "translation": "يحمل",
+        "related":"",
+        "examples": ["Don't carry heavy things",],
+        "examplesToAr": ["لا تحمل أشياء ثقيلة",],
+        "notes":["",],
+        "dict": {
+            "don't":"",
+            "carry":"",
+            "heavy":"",
+            "things":"",
+        }
+
+    },
+    "centre": {
+        "translation": "مركز",
+        "related":"",
+        "examples": ["city centre",],
+        "examplesToAr": ["مركز المدينة",],
+        "notes":["بالأمريكي center",],
+        "dict": {
+            "city":"مدينة",
+            "centre":"مركز",
+        }
+
+    },
+    "change": {
+        "translation": "يحول/يغير/يبدل",
+        "related":"",
+        "examples": ["Things have changed", "You need to change your bad habits"],
+        "examplesToAr": ["الأشياء تغيرت","أنت تحتاج أن تغير عاداتك السيئة"],
+        "notes":["بسبب وجود have ، هذا يعني الأشياء تغيرت وما زلنا نعيش هذا التغير .",""],
+        "dict": {
+            "things":"الأشياء",
+            "have":"بسبب وجود have ، هذا يعني الأشياء تغيرت وما زلنا نعيش هذا التغير.",
+            "changed":"تغيرت",
+            "you":"أنت",
+            "need":"يحتاج",
+            "to":"أن",
+            "change":"يغير",
+            "your":"ـك",
+            "bad":"سيء",
+            "habits":"عادات",
+     
+        }
+
+    },
+    "": {
+        "translation": "",
+        "related":"",
+        "examples": ["",],
+        "examplesToAr": ["",],
+        "notes":["",],
+        "dict": {
+            "":"",
+            "":"",
+            "":"",
+            "":"",
+            "":"",
+            "":"",
+            "":"",
+            "":"",
+            "":"",
+            "":"",
+            "":"",
+        }
+
+    },
 
 }
 

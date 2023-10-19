@@ -14879,13 +14879,13 @@ const quran_words_set = [
 const waws = quran_words_set.filter(item => item.startsWith("ال"));
 
 console.log(waws)
-/* 
-const keyValuePairs = {};
+ 
+//const keyValuePairs = {};
 
-for (let i = 0; i < quran_set_no_numbers.length; i++) {
-  keyValuePairs[quran_set_no_numbers[i]] = "";
-}
-*/
+//for (let i = 0; i < quran_set_no_numbers.length; i++) {
+//  keyValuePairs[quran_set_no_numbers[i]] = "";
+//}
+
 
 // Convert the filtered array to a string
 //const quran_set_no_numbers_string = JSON.stringify(quran_set_no_numbers, null, 2);

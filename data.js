@@ -588,10 +588,10 @@ export const oxford3000 = {
         "examplesToAr": ["لا تحمل أشياء ثقيلة",],
         "notes":["",],
         "dict": {
-            "don't":"",
-            "carry":"",
-            "heavy":"",
-            "things":"",
+            "don't":"لا",
+            "carry":"تحمل",
+            "heavy":"ثقيل",
+            "things":"أشياء",
         }
 
     },

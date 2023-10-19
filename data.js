@@ -586,7 +586,7 @@ export const oxford3000 = {
         "related":"",
         "examples": ["Don't carry heavy things",],
         "examplesToAr": ["لا تحمل أشياء ثقيلة",],
-        "notes":["",],
+        "notes":["light خفيف",],
         "dict": {
             "don't":"لا",
             "carry":"تحمل",

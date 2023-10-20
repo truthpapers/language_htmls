@@ -651,7 +651,7 @@ export const oxford3000 = {
     },
     "chicken": {
         "translation": "دجاج",
-        "related":"beef لحم بقر\n fish سمك",
+        "related":"beef لحم بقر , fish سمك , pork لحم خنزير",
         "examples": ["",],
         "examplesToAr": ["",],
         "notes":["",],

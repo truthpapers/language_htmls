@@ -162,8 +162,8 @@
 
     let explainWordObj = {};
 
-    const startIndex = 38;
-    const endIndex = 3;
+    const startIndex = 41;
+    const endIndex = 4;
     const keys = Object.keys(oxford3000);
     const punctuationRegex = /[.,\/#!$%^&*;:{}=\-_`~()?!]/;
     for (let i = startIndex; i < startIndex + endIndex; i++) {
@@ -189,7 +189,7 @@
         <span class="en-word">${key}</span> 
         <span class="ar-word">${wordTranslation}</span> 
       </h3>
-      ${oxford3000[key].related ? `<p class="related">${oxford3000[key].related.split(" ").map(element => element == "\n" ? `<br><br>` : `<span class="${/^[a-zA-Z\s]+$/.test(element) ? 'en-word' : 'ar-word'}">${element}</span>`).join(" ")}</p>` : ``}
+      ${oxford3000[key].related ? `<p class="related">${oxford3000[key].related.split(" ").map(element => `<span class="${/^[a-zA-Z\s]+$/.test(element) ? 'en-word' : 'ar-word'}">${element}</span>`).join(" ")}</p>` : ``}
       </div>
       
     `;
@@ -201,8 +201,8 @@
           if (oxford3000[key] && oxford3000[key].notes && oxford3000[key].notes[i]) {
             note = oxford3000[key].notes[i];
           }
-
-          ul.innerHTML += `
+          if(examples[0]){
+            ul.innerHTML += `
         
             
               
@@ -214,7 +214,9 @@
               
               
           
-          `;
+           `
+          }
+          
         }
 
         l1.appendChild(entryContainer);

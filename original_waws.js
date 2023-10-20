@@ -1,4 +1,3 @@
-
 const quran_words_set = [
     "بسم",
     "الله",
@@ -14869,6 +14868,7 @@ const quran_words_set = [
     "الخناس",
     "يوسوس"
 ]
+//const quran_words_set_sorted = 
 console.log(quran_words_set.length)
 
 const extra_letters = "سألتمونيها"

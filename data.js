@@ -701,7 +701,7 @@ export const oxford3000 = {
         "related":"",
         "examples": ["His house is clean", "His house was clean", "He cleaned his car."],
         "examplesToAr": ["بيته نظيفٌ","بيته كان نظيف","هو نظف سيارته",],
-        "notes":["",],
+        "notes":["clean هنا صفة","clean هنا صفة","clean هنا فعل",],
         "dict": {
             "his":"ـه",
             "house":"بيت",

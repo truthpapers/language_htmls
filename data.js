@@ -760,7 +760,7 @@ export const oxford3000 = {
         "related":"",
         "examples": ["Put on your cloth, we have to go",],
         "examplesToAr": ["ألبس ملابسك يجب أن نذهب",],
-        "notes":["put ضع ، on على ، put on ألبس ، take off اخلع ، have to يجب/لازم",],
+        "notes":["put ضع <br> on على <br> put on ألبس <br> take off اخلع <br> have to يجب/لازم",],
         "dict": {
             "put":"ضع",
             "on":"على",

@@ -9,7 +9,7 @@ fs.readFile('quran.txt', 'utf8', (err, data) => {
     const wordsArr = data.split(" "); 
 
     
-    const wordsString = wordsArr.join("\n");
+    const wordsString = wordsArr.join("  \n  ");
     console.log(wordsString)
     
     fs.writeFile('output.txt', wordsString, 'utf8', (err) => {

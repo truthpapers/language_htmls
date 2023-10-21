@@ -758,21 +758,19 @@ export const oxford3000 = {
     "clothes": {
         "translation": "ملابس",
         "related":"",
-        "examples": ["",],
-        "examplesToAr": ["",],
-        "notes":["",],
+        "examples": ["Put on your cloth, we have to go",],
+        "examplesToAr": ["ألبس ملابسك يجب أن نذهب",],
+        "notes":["put ضع ، on على ، put on ألبس ، take off اخلع ، have to يجب/لازم",],
         "dict": {
-            "":"",
-            "":"",
-            "":"",
-            "":"",
-            "":"",
-            "":"",
-            "":"",
-            "":"",
-            "":"",
-            "":"",
-            "":"",
+            "put":"ضع",
+            "on":"على",
+            "your":"ـك",
+            "clothes":"ملاببس",
+            "we":"نحن",
+            "have":"هنا have to لازم",
+            "to":"هنا have to لازم",
+            "go":"يذهب",
+           
         }
 
     },

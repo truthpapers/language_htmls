@@ -774,87 +774,75 @@ export const oxford3000 = {
         }
 
     },
-    "": {
+    "cloud": {
         "translation": "",
         "related":"",
-        "examples": ["",],
-        "examplesToAr": ["",],
+        "examples": ["a cloud of dust",],
+        "examplesToAr": ["سحابةٌ من الغبار",],
         "notes":["",],
         "dict": {
-            "":"",
-            "":"",
-            "":"",
-            "":"",
-            "":"",
-            "":"",
-            "":"",
-            "":"",
-            "":"",
-            "":"",
-            "":"",
+            "cloud":"سحابة",
+            "a":"ـٌ",
+            "of":"من",
+            "dust":"غبار",
         }
 
     },
-    "": {
+    "coast": {
         "translation": "",
         "related":"",
-        "examples": ["",],
-        "examplesToAr": ["",],
+        "examples": ["Jeddah is a coastal city.",],
+        "examplesToAr": ["جدة مدينةٌ ساحليةٌ.",],
         "notes":["",],
         "dict": {
-            "":"",
-            "":"",
-            "":"",
-            "":"",
-            "":"",
-            "":"",
-            "":"",
-            "":"",
-            "":"",
-            "":"",
-            "":"",
+            "coast":"ساحل",
+        "examples": ["Jeddah is a coastal city.",],
+            "Jeddah":"",
+            "is":"ـٌ",
+            "a":"ـٌ",
+            "coastal":"ساحلية",
+            "city":"مدينة",
+            
         }
 
     },
-    "": {
+    "coat": {
         "translation": "",
         "related":"",
-        "examples": ["",],
-        "examplesToAr": ["",],
-        "notes":["",],
+        "examples": ["The cookies were thickly coated with chocolate.",],
+        "examplesToAr": ["البسكويت كان بشكل سميك مغطاً ب الشوكلاة ",],
+        "notes":["thick سميك , thickly بشكل سميك",],
         "dict": {
+            "coat":"اسم بمعنى معطف أو فعل بمعنى يغطي",
+            "the":"الـ",
+            "cookies":"بسكوت",
+            "were":"كان",
+            "thickly":"بشكل سميك",
+            "coated":"غطى",
+            "with":"بـ",
+            "chocolate":"شوكولا",
             "":"",
-            "":"",
-            "":"",
-            "":"",
-            "":"",
-            "":"",
-            "":"",
-            "":"",
-            "":"",
-            "":"",
-            "":"",
+            
         }
 
     },
-    "": {
+    "collect": {
         "translation": "",
         "related":"",
-        "examples": ["",],
-        "examplesToAr": ["",],
+        "examples": ["Facebook collects a lot of data from users",],
+        "examplesToAr": ["فيسبوك يجمع الكثير من ال الداتا(معلومات) من المستخدمين",],
         "notes":["",],
         "dict": {
+            "facebook":"قيسبوك",
+            "collects":"",
+            "a":"a lot of كثير من",
+            "lot":"a lot of كثير من",
+            "of":"من",
+            "data":"داتا (معلومات)",
+            "from":"من",
+            "users":"مستخدمين",
             "":"",
-            "":"",
-            "":"",
-            "":"",
-            "":"",
-            "":"",
-            "":"",
-            "":"",
-            "":"",
-            "":"",
-            "":"",
+           
         }
 
     },

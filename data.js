@@ -812,6 +812,7 @@ export const oxford3000 = {
         "examples": ["The cookies were thickly coated with chocolate.",],
         "examplesToAr": ["البسكويت كان بشكل سميك مغطاً ب الشوكولا ",],
         "notes":["thick سميك , thickly بشكل سميك",],
+        "pictures":["/pictures_dict/cookies.jpg"],
         "dict": {
             "coat":"اسم بمعنى معطف أو فعل بمعنى يغطي",
             "the":"الـ",
@@ -833,8 +834,9 @@ export const oxford3000 = {
         "examplesToAr": ["فيسبوك يجمع الكثير من ال الداتا(معلومات) من المستخدمين",],
         "notes":["",],
         "dict": {
+            "collect":"يجمع",
             "facebook":"قيسبوك",
-            "collects":"",
+            "collects":"يجمع",
             "a":"a lot of كثير من",
             "lot":"a lot of كثير من",
             "of":"من",

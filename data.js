@@ -810,7 +810,7 @@ export const oxford3000 = {
         "translation": "",
         "related":"",
         "examples": ["The cookies were thickly coated with chocolate.",],
-        "examplesToAr": ["البسكويت كان بشكل سميك مغطاً ب الشوكلاة ",],
+        "examplesToAr": ["البسكويت كان بشكل سميك مغطاً ب الشوكولا ",],
         "notes":["thick سميك , thickly بشكل سميك",],
         "dict": {
             "coat":"اسم بمعنى معطف أو فعل بمعنى يغطي",

@@ -874,7 +874,7 @@ export const oxford3000 = {
         "examplesToAr": ["الثعبان لف نفسه حول فرعٍ/غصنٍ ",],
         "notes":["",],
         "dict": {
-            "coil":"لف",
+            "coil":"يلف",
             "the":"الـ",
             "snake":"ثعبان",
             "coiled":"لف",

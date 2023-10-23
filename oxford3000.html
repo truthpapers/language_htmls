@@ -114,14 +114,13 @@
     .note-on-example {
       display: flex;
       flex-direction: column;
+      
       gap: 20px;
       padding: 5px;
       text-align: start;
       border-right: 2px solid green;
     }
-    .picture-on-example{
-      width: 150px;
-    }
+   
 
     .notes {
       display: flex;
@@ -171,8 +170,8 @@
 
     let explainWordObj = {};
 
-    const startIndex = 48;
-    const endIndex = 4;
+    const startIndex = 52;
+    const endIndex = 2;
     const keys = Object.keys(oxford3000);
     const punctuationRegex = /[.,\/#!$%^&*;:{}=\-_`~()?!]/;
     for (let i = startIndex; i < startIndex + endIndex; i++) {
@@ -216,23 +215,22 @@
           }
           if(examples[0]){
             ul.innerHTML += `
-        
-            
               
                 <li class="example">
                   <p class="en-sentence">${examples[i].split(" ").map((word) => `<span class="en-word">${word}</span>`).join(" ")} </p> <p class="sentence-translation ar-sentence" dir="rtl"> ${examplesToAr[i]} </p>
-
+                  ${note || picture ? `<div class="note-on-example">
                   
-                    ${note ? `<div class="note-on-example"> <p class="text-on-example ar-sentence" dir="rtl"> ${note}</p>` : ""}
+                    ${note ? ` <p class="text-on-example ar-sentence" dir="rtl">  ${note} </p>`:"" }
             
                     ${picture ? 
                       `
                       <figure>
-                        <img src="${picture}" class="picture-on-example" alt="${picture}">
-                        <figcaption>${picture.match(/\/pictures_dict\/(.*).jpg/)?.[1]}</figcaption>
+                        <a href="${picture}"><img src="${picture}" class="picture-on-example" alt="${picture.includes("!")? picture.match(/\/([^/]+)\.(jpg|jpeg|png)$/i)?.[1].slice(1) : picture.match(/\/([^/]+)\.(jpg|jpeg|png)$/i)?.[1]}"></a>
+                        ${!picture.includes("!")? `<figcaption>${picture.match(/\/([^/]+)\.(jpg|jpeg|png)$/i)?.[1]}</figcaption>`:""}
                       </figure>`
-                       : ""}
-                  </div>   
+                    : ""}
+                  </div>`:""}  
+
                 </li>
                 
               
@@ -390,6 +388,11 @@
     const boxAfterArrow = document.querySelectorAll('.note-on-example')
     boxAfterArrow.forEach(element => {
       element.style.width = element.parentElement.querySelector(".en-sentence").offsetWidth + "px"
+    })
+
+    const pictureOnExample = document.querySelectorAll('.picture-on-example')
+    pictureOnExample.forEach(element => {
+      element.style.width = element.closest(".example").querySelector(".en-sentence").offsetWidth + "px"
     })
 
   </script>

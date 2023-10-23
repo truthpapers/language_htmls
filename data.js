@@ -848,45 +848,41 @@ export const oxford3000 = {
         }
 
     },
-    "": {
+    "coin": {
         "translation": "",
-        "related":"",
-        "examples": ["",],
-        "examplesToAr": ["",],
+        "related":"انظر إلى الصورة",
+        "examples": ["two sides of the same coin",],
+        "examplesToAr": ["وجهان لعملة واحدة/وجهان لنفس العملة",],
         "notes":["",],
+        "pictures":["pictures_dict/!money.png",],
         "dict": {
+            "coin":"مصاري حديد",
+            "two":"اثنان",
+            "sides":"جوانب \n مفردها side ",
+            "of":"من",
+            "the":"الـ",
+            "same":"نفس",
             "":"",
-            "":"",
-            "":"",
-            "":"",
-            "":"",
-            "":"",
-            "":"",
-            "":"",
-            "":"",
-            "":"",
-            "":"",
+           
         }
 
     },
-    "": {
+    "coil": {
         "translation": "",
         "related":"",
-        "examples": ["",],
-        "examplesToAr": ["",],
+        "examples": ["The snake coiled itself around a branch.",],
+        "examplesToAr": ["الثعبان لف نفسه حول فرعٍ/غصنٍ ",],
         "notes":["",],
         "dict": {
-            "":"",
-            "":"",
-            "":"",
-            "":"",
-            "":"",
-            "":"",
-            "":"",
-            "":"",
-            "":"",
-            "":"",
-            "":"",
+            "coil":"لف",
+            "the":"الـ",
+            "snake":"ثعبان",
+            "coiled":"لف",
+            "itself":"نفسه",
+            "around":"حول",
+            "a":"ـٍ",
+            "branch":"فرع/غصن",
+           
         }
 
     },

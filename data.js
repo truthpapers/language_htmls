@@ -1335,6 +1335,51 @@ export const oxford3000 = [
         }
 
     },
+    {
+        "key":"ad",
+        "related":"ads إعلانات",
+        "examples":[
+            {
+                "enSentence":"You can download an app to block ads on Youtube",
+                "arSentence":"أنت تستطيع تحمل برنامجاً لحظر الإعلانات على يوتيوب",
+                "note":"",
+                "picture":"",
+            }
+        ],
+        "dict":{
+            "you":"أنت",
+            "can":"يستطيع",
+            "download":"يحمل",
+            "an":"ـاً",
+            "app":"برنامج",
+            "to":"لـ",
+            "block":"يحظر",
+            "ads":"إعلانات",
+            "ad":"إعلان",
+            "on":"على",
+            "youtube":"يوتيوب",
+        }
+    },
+    {
+        "key":"colour",
+        "related":"بالأمريكي: color",
+        "examples":[
+            {
+                "enSentence":"What is your favourite colour?",
+                "arSentence":"ما هو لونك المفضل؟",
+                "note":"",
+                "picture":"",
+            }
+        ],
+        "dict":{
+            "what":"ما",
+            "is":"هو",
+            "your":"ـك",
+            "favourite":"المفضل",
+            "colour":"لون",
+           
+        }
+    },
 
 ]
 

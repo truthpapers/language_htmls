@@ -76,8 +76,7 @@
     <script type="module">
         import { oxford3000 } from "/data.js";
         
-        const startIndex = 52;
-        const endIndex = 54; 
+        
         const punctuationRegex = /[.,\/#!$%^&*;:{}=\-_`~()?!]/;
         let chunkFromOxford3000 = []
         let oxford3000Html = `
@@ -102,6 +101,9 @@
                     border-left: 2px solid green;
                     padding: 10px;
                 }
+                .entry{
+                  margin-bottom:150px;
+                }
                 .entry .head{
                     border-bottom: 1px solid gray;
                     color: rgb(102, 157, 252);
@@ -116,7 +118,7 @@
             </style>
         `; 
 
-    for (let i = startIndex; i < endIndex; i++) {
+    for (let i = 54; i < 56; i++) {
         chunkFromOxford3000.push(oxford3000[i])
         oxford3000Html += `
             <div class="entry">

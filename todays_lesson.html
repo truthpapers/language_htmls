@@ -75,9 +75,8 @@
 
     <script type="module">
         import { oxford3000 } from "/data.js";
-        
-        
-        const punctuationRegex = /[.,\/#!$%^&*;:{}=\-_`~()?!]/;
+        //const punctuationRegex = /[.,\/#!$%^&*;:{}=\-_`~()?!]/;
+        const popupBox = document.getElementById("popupBox")
         let chunkFromOxford3000 = []
         let oxford3000Html = `
           <style>
@@ -215,19 +214,18 @@
             }
           }
     
-    
+          popupBox.addEventListener("click", (e) => {
+            e.stopPropagation(); 
+          });
           document.addEventListener("click", closePopupOnClickOutside);
         }
     
     function closePopupOnClickOutside(e) {
-      if (
-        !e.target.classList.contains("pronounceable") &&
-        e.target.id !== "popupBox"
-      ) {
+      
         popupBox.style.display = "none";
         popupArrow.style.display = "none";
         document.removeEventListener("click", closePopupOnClickOutside);
-      }
+      
     }
     function getElementDocumentPosition(element) {
       const rect = element.getBoundingClientRect();

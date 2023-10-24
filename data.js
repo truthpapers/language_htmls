@@ -1,8 +1,30 @@
-export const oxford3000 = {
-    "a": {
-        "translation": "أداة للتنكير، يقابلها بالعربية التنوين",
-        "examples": ["a student.", "a teacher", "There's a visitor", "a knife and fork"],
-        "examplesToAr": ["طالبٌ", "معلمٌ", "هناك زائرٌ", "سكينة وشوكة"],
+export const oxford3000 = [
+    {
+        "key":"a",
+        "examples":[
+            {
+                "enSentence": "a student.",
+                "arSentence":"طالبٌ",
+            },
+            
+            {
+                "enSentence": "a teacher",
+                "arSentence": "معلمٌ",
+               
+            },
+
+            {
+                "enSentence": "There's a visitor",
+                "arSentence":"هناك زائرٌ",
+                
+            },
+            {
+                "enSentence": "a knife and fork",
+                "arSentence":"سكينة وشوكة",
+               
+            },
+        ],
+        
         "dict": {
             "a": "أداة للتنكير، يقابلها بالعربية التنوين",
             "student": "طالب",
@@ -15,10 +37,41 @@ export const oxford3000 = {
 
         },
     },
-    "about": {
-        "translation": " حوالي أو عن",
-        "examples": ["It costs about 10 $", "They waited (for) about an hour", "He arrived (at) about ten", "Are you talking about residence permit?", "What are you talking about?", "Yes, I am talking about residence permit"],
-        "examplesToAr": ["هي تكلف حوالي ١٠ دولار", "هم انتظروا (لـ) حوالي ساعةً", "هو وصل حوالي (بـ) العاشرة", "عم تتحدث عن تصريح الإقامة؟", "ماذا تتحدث عن؟", "نعم، أنا أتحدث عن تصريح الإقامة"],
+    {
+        "key":"about",
+        examples:[
+            {
+                "enSentence": "It costs about 10 $",
+                "arSentence":"هي تكلف حوالي ١٠ دولار",
+                
+            },
+            {
+                "enSentence": "They waited (for) about an hour",
+                "arSentence":"هم انتظروا (لـ) حوالي ساعةً",
+                
+            },
+            {
+                "enSentence": "He arrived (at) about ten",
+                "arSentence":"هو وصل حوالي (بـ) العاشرة",
+                
+            },
+            {
+                "enSentence": "Are you talking about residence permit?",
+                "arSentence":"عم تتحدث عن تصريح الإقامة؟",
+                
+            },
+            {
+                "enSentence": "What are you talking about?",
+                "arSentence":"ماذا تتحدث عن؟",
+               
+            },
+            {
+                "enSentence": "Yes, I am talking about residence permit",
+                "arSentence":"نعم، أنا أتحدث عن تصريح الإقامة",
+               
+            },
+        ],
+
         "dict": {
             "it": "هي أو هو لغير العاقل",
             "costs": "تكلف",
@@ -42,10 +95,26 @@ export const oxford3000 = {
             "am": " I تجي مع ",
         },
     },
-    "above": {
-        "translation": "فوق",
-        "examples": ["70 or above", "We were flying above the clouds", "Your health is above everything",],
-        "examplesToAr": ["سبعين أو فوق", "نحن كنا نطير فوق الغيوم", "صحتك فوق كل شيء",],
+    {
+        "key":"above",
+        "examples":[
+            {
+                "enSentence": "70 or above",
+                "arSentence":"سبعين أو فوق",
+                
+            },
+            {
+                "enSentence": "We were flying above the clouds",
+                "arSentence":"نحن كنا نطير فوق الغيوم",
+              
+            },
+            {
+                "enSentence": "Your health is above everything",
+                "arSentence":"صحتك فوق كل شيء",
+              
+            },
+        ],
+
         "dict": {
             "or": "أو",
             "above": "فوق",
@@ -61,10 +130,15 @@ export const oxford3000 = {
     },
 
 
-    "action": {
-        "translation": "فعل",
-        "examples": ["Actions speak louder than words",],
-        "examplesToAr": ["الأفعال أعلى صوتا من الكلمات"],
+    {
+        "key":"action",
+        "examples":[
+            {
+                "enSentence": "Actions speak louder than words",
+                "arSentence":"الأفعال أعلى صوتا من الكلمات",
+              
+            },
+        ],
         "dict": {
             "actions": "أفعال",
             "action": "فعل",
@@ -74,37 +148,51 @@ export const oxford3000 = {
             "words": "كلمات",
         },
     },
-    "active": {
-        "translation": "فعل",
-        "examples": ["He is an active person"],
-        "examplesToAr": [" هو شخصٌ نشط"],
+    {
+        "key":"active",
+        "examples":[
+            {
+                "enSentence": "He is an active person",
+                "arSentence":" هو شخصٌ نشط",
+               
+            },
+        ],
+       
         "dict": {
             "active": "نشط",
             "he": "هو",
-            "is": "",
+            "is": "يكون",
             "an": " تنوين ـٌ",
             "a": " تنوين ـٌ",
             "person": "شخصٌ",
         }
     },
-    "actor": {
-        "translation": "ممثل أو فاعل (حسب السياق)",
-        "examples": [],
-        "examplesToAr": [],
+    {
+        "key":"actor",
         "dict": {
             "actor": "ممثل أو فاعل (حسب السياق)",
         }
     },
-    "actress": {
-        "translation": "ممثلة أو فاعلة (حسب السياق)",
-        "examples": [],
-        "examplesToAr": [],
+    {
+        "key":"actree",
+        
         "dict": { "actress": "ممثلة أو فاعلة (حسب السياق)" }
     },
-    "add": {
-        "translation": "يضيف",
-        "examples": ["Please, add my name to the list", "Add 9 to the total"],
-        "examplesToAr": ["رجاء، أضف اسمي إلي الليستا (يعني المجموعة)", "أضف ٩ إلى المجموع"],
+    {
+        "key":"add",
+        "examples":[
+            {
+                "enSentence": "Please, add my name to the list",
+                "arSentence":"رجاء، أضف اسمي إلي الليستا (يعني المجموعة)",
+               
+            },
+            {
+                "enSentence": "Please, add my name to the list",
+                "arSentence":"أضف ٩ إلى المجموع",
+                
+            },
+        ],
+       
         "dict": {
             "please,": "رجاء",
             "add": "أضف",
@@ -116,10 +204,17 @@ export const oxford3000 = {
             "total": "المجموع",
         }
     },
-    "address": {
-        "translation": "عنوان",
-        "examples": ["What is your address?"],
-        "examplesToAr": ["ما هو عنوانك؟"],
+    {
+        "key":"address",
+        "examples":[
+            {
+                "enSentence": "What is your address?",
+                "arSentence":"ما هو عنوانك؟",
+               
+            },
+          
+        ],
+       
         "dict": {
             "what": "ما/ماذا",
             "is": "هو",
@@ -129,10 +224,17 @@ export const oxford3000 = {
 
         }
     },
-    "afraid": {
-        "translation": "خائف",
-        "examples": ["Don't be afraid to ask if you don't understand"],
-        "examplesToAr": ["لا تكن خائف أن تسأل إذا أنت لا تفهم",],
+    {
+        "key":"afraid",
+        "examples":[
+            {
+                "enSentence": "Don't be afraid to ask if you don't understand",
+                "arSentence":"لا تكن خائف أن تسأل إذا أنت لا تفهم",
+               
+            },
+          
+        ],
+    
         "dict": {
             "don't": "لا",
             "be": "تكن/يكون",
@@ -145,10 +247,17 @@ export const oxford3000 = {
 
         },
     },
-    "after": {
-        "translation": "بعد",
-        "examples": ["We will leave after lunch"],
-        "examplesToAr": ["نحن سوف نغادر بعد الغداء"],
+    {
+        "key":"after",
+        "examples":[
+            {
+                "enSentence": "We will leave after lunch",
+                "arSentence":"نحن سوف نغادر بعد الغداء",
+               
+            },
+          
+        ],
+       
         "dict": {
             "we": "نحن",
             "will": "سوف",
@@ -158,11 +267,18 @@ export const oxford3000 = {
         }
 
     },
-    "all": {
-        "translation": "كل",
-        "examples": ["All people originate from Adam and Eve",],
-        "examplesToAr": ["كل الناس ينحدرون/يتجذرون من آدم وحواء",],
-        "notes": "origin  🔊: اسم بمعنى أصل/جذر  \n   originate 🔊: فعل بمعنى يتجذر/ينحدر",
+    {
+        "key":"all",
+        "examples":[
+            {
+                "enSentence": "All people originate from Adam and Eve",
+                "arSentence":"كل الناس ينحدرون/يتجذرون من آدم وحواء",
+                "note": "origin  🔊: اسم بمعنى أصل/جذر  \n   originate 🔊: فعل بمعنى يتجذر/ينحدر",
+            },
+
+        ],
+        
+        
         "dict": {
             "all": "كل",
             "people": "الناس",
@@ -173,10 +289,16 @@ export const oxford3000 = {
             "Eve": "حواء",
         },
     },
-    "another": {
-        "translation": "آخر",
-        "examples": ["That's another thing",],
-        "examplesToAr": ["ذلك شيء آخر"],
+    {
+        "key":"another",
+        "examples":[
+            {
+                "enSentence": "That's another thing",
+                "arSentence":"ذلك شيء آخر",
+            },
+
+        ],
+      
         "dict": {
             "that's": "ذلك",
             "another": "آخر",
@@ -184,10 +306,25 @@ export const oxford3000 = {
         }
     },
 
-    "answer": {
-        "translation": "جواب",
-        "examples": ["a question and answer session", "Do you know the answer?", "Answer me! Where were you?"],
-        "examplesToAr": ["جلسة سؤال و جواب", "هل تعرف الجواب", "جاوبني! أين كنت؟",],
+    {
+        "key":"answer",
+        "examples":[
+            {
+                "enSentence": "a question and answer session",
+                "arSentence":"جلسة سؤال و جواب",
+            },
+            {
+                "enSentence": "Do you know the answer?",
+                "arSentence":"هل تعرف الجواب",
+            },
+            {
+                "enSentence": "Answer me! Where were you?",
+                "arSentence":"جاوبني! أين كنت؟",
+            },
+
+
+        ],
+
         "dict": {
             "a": "تنوين ـً",
             "question": "سؤال",
@@ -206,10 +343,18 @@ export const oxford3000 = {
             "you?": "أنت",
         }
     },
-    "any": {
-        "translation": "أي",
-        "examples": ["Any questions?"],
-        "examplesToAr": ["أي أسئلة؟"],
+    {
+        "key":"any",
+        "examples":[
+            {
+                "enSentence":"Any questions?",
+                "arSentence":"أي أسئلة؟",
+            },
+          
+
+
+        ],
+       
         "dict": {
             "any": "أي",
             "Any": "أي",
@@ -217,10 +362,16 @@ export const oxford3000 = {
 
         }
     },
-    "anyone": {
-        "translation": "أي شخص",
-        "examples": ["Anyone can that"],
-        "examplesToAr": ["أي شخص يستطيع ذلك"],
+   {
+        "key":"anyone",
+        "examples":[
+            {
+                "enSentence":"Anyone can that",
+                "arSentence":"أي شخص يستطيع ذلك",
+            },
+
+        ],
+    
         "dict": {
             "anyone": "أي شخص",
             "can": "يستطيع",
@@ -228,19 +379,31 @@ export const oxford3000 = {
 
         }
     },
-    "anything": {
-        "translation": "أي شي",
-        "examples": ["Anything else?"],
-        "examplesToAr": ["أي شي تاني؟"],
+    {
+        "key":"anything",
+        "examples":[
+            {
+                "enSentence":"Anything else?",
+                "arSentence":"أي شي تاني؟",
+            },
+
+        ],
+      
         "dict": {
             "anything": "أي شي",
             "else?": "تاني/آخر",
         }
     },
-    "apartment": {
-        "translation": "شقة",
-        "examples": ["I am looking for an apartment"],
-        "examplesToAr": ["أنا عم أبحث عن شقةٍ"],
+    {
+        "key":"apartment",
+        "examples":[
+            {
+                "enSentence":"I am looking for an apartment",
+                "arSentence":"أنا عم أبحث عن شقةٍ",
+            },
+
+        ],
+    
         "dict": {
             "i": "أنا",
             "am": "عم",
@@ -251,10 +414,16 @@ export const oxford3000 = {
 
         }
     },
-    "area": {
-        "translation": "منطقة",
-        "examples": ["Do you live in this area?"],
-        "examplesToAr": ["هل تسكن في هذه المنطقة؟"],
+    {
+        "key":"area",
+        "examples":[
+            {
+                "enSentence":"Do you live in this area?",
+                "arSentence":"هل تسكن في هذه المنطقة؟",
+            },
+
+        ],
+       
         "dict": {
             "do": "هل",
             "you": "انت/انتم",
@@ -265,10 +434,19 @@ export const oxford3000 = {
             "area?": "المنطقة",
         }
     },
-    "around": {
-        "translation": "حول",
-        "examples": ["They were sitting around the fire", "He arrived around five o'clock"],
-        "examplesToAr": ["هم كانوا جالسين حول النار", "هو وصل حوالي الساعة خمسة"],
+    {
+        "key":"around",
+        "examples":[
+            {
+                "enSentence":"They were sitting around the fire",
+                "arSentence":"هم كانوا جالسين حول النار",
+            },
+            {
+                "enSentence":"He arrived around five o'clock",
+                "arSentence":"هو وصل حوالي الساعة خمسة",
+            },
+
+        ],
         "dict": {
             "they": "هم",
             "were": "كانوا",
@@ -282,10 +460,17 @@ export const oxford3000 = {
             "o'clock": "الساعة",
         }
     },
-    "arrive": {
-        "translation": "يصل",
-        "examples": ["I will wait until they arrive"],
-        "examplesToAr": ["أنا سوف أنتظر إلى أن يصلوا"],
+    {
+        "key":"arrive",
+        "examples":[
+            {
+                "enSentence":"I will wait until they arrive",
+                "arSentence":"أنا سوف أنتظر إلى أن يصلوا",
+            },
+          
+
+        ],
+       
         "dict": {
             "i": "أنا",
             "will": "سوف",
@@ -296,10 +481,17 @@ export const oxford3000 = {
 
         }
     },
-    "ask": {
-        "translation": "يسأل",
-        "examples": ["Can I ask a question?"],
-        "examplesToAr": ["أقدر أسئل سؤالاً؟"],
+     {
+        "key":"ask",
+        "examples":[
+            {
+                "enSentence":"Can I ask a question?",
+                "arSentence":"أقدر أسئل سؤالاً؟",
+            },
+          
+
+        ],
+        
         "dict": {
             "can": "أقدر",
             "i": "أنا",
@@ -309,11 +501,36 @@ export const oxford3000 = {
 
         }
     },
-    "as": {
-        "translation": "بـ / كما ",
-        "examples": ["as soon as possible", "Run as fast as you can", "As you know, Adam is leaving soon", "He behaved as if nothing had happened", "As for Max, he is fine"],
-        "examplesToAr": ["بأقرب ما يمكن/بأسرع وقت ممكن", "اركض بـاسرع ما يمكنك", "كما تعلم، آدم عم يغادر قريباً = كما تعلم، آدم سيغادر قريباً", "تصرف وكأن شيئًا لم يحدث", "بالنسبة لـ ماكس، هو بخير"],
-        "notes": [" ... as ... as ...  \n  ... بـ ... ما ...  ", "... as ... as ...  \n  ... بـ ... ما ...  ", " Adam is leaving soon = Adam will leave soon = آدم سوف يغادر قريباً", "  as if وكأن ", ""],
+    {
+        "key":"as",
+        "examples":[
+            {
+                "enSentence":"as soon as possible",
+                "arSentence":"بأقرب ما يمكن/بأسرع وقت ممكن",
+                "note":" ... as ... as ...  \n  ... بـ ... ما ...  ",
+            },
+            {
+                "enSentence":"Run as fast as you can",
+                "arSentence":"اركض بـاسرع ما يمكنك",
+                "note":"... as ... as ...  \n  ... بـ ... ما ...  ", 
+            },
+            {
+                "enSentence":"As you know, Adam is leaving soon",
+                "arSentence":"كما تعلم، آدم عم يغادر قريباً = كما تعلم، آدم سيغادر قريباً",
+                "mote":" Adam is leaving soon = Adam will leave soon = آدم سوف يغادر قريباً",
+            },
+            {
+                "enSentence":"He behaved as if nothing had happened",
+                "arSentence":"تصرف وكأن شيئًا لم يحدث",
+                "note":"as if وكأن"
+            },
+            {
+                "enSentence":"As for Max, he is fine",
+                "arSentence":"بالنسبة لـ ماكس، هو بخير"
+            },
+
+
+        ],
         "dict": {
             "run": "أركض",
             "fast": "سريع",
@@ -330,7 +547,7 @@ export const oxford3000 = {
             "behaved": "تصرف",
             "if": "إذا",
             "nothing": "لا شيء",
-            "had": "",
+            "had": "نستخدم had ، كي نبين أنه تصرفه كان بعد الحادث",
             "happened": "حدث",
             "for": "لـ",
             "max,": "ماكس",
@@ -339,10 +556,20 @@ export const oxford3000 = {
         }
     },
 
-    "away": {
-        "translation": "بعيد",
-        "examples": ["The beach is 500 metres away from here", "Go away"],
-        "examplesToAr": ["الشاطئ بعيد ٥٠ متر من هنا", "ابتعد"],
+    {
+        "key":"awat",
+        "examples":[
+            {
+                "enSentence":"The beach is 500 metres away from here",
+                "arSentence":"الشاطئ بعيد ٥٠ متر من هنا",
+            },
+            {
+                "enSentence":"Go away",
+                "arSentence":"ابتعد",
+                
+            },
+        ],
+    
         "dict": {
             "the": "الـ",
             "beach": "شاطئ",
@@ -356,10 +583,35 @@ export const oxford3000 = {
 
         }
     },
-    "back": {
-        "translation": " ظهر / خلف",
-        "examples": ["Put the book back on the shelf", "It takes me an hour to walk there and back", "Go back", "I have pain in my back", "We were sitting in the back row not the front row"],
-        "examplesToAr": ["ضع الكتاب مرة أخرى على الرف", "يستغرق مني ساعةٍ للمشي هناك والعودة", "عُد/أرجع", "أنا عندي ألم في ظهري", "نحن كنا نجلس في الصف الخلفي ليس الصف الأمامي"],
+    {
+        "key":"back",
+        "examples":[
+           
+            {
+                "enSentence":"Put the book back on the shelf",
+                "arSentence":"ضع الكتاب مرة أخرى على الرف",
+            },
+            {
+                "enSentence":"It takes me an hour to walk there and back",
+                "arSentence":"يأخذ مني ساعةٍ للمشي هناك والعودة",
+                
+            },
+            {
+                "enSentence":"Go back",
+                "arSentence":"عُد/أرجع"
+                
+            },
+            {
+                "enSentence":"I have pain in my back",
+                "arSentence":"أنا عندي ألم في ظهري",
+                
+            },
+            {
+                "enSentence":"We were sitting in the back row not the front row",
+                "arSentence":"نحن كنا نجلس في الصف الخلفي ليس الصف الأمامي",
+                
+            },
+        ],
         "dict": {
             "put": "ضع",
             "the": "الـ",
@@ -391,12 +643,18 @@ export const oxford3000 = {
             "front": "أمامي",
         }
     },
-    "bad": {
-        "translation": "سيء/شر/عيب/ضار",
+    {
+        "key":"bad",
+        
         "related": "عكسها: goodخير/مفيد",
-        "examples": ["Smoking is bad for you."],
-
-        "examplesToAr": ["التدخين مضرٌ لك."],
+        "examples":[
+            {
+                "enSentence": "Smoking is bad for you.",
+                "arSentence":"التدخين مضرٌ لك.",
+               
+            },
+            
+        ],
         "dict": {
             "smoking": "التدخين",
             "is": "ـٌ",
@@ -406,12 +664,25 @@ export const oxford3000 = {
         },
     },
 
-    "bag": {
-        "translation": "كيس/حقيبة",
+    {
+        "key":"bag",
+        "examples":[
+            {
+                "enSentence": "would you like a bag?",
+                "arSentence":"هل تود كيساً؟",
+                "note": "would you like ... أتود ...",
+                
+            },
+            {
+                "enSentence": "I packed my bags and left.",
+                "arSentence":"حزمت حقائبي وغادرت.",
+                "note": "pack حزمة",
+                
+            },
+            
+        ],
         "related": "جمع: bags ",
-        "examples": ["would you like a bag?", "I packed my bags and left."],
-        "examplesToAr": ["هل تود كيساً؟", "حزمت حقائبي وغادرت."],
-        "notes": ["would you like ... أتود ...", "pack حزمة"],
+        
         "dict": {
             "would": "would you like أتود",
             "you": "أنت",
@@ -426,11 +697,23 @@ export const oxford3000 = {
             "left": "غادرت",
         }
     },
-    "become": {
-        "translation": 'أصبح',
-        "examples": ["the situation has become very dangerous", "How can I become a doctor?",],
-        "examplesToAr": ["أصْبَحَ الوَضْعُ خطيراً جِدّاً", "كيف أستطيع أصبح  دكتوراً؟"],
-        "notes": ["يعني صار خطير وإلى الآن خطير . لو مافي has معناها عم يتحدث عن شي بالماضي البعيد والوضع الآن آمن.  ", ""],
+    {
+        "key":"become",
+        "examples":[
+            {
+                "enSentence": "the situation has become very dangerous",
+                "arSentence":"أصْبَحَ الوَضْعُ خطيراً جِدّاً",
+                "note": "يعني صار خطير وإلى الآن خطير . لو مافي has معناها عم يتحدث عن شي بالماضي البعيد والوضع الآن آمن.",
+                
+            },
+            {
+                "enSentence": "How can I become a doctor?",
+                "arSentence":"كيف أستطيع أصبح  دكتوراً؟",
+              
+                
+            },
+            
+        ],
         "dict": {
             "the": "الـ",
             "situation": "وضع",
@@ -446,11 +729,18 @@ export const oxford3000 = {
             "doctor": "دكتور",
         }
     },
-    "begin": {
-        "translation": 'فعل بمعنى يبدأ',
-        "examples": ["Let's begin from page 9."],
-        "examplesToAr": ["دعنا نبدأ من الصفحة ٩."],
-        "notes": ["أصل Let us : Let's دعـنا"],
+   {
+        "key":"begin",
+        "examples":[
+            {
+                "enSentence": "Let's begin from page 9.",
+                "arSentence":"دعنا نبدأ من الصفحة ٩.",
+                "note": "أصل Let us : Let's دعـنا",
+                
+            },
+           
+        ],
+    
         "dict": {
             "let's": "دعنا",
             "begin": "نبدأ",
@@ -459,11 +749,18 @@ export const oxford3000 = {
             "9.": "٩",
         }
     },
-    "beginning": {
-        "translation": 'اسم بمعنى بداية',
-        "examples": ["The beginning, the middle, the end"],
-        "examplesToAr": ["البداية، الوسط، النهاية"],
-        "notes": ["أصل Let us : Let's دعـنا"],
+    {
+        "key":"beginning",
+        "examples":[
+            {
+                "enSentence":"The beginning, the middle, the end",
+                "arSentence":"البداية، الوسط، النهاية",
+                "note": "أصل Let us : Let's دعـنا",
+                
+            },
+           
+        ],
+    
         "dict": {
             "the": "الـ",
             "beginning": "بداية",
@@ -471,13 +768,22 @@ export const oxford3000 = {
             "end": "نهاية",
         }
     },
-    "behind": {
-        "translation": 'خلف',
+     {
+        "key":"behind",
+        "examples":[
+            {
+                "enSentence":"who is behind this proposal?",
+                "arSentence":"مَنْ وَراءَ هذا الاقْتِراحِ؟",
+               
+                
+            },
+           
+        ],
         "related": "عكسها: in front of أمام",
-        "examples": ["who is behind this proposal?"],
-        "examplesToAr": ["مَنْ وَراءَ هذا الاقْتِراحِ؟"],
+        
 
         "dict": {
+            
             "who": "من",
             "is": "يكون",
             "behind": "وراء",
@@ -486,17 +792,30 @@ export const oxford3000 = {
 
         }
     },
-    "below": {
-        "translation": 'تحت',
+    {
+        "key":"below",
+        
         "related": " Above فوق \n Low منخفض \n Law قانون \n High عالي"
     },
-    "both": {
-        "translation": "كلاهما",
-        "examples": ["Both are good", "I have 2 brothers. Both live in London",],
-        "examplesToAr": ["كلاهما طيب", "أنا عندي أخوين. الاثنين يعيشان في لندن",],
+    {
+        "key":"both",
+        "examples":[
+            {
+                "enSentence":"Both are good",
+                "arSentence":"كلاهما طيب",
+               
+            },
+            {
+                "enSentence":"I have 2 brothers. Both live in London",
+                "arSentence":"أنا عندي أخوين. الاثنين يعيشان في لندن",
+               
+            },
+           
+        ],
+        
         "dict": {
             "both": "كلاهما",
-            "are": "",
+           
             "good": "طيب",
             "i": "أنا",
             "have": "عندي",
@@ -507,10 +826,21 @@ export const oxford3000 = {
             "london": "لندن",
         }
     },
-    "break": {
-        "translation": "( حسب السياق )استراحة أو يكسر",
-        "examples": ["Let's take a break.", "Don't break it."],
-        "examplesToAr": ["دعنا نأخذ استراحةً.", "لا تكسرها"],
+    {
+        "key":"break",
+        "examples":[
+            {
+                "enSentence":"Let's take a break.",
+                "arSentence":"دعنا نأخذ استراحةً.",
+               
+            },
+            {
+                "enSentence":"Don't break it.",
+                "arSentence":"لا تكسرها"
+               
+            },
+           
+        ],
 
         "dict": {
             "Let's": "دعنا",
@@ -521,10 +851,18 @@ export const oxford3000 = {
             "it": "ضمير 'ها' في تكسرها",
         }
     },
-    "bring": {
-        "translation": "جلب/جاب",
-        "examples": ["Don't forget to bring your books with you."],
-        "examplesToAr": ["لا تنسى تجيب كتبك معك"],
+    {
+        "key":"bring",
+        "examples":[
+            {
+                "enSentence":"Don't forget to bring your books with you.",
+                "arSentence":"لا تنسى تجيب كتبك معك",
+               
+            },
+           
+           
+        ],
+       
         "dict": {
             "don't": "لا",
             "forget": "تنسى",
@@ -536,11 +874,19 @@ export const oxford3000 = {
             "you": "ـك",
         }
     },
-    "build": {
-        "translation": "يبني",
-        "examples": ["I like software because I like building apps."],
-        "notes": ["g لا تلفظ building"],
-        "examplesToAr": ["أنا أحب السوفتوير لأني أنا أحب بناء الأشياء"],
+     {
+        "key":"build",
+        "examples":[
+            {
+                "enSentence":"I like software because I like building apps.",
+                "arSentence":"أنا أحب السوفتوير لأني أنا أحب بناء الأشياء",
+                "note":"g لا تلفظ building"
+               
+            },
+           
+           
+        ],
+       
         "dict": {
             "i": "أنا",
             "like": "أحب",
@@ -552,10 +898,19 @@ export const oxford3000 = {
         }
 
     },
-    "busy": {
-        "translation": "مشغول",
-        "examples": ["I am busy. call later."],
-        "examplesToAr": ["أنا مشغولٌ. اتصل لاحقاً."],
+    {
+        "key":"busy",
+        "examples":[
+            {
+                "enSentence":"I am busy. call later.",
+                "arSentence":"أنا مشغولٌ. اتصل لاحقاً.",
+                
+               
+            },
+           
+           
+        ],
+  
         "dict": {
             "i": "أنا",
             "am": "ـٌ",
@@ -566,10 +921,18 @@ export const oxford3000 = {
         }
 
     },
-    "business": {
-        "translation": "شغل/شركة",
-        "examples": ["I have my own business",],
-        "examplesToAr": ["أنا عندي شُغْلْي الخاص",],
+    {
+        "key":"business",
+        "examples":[
+            {
+                "enSentence":"I have my own business",
+                "arSentence":"أنا عندي شُغْلْي الخاص",
+                
+               
+            },
+           
+           
+        ],
         "dict": {
             "i": "أنا",
             "have": "أملك",
@@ -581,12 +944,21 @@ export const oxford3000 = {
 
     },
 
-    "carry": {
-        "translation": "يحمل",
-        "related":"",
-        "examples": ["Don't carry heavy things",],
-        "examplesToAr": ["لا تحمل أشياء ثقيلة",],
-        "notes":["light خفيف",],
+    {
+        "key":"carry",
+        "examples":[
+            {
+                "enSentence":"Don't carry heavy things",
+                "arSentence":"لا تحمل أشياء ثقيلة",
+                "note":"light خفيف",
+               
+            },
+           
+           
+        ],
+       
+       
+        
         "dict": {
             "don't":"لا",
             "carry":"تحمل",
@@ -595,24 +967,42 @@ export const oxford3000 = {
         }
 
     },
-    "centre": {
-        "translation": "مركز",
-        "related":"",
-        "examples": ["city centre",],
-        "examplesToAr": ["مركز المدينة",],
-        "notes":["بالأمريكي center",],
+     {
+        "key":"centre",
+        "examples":[
+            {
+                "enSentence":"city centre",
+                "arSentence":"مركز المدينة",
+                "notes":"light خفيف",
+                "note":"بالأمريكي center",
+            },
+           
+           
+        ],
+       
         "dict": {
             "city":"مدينة",
             "centre":"مركز",
         }
 
     },
-    "change": {
-        "translation": "يحول/يغير/يبدل",
-        "related":"",
-        "examples": ["Things have changed", "You need to change your bad habits"],
-        "examplesToAr": ["الأشياء تغيرت","أنت تحتاج أن تغير عاداتك السيئة"],
-        "notes":["بسبب وجود have ، هذا يعني الأشياء تغيرت وما زلنا نعيش هذا التغير .",""],
+    {
+        "key":"change",
+        "examples":[
+            {
+                "enSentence":"Things have changed",
+                "arSentence":"الأشياء تغيرت",
+                "note":"بسبب وجود have ، هذا يعني الأشياء تغيرت وما زلنا نعيش هذا التغير .",
+               
+            },
+            {
+                "enSentence":"You need to change your bad habits",
+                "arSentence":"أنت تحتاج أن تغير عاداتك السيئة",
+               
+               
+            },
+           
+        ],
         "dict": {
             "things":"الأشياء",
             "have":"بسبب وجود have ، هذا يعني الأشياء تغيرت وما زلنا نعيش هذا التغير.",
@@ -628,54 +1018,29 @@ export const oxford3000 = {
         }
 
     },
-    "cheap": {
-        "translation": "رخيص",
+    {
+        "key":"cheap",
         "related":"عكسها expensive",
-        "examples": ["",],
-        "examplesToAr": ["",],
-        "notes":["",],
-        "dict": {
-            "":"",
-            "":"",
-            "":"",
-            "":"",
-            "":"",
-            "":"",
-            "":"",
-            "":"",
-            "":"",
-            "":"",
-            "":"",
+        "dict":{
+            "cheap":"رخيص"
         }
-
     },
-    "chicken": {
-        "translation": "دجاج",
+   {
+        "key":"chicken",
         "related":"beef لحم بقر , fish سمك , pork لحم خنزير",
-        "examples": ["",],
-        "examplesToAr": ["",],
-        "notes":["",],
-        "dict": {
-            "":"",
-            "":"",
-            "":"",
-            "":"",
-            "":"",
-            "":"",
-            "":"",
-            "":"",
-            "":"",
-            "":"",
-            "":"",
+        "dict":{
+            "chicken": "دجاج",
         }
+       
 
     },
-    "choose": {
+    {
+        "key":"choose",
         "translation": "يختار",
         "related":"مرادفات :  \n select ▪ pick ▪ decide ▪ opt ▪ go for",
         "examples": ["Which one will you go for, red or blue?","Which one will you choose, red or blue?"],
         "examplesToAr": ["أي واحد سوف تختار، أحمر أم أزرق؟","أي واحد سوف تختار، أحمر أم أزرق؟"],
-        "notes":["",],
+        
         "dict": {
             "which":"أي",
             "one":"واحد",
@@ -696,12 +1061,30 @@ export const oxford3000 = {
         }
 
     },
-    "clean": {
-        "translation": "فعل بمعنى ينضف أو صفة بمعنى نضيف",
-        "related":"",
-        "examples": ["His house is clean", "His house was clean", "He cleaned his car."],
-        "examplesToAr": ["بيته نظيفٌ","بيته كان نظيف","هو نظف سيارته",],
-        "notes":["clean هنا صفة","clean هنا صفة","clean هنا فعل",],
+    {
+        "key":"clean",
+        "examples":[
+            {
+                "enSentence":"His house is clean",
+                "arSentence":"بيته نظيفٌ",
+                "note":"clean هنا صفة",
+               
+            },
+            {
+                "enSentence":"His house was clean",
+                "arSentence":"بيته كان نظيف",
+                "note":"clean هنا صفة",
+               
+               
+            },
+            {
+                "enSentence":"He cleaned his car.",
+                "arSentence":"هو نظف سيارته",
+               "note":"clean هنا فعل",
+               
+            },
+           
+        ],
         "dict": {
             "his":"ـه",
             "house":"بيت",
@@ -715,12 +1098,25 @@ export const oxford3000 = {
         }
 
     },
-    "close": {
-        "translation": "صفة بمعنى قريب أو فعل بمعنى يغلق",
-        "related":"",
-        "examples": ["you are too close to the edge","Please close the door."],
-        "examplesToAr": ["أَنْتَ قَريبٌ جِدًّا من الحافّةِ","رجاء أغلق الباب."],
-        "notes":["close هنا صفة","close هنا فعل"],
+    {
+        "key":"close",
+        "examples":[
+            {
+                "enSentence":"you are too close to the edge",
+                "arSentence":"أَنْتَ قَريبٌ جِدًّا من الحافّةِ",
+                "note":"close هنا صفة",
+               
+            },
+            {
+                "enSentence":"Please close the door.",
+                "arSentence":"رجاء أغلق الباب.",
+                "note":"close هنا فعل",
+               
+               
+            },
+            
+        ],
+       
         "dict": {
             "you":"أنت",
             "are":"ـٌ",
@@ -734,12 +1130,27 @@ export const oxford3000 = {
         }
 
     },
-    "cloth": {
-        "translation": "قماش",
+    {
+        "key":"cloth",
+        
         "related":"تأتي أيضاً بمعنى خرقة/ممسحة كما في المثال الثاني",
-        "examples": ["a piece of cloth","He cleaned his face with a wet cloth"],
-        "examplesToAr": ["قطعةٌ من قماش/قطعة قماش","هو نظف وجهه بقماشة رطبة"],
-        "notes":["",],
+        "examples":[
+            {
+                "enSentence":"a piece of cloth",
+                "arSentence":"قطعةٌ من قماش/قطعة قماش",
+                
+               
+            },
+            {
+                "enSentence":"He cleaned his face with a wet cloth",
+                "arSentence":"هو نظف وجهه بقماشة رطبة",
+                
+               
+               
+            },
+            
+        ],
+        
         "dict": {
             "a":"ـٌ",
             "piece":"قطعة",
@@ -755,9 +1166,10 @@ export const oxford3000 = {
         }
 
     },
-    "clothes": {
+    {
+        "key":"clothes",
         "translation": "ملابس",
-        "related":"",
+      
         "examples": ["Put on your cloth, we have to go",],
         "examplesToAr": ["ألبس ملابسك يجب أن نذهب",],
         "notes":["put ضع <br> on على <br> put on ألبس <br> take off اخلع <br> have to يجب/لازم",],
@@ -774,12 +1186,17 @@ export const oxford3000 = {
         }
 
     },
-    "cloud": {
-        "translation": "",
-        "related":"",
-        "examples": ["a cloud of dust",],
-        "examplesToAr": ["سحابةٌ من الغبار",],
-        "notes":["",],
+    {
+        "key":"cloud",
+        "examples":[
+            {
+                "enSentence":"a cloud of dust",
+                "arSentence":"سحابةٌ من الغبار",
+                
+               
+            },
+        ],
+      
         "dict": {
             "cloud":"سحابة",
             "a":"ـٌ",
@@ -788,16 +1205,21 @@ export const oxford3000 = {
         }
 
     },
-    "coast": {
-        "translation": "",
-        "related":"",
-        "examples": ["Jeddah is a coastal city.",],
-        "examplesToAr": ["جدة مدينةٌ ساحليةٌ.",],
-        "notes":["",],
+    {
+        "key":"coast",
+        "examples":[
+            {
+                "enSentence":"Jeddah is a coastal city.",
+                "arSentence":"جدة مدينةٌ ساحليةٌ.",
+                
+               
+            },
+        ],
+      
+    
         "dict": {
             "coast":"ساحل",
-        "examples": ["Jeddah is a coastal city.",],
-            "Jeddah":"",
+            "Jeddah":"جدة",
             "is":"ـٌ",
             "a":"ـٌ",
             "coastal":"ساحلية",
@@ -806,13 +1228,20 @@ export const oxford3000 = {
         }
 
     },
-    "coat": {
-        "translation": "",
-        "related":"",
-        "examples": ["The cookies were thickly coated with chocolate.",],
-        "examplesToAr": ["البسكويت كان بشكل سميك مغطاً ب الشوكولا ",],
-        "notes":["thick سميك , thickly بشكل سميك",],
-        "pictures":["/pictures_dict/cookies.jpg"],
+    {
+        "key":"coat",
+        "examples":[
+            {
+                "enSentence":"The cookies were thickly coated with chocolate.",
+                "arSentence":"البسكويت كان بشكل سميك مغطاً ب الشوكولا ",
+                "note":"thick سميك , thickly بشكل سميك",
+                "picture":"/pictures_dict/cookies.jpg",
+               
+            },
+        ],
+
+        
+        
         "dict": {
             "coat":"اسم بمعنى معطف أو فعل بمعنى يغطي",
             "the":"الـ",
@@ -822,17 +1251,23 @@ export const oxford3000 = {
             "coated":"غطى",
             "with":"بـ",
             "chocolate":"شوكولا",
-            "":"",
+            
             
         }
 
     },
-    "collect": {
-        "translation": "",
-        "related":"",
-        "examples": ["Facebook collects a lot of data from users",],
-        "examplesToAr": ["فيسبوك يجمع الكثير من ال الداتا(معلومات) من المستخدمين",],
-        "notes":["",],
+    {
+        "key":"collect",
+        "examples":[
+            {
+                "enSentence":"Facebook collects a lot of data from users",
+                "arSentence":"فيسبوك يجمع الكثير من ال الداتا(معلومات) من المستخدمين",
+                "note":"thick سميك , thickly بشكل سميك",
+                "picture":"/pictures_dict/cookies.jpg",
+               
+            },
+        ],
+       
         "dict": {
             "collect":"يجمع",
             "facebook":"قيسبوك",
@@ -843,36 +1278,50 @@ export const oxford3000 = {
             "data":"داتا (معلومات)",
             "from":"من",
             "users":"مستخدمين",
-            "":"",
+           
            
         }
 
     },
-    "coin": {
-        "translation": "",
+    {
+        "key":"coin",
+       
         "related":"انظر إلى الصورة",
-        "examples": ["two sides of the same coin",],
-        "examplesToAr": ["وجهان لعملة واحدة/وجهان لنفس العملة",],
-        "notes":["",],
-        "pictures":["pictures_dict/!money.png",],
+        "examples":[
+            {
+                "enSentence":"two sides of the same coin",
+                "arSentence":"وجهان لعملة واحدة/وجهان لنفس العملة",
+                
+                "picture":"pictures_dict/!money.png",
+               
+            },
+        ],
+       
         "dict": {
             "coin":"مصاري حديد",
             "two":"اثنان",
-            "sides":"جوانب \n مفردها side ",
+            "sides":"جوانب ، \n مفردها side ",
             "of":"من",
             "the":"الـ",
             "same":"نفس",
-            "":"",
+           
            
         }
 
     },
-    "coil": {
-        "translation": "",
-        "related":"",
-        "examples": ["The snake coiled itself around a branch.",],
-        "examplesToAr": ["الثعبان لف نفسه حول فرعٍ/غصنٍ ",],
-        "notes":["",],
+    {
+        "key":"coil",
+        "examples":[
+            {
+                "enSentence":"The snake coiled itself around a branch.",
+                "arSentence":"الثعبان لف نفسه حول فرعٍ/غصنٍ ",
+                
+               
+               
+            },
+        ],
+       
+
         "dict": {
             "coil":"يلف",
             "the":"الـ",
@@ -886,92 +1335,7 @@ export const oxford3000 = {
         }
 
     },
-    "": {
-        "translation": "",
-        "related":"",
-        "examples": ["",],
-        "examplesToAr": ["",],
-        "notes":["",],
-        "dict": {
-            "":"",
-            "":"",
-            "":"",
-            "":"",
-            "":"",
-            "":"",
-            "":"",
-            "":"",
-            "":"",
-            "":"",
-            "":"",
-        }
 
-    },
-    "": {
-        "translation": "",
-        "related":"",
-        "examples": ["",],
-        "examplesToAr": ["",],
-        "notes":["",],
-        "dict": {
-            "":"",
-            "":"",
-            "":"",
-            "":"",
-            "":"",
-            "":"",
-            "":"",
-            "":"",
-            "":"",
-            "":"",
-            "":"",
-        }
-
-    },
-    "": {
-        "translation": "",
-        "related":"",
-        "examples": ["",],
-        "examplesToAr": ["",],
-        "notes":["",],
-        "dict": {
-            "":"",
-            "":"",
-            "":"",
-            "":"",
-            "":"",
-            "":"",
-            "":"",
-            "":"",
-            "":"",
-            "":"",
-            "":"",
-        }
-
-    },
-    "": {
-        "translation": "",
-        "related":"",
-        "examples": ["",],
-        "examplesToAr": ["",],
-        "notes":["",],
-        "dict": {
-            "":"",
-            "":"",
-            "":"",
-            "":"",
-            "":"",
-            "":"",
-            "":"",
-            "":"",
-            "":"",
-            "":"",
-            "":"",
-        }
-
-    },
-
-
-}
+]
 
 

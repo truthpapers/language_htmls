@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Today's lesson</title>
+</head>
+<body>
+    <style>
+        body {
+          background-color: black;
+          color: white;
+    
+        }
+        a {
+          margin: 10px;
+          text-decoration: none;
+          color: lightblue;
+        }
+    
+        h1{
+            text-align: center;
+        }
+    
+    
+        #popupBox {
+          position: absolute;
+          background-color: darkgray;
+          max-width: 2000px;
+          border-radius: 5%;
+          padding-top: 5px;
+          padding-left: 10px;
+          padding-right: 10px;
+          padding-bottom: 15px;
+          display: none;
+        }
+    
+        .popup-body {
+          margin-left: 10px;
+          font-weight: lighter;
+        }
+    
+        .popup-heading {
+          font-weight: bolder;
+        }
+    
+        #popupArrow {
+          position: absolute;
+          width: 0;
+          height: 0;
+          border-left: 8px solid transparent;
+          border-right: 8px solid transparent;
+          border-bottom: 8px solid darkgray;
+          display: none;
+          
+        }
+    
+        
+        
+    
+    </style>
+    <header>
+        <a href="alphabet.html">درس الحروف والهجاء</a>
+        <a href="airport.html"> في المطار </a>
+        <a href="health_problems.html"> الصحة </a>
+        <a href="directions.html"> الاتجاهات </a>
+        <a href="do_are.html"> are/do </a>
+        <a style="border-bottom: 1px solid gray" href="oxford3000.html">Oxford 3000</a>
+    </header>
+    <h1>درس اليوم</h1>
+    <div id="english-lesson" class="todays-lesson"></div>
+
+    <div id="popupArrow"></div>
+    <div id="popupBox" dir="auto"></div>
+
+    <script type="module">
+        import { oxford3000 } from "/data.js";
+        
+        const startIndex = 52;
+        const endIndex = 54; 
+        const punctuationRegex = /[.,\/#!$%^&*;:{}=\-_`~()?!]/;
+        let chunkFromOxford3000 = []
+        let oxford3000Html = `
+          <style>
+                figure{
+                   
+                    display:flex;
+                    flex-direction: column;
+                    align-items: start;
+                    margin: 0;
+                }
+                figure img{
+                    width: 200px;
+                }  
+                figure a{
+                    
+                    padding-left:0;
+                    margin-left:0;
+                    border:0;
+                }  
+                .note-on-example {  
+                    border-left: 2px solid green;
+                    padding: 10px;
+                }
+                .entry .head{
+                    border-bottom: 1px solid gray;
+                    color: rgb(102, 157, 252);
+                }
+                .en-ar{
+                    display:flex; 
+                    gap:5px;
+                }
+                .ar-sentence{
+                    color: gray
+                }
+            </style>
+        `; 
+
+    for (let i = startIndex; i < endIndex; i++) {
+        chunkFromOxford3000.push(oxford3000[i])
+        oxford3000Html += `
+            <div class="entry">
+                <div class="head">
+                    <h3>
+                        <span class="en-key en-word" ">${oxford3000[i].key}</span>
+                        <span class="ar-key" >${oxford3000[i].dict[oxford3000[i].key]}</span>
+                    </h3>
+                    <p class="related">${oxford3000[i].related || ""}</p>
+                </div>
+                
+                <ul class="body">
+                    ${oxford3000[i].examples?.map((example) => `
+                        <li>
+                            <div class="en-ar">
+                                <p class="en-sentence">${example.enSentence.split(" ").map((word) => `<span class="en-word">${word} </span>`).join('')}</p>
+                                <p class="ar-sentence" dir="rtl">${example.arSentence}</p>
+                            </div>
+                            ${(example.note || example.picture) ? 
+                            `<div class="note-on-example">
+                                <p class="text-on-example">${example.note || ""}</p>
+                                <figure>
+                                    <a class="picture-on-example" href="${example.picture || "#"}"><img src="${example.picture || ""}"  alt=""></a>
+                                    <figcaption>${(!example.picture?.includes("!")?example.picture?.match(/\/([^/]+)\.(jpg|jpeg|png)$/i)?.[1]:"")||""}</figcaption>
+                                </figure>
+                            </div>`:""}
+                        </li>
+                    `).join('')}
+                </ul>
+                
+            </div>
+        `;
+    }
+        const currentDict = {};
+
+        // Iterate through the oxf array and merge the dict objects
+        chunkFromOxford3000.forEach((item) => {
+        const dict = item.dict;
+        for (const key in dict) {
+            if (dict.hasOwnProperty(key)) {
+                currentDict[key] = dict[key];
+            }
+        }
+        });
+                
+        
+        
+        document.getElementById("english-lesson").innerHTML = oxford3000Html;
+        document.querySelectorAll(".en-word").forEach(item=>item.addEventListener("click",wordExplainPopup))
+    
+        function wordExplainPopup(e) {
+    
+          const speech = new SpeechSynthesisUtterance();
+          speech.lang = "en-GB";
+          speech.text = e.target.innerText;
+          speechSynthesis.speak(speech);
+    
+          if (currentDict[e.target.innerText.trim().toLowerCase().replace(/[^a-zA-Z']+/g, '')]) {
+            e.stopPropagation();
+            popupBox.style.display = "block";
+            popupArrow.style.display = "block";
+    
+            popupBox.innerHTML = `
+                <h4 class="popup-heading"> ${e.target.innerText} </h4>
+                <div class="popup-body" dir="rtl">${currentDict[e.target.innerText.trim().toLowerCase().replace(/[^a-zA-Z']+/g, '')] || "---"}</div>
+            `;
+    
+            const rect = getElementDocumentPosition(e.currentTarget);
+            const rectOfPopup = getElementDocumentPosition(popupBox);
+            const middleOfWordCoord = rect.left + rect.width / 2;
+    
+            const popupLeftEdge = rectOfPopup.left;
+            const popupRightEdge = rectOfPopup.right;
+            const xOfLeftBorderOfPopup = middleOfWordCoord - rectOfPopup.width / 2 - 2;
+            if (xOfLeftBorderOfPopup < 0) {
+              popupArrow.style.left = middleOfWordCoord - 13 + "px";
+              popupArrow.style.top = rect.bottom + 3 + "px";
+    
+              popupBox.style.top = rect.bottom + 8 + "px";
+              popupBox.style.left = 0;
+            } else if (popupRightEdge >= window.innerWidth) {
+              popupArrow.style.left = middleOfWordCoord - 13 + "px";
+              popupArrow.style.top = rect.bottom + 3 + "px";
+    
+              popupBox.style.top = rect.bottom + 8 + "px";
+              popupBox.style.right = window.innerWidth;
+            } else if (popupRightEdge < window.innerWidth) {
+              popupArrow.style.left = middleOfWordCoord - 13 + "px";
+              popupArrow.style.top = rect.bottom + 3 + "px";
+    
+              popupBox.style.left =
+                middleOfWordCoord - rectOfPopup.width / 2 - 2 + "px";
+              popupBox.style.top = rect.bottom + 8 + "px";
+            }
+          }
+    
+    
+          document.addEventListener("click", closePopupOnClickOutside);
+        }
+    
+    function closePopupOnClickOutside(e) {
+      if (
+        !e.target.classList.contains("pronounceable") &&
+        e.target.id !== "popupBox"
+      ) {
+        popupBox.style.display = "none";
+        popupArrow.style.display = "none";
+        document.removeEventListener("click", closePopupOnClickOutside);
+      }
+    }
+    function getElementDocumentPosition(element) {
+      const rect = element.getBoundingClientRect();
+
+      // Get the current scroll position of the document
+      const scrollX = window.scrollX || window.pageXOffset;
+      const scrollY = window.scrollY || window.pageYOffset;
+
+      // Calculate the position relative to the document
+      const top = rect.top + scrollY;
+      const left = rect.left + scrollX;
+
+      return { top, left, width: rect.width, height: rect.height, right: rect.right + scrollX, bottom: rect.bottom + scrollY };
+    }
+    </script>
+</body>
+</html>

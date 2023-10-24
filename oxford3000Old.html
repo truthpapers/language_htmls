@@ -79,7 +79,7 @@
 
 
 
-
+    /*  */
 
     .example {
       margin-bottom: 30px;
@@ -169,7 +169,7 @@
     const l1 = document.getElementById("l1");
 
     let explainWordObj = {};
-
+    
     const startIndex = 52;
     const endIndex = 2;
     const keys = Object.keys(oxford3000);
@@ -203,7 +203,7 @@
     `;
 
         //
-        for (let i = 0; i < examplesToAr.length; i++) {
+        for (let i = 0; i < examples.length; i++) {
 
           let note
           if (oxford3000[key] && oxford3000[key].notes && oxford3000[key].notes[i]) {
@@ -265,12 +265,13 @@
       endIndex
     );
 
-    const pronouncables = document.querySelectorAll(".en-word");
+    const enWords = document.querySelectorAll(".en-word");
+
     const popupBox = document.getElementById("popupBox");
     const popupArrow = document.getElementById("popupArrow");
 
-    for (let i = 0; i < pronouncables.length; i++) {
-      pronouncables[i].addEventListener("click", wordExplainPopup);
+    for (let i = 0; i < enWords.length; i++) {
+      enWords[i].addEventListener("click", wordExplainPopup);
     }
 
     function getElementDocumentPosition(element) {
@@ -287,6 +288,7 @@
       return { top, left, width: rect.width, height: rect.height, right: rect.right + scrollX, bottom: rect.bottom + scrollY };
     }
 
+    
     function wordExplainPopup(wordEvent) {
       
 
@@ -338,9 +340,11 @@
       document.addEventListener("click", closePopupOnClickOutside);
     }
 
+    
+    
     function closePopupOnClickOutside(e) {
       if (
-        !e.target.classList.contains("pronouncable") &&
+        !e.target.classList.contains("pronounceable") &&
         e.target.id !== "popupBox"
       ) {
         popupBox.style.display = "none";

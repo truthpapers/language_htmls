@@ -1414,16 +1414,16 @@ export const oxford3000 = [
             }
         ],
         "dict":{
-            "the":"",
-            "canal":"",
-            "was":"",
-            "built":"",
-            "to":"",
-            "connect":"",
-            "sweden":"",
-            "with":"",
-            "denmark":"",
-            "":"",
+            "the":"الـ",
+            "canal":"فناة",
+            "was":"ـُ",
+            "built":"ينى",
+            "to":"لـ/بـ/إلى",
+            "connect":"فعل بمعني يتصل",
+            "sweden":"السويد",
+            "with":"بـ",
+            "denmark":"دنمارك",
+            
         }
     },
     {

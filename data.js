@@ -1381,6 +1381,139 @@ export const oxford3000 = [
         }
     },
 
+    {
+        "key":"colour",
+        "related":"بالأمريكي: color",
+        "examples":[
+            {
+                "enSentence":"What is your favourite colour?",
+                "arSentence":"ما هو لونك المفضل؟",
+                "note":"",
+                "picture":"",
+            }
+        ],
+        "dict":{
+            "what":"ما",
+            "is":"هو",
+            "your":"ـك",
+            "favourite":"المفضل",
+            "colour":"لون",
+           
+        }
+    },
+
+    {
+        "key":"connect",
+        "related":"",
+        "examples":[
+            {
+                "enSentence":"The canal was built to connect Sweden with Denmark",
+                "arSentence":"القناة بنيت لربط/لوصل السويد بالدنمارك",
+                "note":"",
+                "picture":"",
+            }
+        ],
+        "dict":{
+            "the":"",
+            "canal":"",
+            "was":"",
+            "built":"",
+            "to":"",
+            "connect":"",
+            "sweden":"",
+            "with":"",
+            "denmark":"",
+            "":"",
+        }
+    },
+    {
+        "key":"connection",
+        "related":"",
+        "examples":[
+            {
+                "enSentence":"Scientists have established a connection between cholesterol levels and heart disease.",
+                "arSentence":"العلماء ثبتوا علاقةً بين مستويات الكوليسترول ومرض القلب.",
+                "note":"",
+                "picture":"",
+            }
+        ],
+        "dict":{
+            "scientists":"العلماء",
+            "have":"",
+            "established":"ثبت",
+            "a":"ـةٌ",
+            "connection":"علاقة/صلة",
+            "between":"بين",
+            "cholesterol":"الكوليسترول",
+            "levels":"مستويات",
+            "and":"و",
+            "heart":"القلب",
+            "disease":"مرض",
+        }
+    },
+    {
+        "key":"contact",
+        "related":"",
+        "examples":[
+            {
+                "enSentence":"We have lost contact to him since 14 august.",
+                "arSentence":"لقد فقدنا الاتصال به منذ 14 أغسطس/آب.",
+                "note":"لو مافي have ، فمعناها شي ماضي والآن هم قادرين على الاتصال به",
+                "picture":"",
+            },
+            {
+                "enSentence":"contact info",
+                "arSentence":"معلومات الاتصال",
+                "note":"",
+                "picture":"",
+            },
+            {
+                "enSentence":"contact lenses",
+                "arSentence":"عدسات لاصقة",
+                "note":"",
+                "picture":"",
+            },
+            
+        ],
+        "dict":{
+            
+            "we":"نحن",
+            "have":"لو مافي have ، فمعناها شي ماضي والآن هم قادرين على الاتصال به",
+            "lost":"فقد",
+            "contact":"ملامسة/اتصل",
+            "to":"لـ/بـ/إلى",
+            "him":"ـه",
+            "since":"منذ",
+            "14":"١٤",
+            "august":"أُوچُست",
+            "info":"معلومات",
+            "lenses":"عدسات",
+        }
+    },
+
+    {
+        "key":"",
+        "related":"",
+        "examples":[
+            {
+                "enSentence":"",
+                "arSentence":"",
+                "note":"",
+                "picture":"",
+            },
+        ],
+        "dict":{
+            "":"",
+            "":"",
+            "":"",
+            "":"",
+            "":"",
+            "":"",
+            "":"",
+            "":"",
+        }
+    },
+
 ]
 
 

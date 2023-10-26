@@ -56,7 +56,11 @@
         }
     
         
-        
+        .bottom-0{
+          margin-bottom: 0;
+          padding-bottom: 0;
+          
+        }
     
     </style>
     <header>
@@ -97,11 +101,19 @@
                     border:0;
                 }  
                 .note-on-example {  
-                    border-left: 2px solid green;
-                    padding: 10px;
+                  border-left: 2px solid green;
+                  border-bottom: 2px solid green;
+                  width:fit-content;
+                  margin-bottom:0
+                  margin-top:0;
+                }
+                .text-on-example{
+                  margin-top:0;
+                  padding-top:10px;
+                  margin:5px;
                 }
                 .entry{
-                  margin-bottom:150px;
+                  margin-bottom:100px;
                 }
                 .entry .head{
                     border-bottom: 1px solid gray;
@@ -117,7 +129,7 @@
             </style>
         `; 
 
-    for (let i = 54; i < 56; i++) {
+    for (let i = 57; i < 60; i++) {
         chunkFromOxford3000.push(oxford3000[i])
         oxford3000Html += `
             <div class="entry">
@@ -132,17 +144,17 @@
                 <ul class="body">
                     ${oxford3000[i].examples?.map((example) => `
                         <li>
-                            <div class="en-ar">
-                                <p class="en-sentence">${example.enSentence.split(" ").map((word) => `<span class="en-word">${word} </span>`).join('')}</p>
-                                <p class="ar-sentence" dir="rtl">${example.arSentence}</p>
+                            <div class="en-ar ${example.note  ? "bottom-0":""}">
+                                <p class="en-sentence ${example.note  ? "bottom-0":""}">${example.enSentence.split(" ").map((word) => `<span class="en-word">${word} </span>`).join('')}</p>
+                                <p class="ar-sentence ${example.note  ? "bottom-0":""}" dir="rtl">${example.arSentence}</p>
                             </div>
                             ${(example.note || example.picture) ? 
                             `<div class="note-on-example">
-                                <p class="text-on-example">${example.note || ""}</p>
-                                <figure>
+                                <p class="text-on-example" dir="rtl">${example.note || ""}</p>
+                                ${example.picture && `<figure>
                                     <a class="picture-on-example" href="${example.picture || "#"}"><img src="${example.picture || ""}"  alt=""></a>
                                     <figcaption>${(!example.picture?.includes("!")?example.picture?.match(/\/([^/]+)\.(jpg|jpeg|png)$/i)?.[1]:"")||""}</figcaption>
-                                </figure>
+                                </figure>`}
                             </div>`:""}
                         </li>
                     `).join('')}

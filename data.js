@@ -1417,7 +1417,7 @@ export const oxford3000 = [
             "the":"الـ",
             "canal":"فناة",
             "was":"ـُ",
-            "built":"ينى",
+            "built":"بنى",
             "to":"لـ/بـ/إلى",
             "connect":"فعل بمعني يتصل",
             "sweden":"السويد",

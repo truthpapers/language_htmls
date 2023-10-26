@@ -255,6 +255,14 @@
 
       return { top, left, width: rect.width, height: rect.height, right: rect.right + scrollX, bottom: rect.bottom + scrollY };
     }
+    document.querySelectorAll(".ar-sentence").forEach(element => {
+        element.addEventListener("click",(e)=>{
+        const speech = new SpeechSynthesisUtterance();
+        speech.lang = "ar-SA";
+        speech.text = e.target.innerText;
+        speechSynthesis.speak(speech);
+      })
+    });
     </script>
 </body>
 </html>

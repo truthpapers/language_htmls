@@ -1407,15 +1407,15 @@ export const oxford3000 = [
         "related":"",
         "examples":[
             {
-                "enSentence":"The canal was built to connect Sweden with Denmark",
-                "arSentence":"القناة بُنيت لربط/لوصل السويد بالدنمارك",
+                "enSentence":"The bridge was built to connect Sweden with Denmark",
+                "arSentence":"الجسر بُني لربط/لوصل السويد بالدنمارك",
                 "note":"",
                 "picture":"",
             }
         ],
         "dict":{
             "the":"الـ",
-            "canal":"فناة",
+            "bridge":"جسر",
             "was":"ـُ",
             "built":"بنى",
             "to":"لـ/بـ/إلى",

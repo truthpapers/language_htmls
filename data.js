@@ -1433,7 +1433,7 @@ export const oxford3000 = [
             {
                 "enSentence":"Scientists have established a connection between cholesterol levels and heart disease.",
                 "arSentence":"العلماء ثبتوا علاقةً بين مستويات الكوليسترول ومرض القلب.",
-                "note":"",
+                "note":"Science علم <br> لا تلفظ e في heart",
                 "picture":"",
             }
         ],
@@ -1456,7 +1456,7 @@ export const oxford3000 = [
         "related":"",
         "examples":[
             {
-                "enSentence":"We have lost contact to him since 14 august.",
+                "enSentence":"We have lost contact with him since 14 august.",
                 "arSentence":"لقد فقدنا الاتصال به منذ 14 أغسطس/آب.",
                 "note":"لو مافي have ، فمعناها شي ماضي والآن هم قادرين على الاتصال به",
                 "picture":"",
@@ -1464,7 +1464,7 @@ export const oxford3000 = [
             {
                 "enSentence":"contact info",
                 "arSentence":"معلومات الاتصال",
-                "note":"",
+                "note":"يعني رقم تلفون أو إيميل أو عنوان",
                 "picture":"",
             },
             {
@@ -1482,6 +1482,7 @@ export const oxford3000 = [
             "lost":"فقد",
             "contact":"ملامسة/اتصل",
             "to":"لـ/بـ/إلى",
+            "with":"مع/بـ",
             "him":"ـه",
             "since":"منذ",
             "14":"١٤",

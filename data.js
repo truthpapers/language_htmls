@@ -1408,7 +1408,7 @@ export const oxford3000 = [
         "examples":[
             {
                 "enSentence":"The canal was built to connect Sweden with Denmark",
-                "arSentence":"القناة بنيت لربط/لوصل السويد بالدنمارك",
+                "arSentence":"القناة بُنيت لربط/لوصل السويد بالدنمارك",
                 "note":"",
                 "picture":"",
             }

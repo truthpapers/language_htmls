@@ -1467,12 +1467,12 @@ export const oxford3000 = [
                 "note":"يعني رقم تلفون أو إيميل أو عنوان",
                 "picture":"",
             },
-            {
+            /* {
                 "enSentence":"contact lenses",
                 "arSentence":"عدسات لاصقة",
                 "note":"",
                 "picture":"",
-            },
+            }, */
             
         ],
         "dict":{

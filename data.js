@@ -1457,7 +1457,7 @@ export const oxford3000 = [
         "examples":[
             {
                 "enSentence":"We have lost contact with him since 14 august.",
-                "arSentence":"لقد فقدنا الاتصال به منذ 14 أغسطس.",
+                "arSentence":"لقد فقدنا الاتصال به منذ 14 أغسط.",
                 "note":"لو مافي have ، فمعناها شي ماضي والآن هم قادرين على الاتصال به",
                 "picture":"",
             },

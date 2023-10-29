@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>درس اليوم</title>
+    <style>
+        body {
+            background-color: black;
+            color: white;
+
+        }
+
+        a {
+            margin: 10px;
+            text-decoration: none;
+            color: lightblue;
+        }
+
+        h1 {
+            text-align: center;
+
+        }
+
+
+        #popupBox {
+            position: absolute;
+            background-color: darkgray;
+            max-width: 2000px;
+            border-radius: 5%;
+            padding-top: 5px;
+            padding-left: 10px;
+            padding-right: 10px;
+            padding-bottom: 15px;
+            display: none;
+        }
+
+        .popup-body {
+            margin-left: 10px;
+            font-weight: lighter;
+        }
+
+        .popup-heading {
+            font-weight: bolder;
+        }
+
+        #popupArrow {
+            position: absolute;
+            width: 0;
+            height: 0;
+            border-left: 8px solid transparent;
+            border-right: 8px solid transparent;
+            border-bottom: 8px solid darkgray;
+            display: none;
+
+        }
+
+
+        .bottom-0 {
+            margin-bottom: 0;
+            padding-bottom: 0;
+            background-color: rgb(6, 16, 92)
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <a href="alphabet.html">درس الحروف والهجاء</a>
+        <a href="airport.html"> في المطار </a>
+        <a href="health_problems.html"> الصحة </a>
+        <a href="directions.html"> الاتجاهات </a>
+        <a href="do_are.html"> are/do </a>
+        <a href="oxford3000.html">Oxford 3000</a>
+        <a style="border-bottom: 1px solid gray" href="oxford3000.html">محادثات</a>
+    </header>
+    <h1>محادثة اليوم</h1>
+
+    <div id="en-lesson-conversations"></div>
+    <div id="popupArrow"></div>
+    <div id="popupBox" dir="auto"></div>
+
+    <script type="module">
+
+        import { conversations } from "/data.js";
+        import { wordExplainPopup } from "/funcs.js";
+        export let dict = {};
+        const popupBox = document.getElementById("popupBox")
+        const popupArrow = document.getElementById("popupArrow")
+        const start = 0; // Index of the first item in the chunk
+        const end = 1;   // Index of the last item in the chunk (not inclusive)
+
+        const chunkFromConversations = conversations.slice(start, end);
+        chunkFromConversations.forEach(item => {
+            // Check if item[2] is an object
+            if (typeof item[2] === 'object') {
+                Object.assign(dict, item[2]);
+            }
+        });
+        console.log(dict)
+        let chunkFromConversationsHtml = `
+            <style>
+
+                .conversation{
+                   
+                    display: flex;
+                    flex-direction: column;
+                    gap: 50px;
+                    max-width:500px;
+                    
+                }
+                .en-ar-div{
+                    max-width: 200px;
+                    padding: 10px;
+                    border-radius: 15px;
+                }
+
+                .en-ar-div > p:nth-child(2){
+                   color: #999;
+                }
+
+                .en-ar-div > p{
+                    margin: 0;
+                }
+
+               
+            </style>
+        `
+
+        let flexEnd = true;
+        chunkFromConversationsHtml += chunkFromConversations.flatMap(([language1, language2]) => {
+            return '<div class="conversation">' + language1.map((item1, index) => {
+                const item2 = language2[index];
+                flexEnd = !flexEnd;
+                return `<div class="en-ar-div" ${flexEnd ? 'style="align-self:flex-end; background-color:rgb(6, 16, 92);"' : 'style="align-self:flex-start; background-color:#333;"'}>
+                            <p class="en-sentence"> ${item1.split(" ").map(word => `<span class="en-word">${word}</span>`).join(" ")}</p>
+                            <p class="ar-sentence" dir="rtl">${item2}</p>
+                        </div>`;
+            }).join('') + "</div>";
+        }).join('');
+
+        document.getElementById("en-lesson-conversations").innerHTML = chunkFromConversationsHtml
+        document.querySelectorAll(".en-word").forEach( item => item.addEventListener( "click", e=>wordExplainPopup(e,dict,popupBox,popupArrow) ) )
+        document.querySelectorAll(".ar-sentence").forEach(element => {
+            element.addEventListener("click", (e) => {
+                const speech = new SpeechSynthesisUtterance();
+                speech.lang = "ar-SA";
+                speech.text = e.target.innerText;
+                speechSynthesis.speak(speech);
+            })
+        });
+    </script>
+</body>
+
+</html>

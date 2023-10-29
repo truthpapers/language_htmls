@@ -4,65 +4,66 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Today's lesson</title>
+    <style>
+      body {
+        background-color: black;
+        color: white;
+  
+      }
+      a {
+        margin: 10px;
+        text-decoration: none;
+        color: lightblue;
+      }
+  
+      h1{
+          text-align: center;
+      }
+  
+  
+      #popupBox {
+        position: absolute;
+        background-color: darkgray;
+        max-width: 2000px;
+        border-radius: 5%;
+        padding-top: 5px;
+        padding-left: 10px;
+        padding-right: 10px;
+        padding-bottom: 15px;
+        display: none;
+      }
+  
+      .popup-body {
+        margin-left: 10px;
+        font-weight: lighter;
+      }
+  
+      .popup-heading {
+        font-weight: bolder;
+      }
+  
+      #popupArrow {
+        position: absolute;
+        width: 0;
+        height: 0;
+        border-left: 8px solid transparent;
+        border-right: 8px solid transparent;
+        border-bottom: 8px solid darkgray;
+        display: none;
+        
+      }
+  
+      
+      .bottom-0{
+        margin-bottom: 0;
+        padding-bottom: 0;
+        
+      }
+  
+  </style>
 </head>
 <body>
-    <style>
-        body {
-          background-color: black;
-          color: white;
     
-        }
-        a {
-          margin: 10px;
-          text-decoration: none;
-          color: lightblue;
-        }
-    
-        h1{
-            text-align: center;
-        }
-    
-    
-        #popupBox {
-          position: absolute;
-          background-color: darkgray;
-          max-width: 2000px;
-          border-radius: 5%;
-          padding-top: 5px;
-          padding-left: 10px;
-          padding-right: 10px;
-          padding-bottom: 15px;
-          display: none;
-        }
-    
-        .popup-body {
-          margin-left: 10px;
-          font-weight: lighter;
-        }
-    
-        .popup-heading {
-          font-weight: bolder;
-        }
-    
-        #popupArrow {
-          position: absolute;
-          width: 0;
-          height: 0;
-          border-left: 8px solid transparent;
-          border-right: 8px solid transparent;
-          border-bottom: 8px solid darkgray;
-          display: none;
-          
-        }
-    
-        
-        .bottom-0{
-          margin-bottom: 0;
-          padding-bottom: 0;
-          
-        }
-    
-    </style>
     <header>
         <a href="alphabet.html">درس الحروف والهجاء</a>
         <a href="airport.html"> في المطار </a>
@@ -79,6 +80,7 @@
 
     <script type="module">
         import { oxford3000 } from "/data.js";
+        import { wordExplainPopup } from "/funcs.js";
         //const punctuationRegex = /[.,\/#!$%^&*;:{}=\-_`~()?!]/;
         const popupBox = document.getElementById("popupBox")
         let chunkFromOxford3000 = []
@@ -180,81 +182,9 @@
                 
         
         
-        document.getElementById("english-lesson").innerHTML = oxford3000Html;
-        document.querySelectorAll(".en-word").forEach(item=>item.addEventListener("click",wordExplainPopup))
+    document.getElementById("english-lesson").innerHTML = oxford3000Html;
     
-        function wordExplainPopup(e) {
-    
-          const speech = new SpeechSynthesisUtterance();
-          speech.lang = "en-GB";
-          speech.text = e.target.innerText;
-          speechSynthesis.speak(speech);
-    
-          if (currentDict[e.target.innerText.trim().toLowerCase().replace(/[^a-zA-Z']+/g, '')]) {
-            e.stopPropagation();
-            popupBox.style.display = "block";
-            popupArrow.style.display = "block";
-    
-            popupBox.innerHTML = `
-                <h4 class="popup-heading"> ${e.target.innerText} </h4>
-                <div class="popup-body" dir="rtl">${currentDict[e.target.innerText.trim().toLowerCase().replace(/[^a-zA-Z']+/g, '')] || "---"}</div>
-            `;
-    
-            const rect = getElementDocumentPosition(e.currentTarget);
-            const rectOfPopup = getElementDocumentPosition(popupBox);
-            const middleOfWordCoord = rect.left + rect.width / 2;
-    
-            const popupLeftEdge = rectOfPopup.left;
-            const popupRightEdge = rectOfPopup.right;
-            const xOfLeftBorderOfPopup = middleOfWordCoord - rectOfPopup.width / 2 - 2;
-            if (xOfLeftBorderOfPopup < 0) {
-              popupArrow.style.left = middleOfWordCoord - 13 + "px";
-              popupArrow.style.top = rect.bottom + 3 + "px";
-    
-              popupBox.style.top = rect.bottom + 8 + "px";
-              popupBox.style.left = 0;
-            } else if (popupRightEdge >= window.innerWidth) {
-              popupArrow.style.left = middleOfWordCoord - 13 + "px";
-              popupArrow.style.top = rect.bottom + 3 + "px";
-    
-              popupBox.style.top = rect.bottom + 8 + "px";
-              popupBox.style.right = window.innerWidth;
-            } else if (popupRightEdge < window.innerWidth) {
-              popupArrow.style.left = middleOfWordCoord - 13 + "px";
-              popupArrow.style.top = rect.bottom + 3 + "px";
-    
-              popupBox.style.left =
-                middleOfWordCoord - rectOfPopup.width / 2 - 2 + "px";
-              popupBox.style.top = rect.bottom + 8 + "px";
-            }
-          }
-    
-          popupBox.addEventListener("click", (e) => {
-            e.stopPropagation(); 
-          });
-          document.addEventListener("click", closePopupOnClickOutside);
-        }
-    
-    function closePopupOnClickOutside(e) {
-      
-        popupBox.style.display = "none";
-        popupArrow.style.display = "none";
-        document.removeEventListener("click", closePopupOnClickOutside);
-      
-    }
-    function getElementDocumentPosition(element) {
-      const rect = element.getBoundingClientRect();
-
-      // Get the current scroll position of the document
-      const scrollX = window.scrollX || window.pageXOffset;
-      const scrollY = window.scrollY || window.pageYOffset;
-
-      // Calculate the position relative to the document
-      const top = rect.top + scrollY;
-      const left = rect.left + scrollX;
-
-      return { top, left, width: rect.width, height: rect.height, right: rect.right + scrollX, bottom: rect.bottom + scrollY };
-    }
+    document.querySelectorAll(".en-word").forEach(item=>item.addEventListener("click",wordExplainPopup))
     document.querySelectorAll(".ar-sentence").forEach(element => {
         element.addEventListener("click",(e)=>{
         const speech = new SpeechSynthesisUtterance();

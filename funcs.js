@@ -14,7 +14,6 @@ export function wordExplainPopup(e, obj, popupBox, popupArrow) {
         return { top, left, width: rect.width, height: rect.height, right: rect.right + scrollX, bottom: rect.bottom + scrollY };
     }
 
-    console.log(e.target)
     const speech = new SpeechSynthesisUtterance();
     speech.lang = "en-GB";
     speech.text = e.target.innerText;

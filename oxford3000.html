@@ -49,5 +49,24 @@
         <div class="en-ar"><span class="en">ready</span><span class="ar">جاهزة</span></div>
         <div class="en-ar"><span class="en">God willing</span><span class="ar">إن شاء الله</span></div>
     </h2>
+    <script>
+        document.querySelectorAll(".en").forEach(element => {
+            element.addEventListener("click", (e) => {
+                const speech = new SpeechSynthesisUtterance();
+                speech.lang = "en-GB";
+                speech.text = e.target.innerText;
+                speechSynthesis.speak(speech);
+            })
+        });
+
+        document.querySelectorAll(".ar").forEach(element => {
+            element.addEventListener("click", (e) => {
+                const speech = new SpeechSynthesisUtterance();
+                speech.lang = "ar-SA";
+                speech.text = e.target.innerText;
+                speechSynthesis.speak(speech);
+            })
+        });
+    </script>
 </body>
 </html>

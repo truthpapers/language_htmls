@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Today's lesson</title>
+  <style>
+    body {
+      background-color: black;
+      color: white;
+
+    }
+
+    a {
+      margin: 10px;
+      text-decoration: none;
+      color: lightblue;
+    }
+
+    h1 {
+      text-align: center;
+    }
+
+
+    #popupBox {
+      position: absolute;
+      background-color: darkgray;
+      max-width: 2000px;
+      border-radius: 5%;
+      padding-top: 5px;
+      padding-left: 10px;
+      padding-right: 10px;
+      padding-bottom: 15px;
+      display: none;
+    }
+
+    .popup-body {
+      margin-left: 10px;
+      font-weight: lighter;
+    }
+
+    .popup-heading {
+      font-weight: bolder;
+    }
+
+    #popupArrow {
+      position: absolute;
+      width: 0;
+      height: 0;
+      border-left: 8px solid transparent;
+      border-right: 8px solid transparent;
+      border-bottom: 8px solid darkgray;
+      display: none;
+
+    }
+
+
+    .bottom-0 {
+      margin-bottom: 0;
+      padding-bottom: 0;
+
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <a href="alphabet.html">درس الحروف والهجاء</a>
+    <a href="airport.html"> في المطار </a>
+    <a href="health_problems.html"> الصحة </a>
+    <a href="directions.html"> الاتجاهات </a>
+    <a href="do_are.html"> are/do </a>
+    <a style="border-bottom: 1px solid gray" href="oxford3000.html">Oxford 3000</a>
+  </header>
+  <h1>درس اليوم</h1>
+
+  <button id="prev-btn">Previous</button>
+  <button id="next-btn">Next</button>
+  <div id="english-lesson" class="todays-lesson"></div>
+
+  <div id="popupArrow"></div>
+  <div id="popupBox" dir="auto"></div>
+
+
+
+
+  <script type="module">
+    import { oxford3000 } from "/data.js";
+
+    import { wordExplainPopup } from "/funcs.js";
+    //const punctuationRegex = /[.,\/#!$%^&*;:{}=\-_`~()?!]/;
+    const popupBox = document.getElementById("popupBox")
+    const popupArrow = document.getElementById("popupArrow")
+  
+    //const randomIndex = Math.floor( Math.random() * oxford3000.length );
+    //console.log(randomIndex)
+    //console.log(Math.min(randomIndex + 2, oxford3000.length))
+    //console.log(oxford3000.length)
+    // for (let i = randomIndex; i < Math.min(randomIndex + 2, oxford3000.length); i++) {
+    //////////////////////////////////////////////////////////////////////////////
+    let randomIndex = localStorage.getItem("oxford3000LastVisited") || 0
+    const prevBtn = document.getElementById("prev-btn");
+    const nextBtn = document.getElementById("next-btn");
+
+    nextBtn.addEventListener("click", () => {
+      randomIndex++
+      console.log(randomIndex)
+      localStorage.setItem("oxford3000LastVisited",randomIndex)
+      renderChunck(randomIndex,oxford3000)
+    })
+    //////////////////////////////////////////////////////////////////////////////
+    renderChunck(randomIndex,oxford3000)
+    function renderChunck(randomIndex,array) {
+      const arr = array
+      let chunkFromarr = []
+    let oxford3000Html = `
+          <style>
+                figure{
+                   
+                    display:flex;
+                    flex-direction: column;
+                    align-oxford3000: start;
+                    margin: 0;
+                }
+                figure img{
+                    width: 200px;
+                }  
+                figure a{
+                    
+                    padding-left:0;
+                    margin-left:0;
+                    border:0;
+                }  
+                .note-on-example {  
+                  border-left: 2px solid green;
+                  border-bottom: 2px solid green;
+                  width:fit-content;
+                  margin-bottom:0
+                  margin-top:0;
+                }
+                .text-on-example{
+                  margin-top:0;
+                  padding-top:10px;
+                  margin:5px;
+                }
+                .entry{
+                  margin-bottom:100px;
+                }
+                .entry .head{
+                    border-bottom: 1px solid gray;
+                    color: rgb(102, 157, 252);
+                }
+                .en-ar{
+                    display:flex; 
+                    gap:5px;
+                }
+                .ar-sentence{
+                    color: gray
+                }
+                li{
+                  margin-bottom: 50px;
+                }
+            </style>
+        `;
+
+      for (let i = randomIndex; i < Math.min(randomIndex + 2, arr.length); i++) {
+        chunkFromarr.push(arr[i])
+        oxford3000Html += `
+            <div class="entry">
+                <div class="head">
+                    <h3>
+                        <span class="en-key en-word" ">${arr[i].key}</span>
+                        <span class="ar-key" >${arr[i].dict[arr[i].key]}</span>
+                    </h3>
+                    <p class="related">${arr[i].related || ""}</p>
+                </div>
+                
+                <ul class="body">
+                    ${arr[i].examples ? arr[i].examples.map((example) => `
+                        <li>
+                            <div class="en-ar ${example.note ? "bottom-0" : ""}">
+                                <p class="en-sentence ${example.note ? "bottom-0" : ""}">${example.enSentence?.split(" ").map((word) => `<span class="en-word">${word} </span>`).join('')}</p>
+                                <p class="ar-sentence ${example.note ? "bottom-0" : ""}" dir="rtl">${example.arSentence}</p>
+                            </div>
+                            ${(example.note || example.picture) ?
+            `<div class="note-on-example">
+                                <p class="text-on-example" dir="rtl">${example.note || ""}</p>
+                                ${example.picture ? `<figure>
+                                    <a class="picture-on-example" href="${example.picture || "#"}"><img src="${example.picture || ""}"  alt=""></a>
+                                    <figcaption>${(!example.picture?.includes("!") ? example.picture?.match(/\/([^/]+)\.(jpg|jpeg|png)$/i)?.[1] : "") || ""}</figcaption>
+                                </figure>`: ""}
+                            </div>`: ""}
+                        </li>
+                    `).join('') : ""}
+                </ul>
+                
+            </div>
+        `;
+      }
+      const currentDict = {};
+
+      // Iterate through the oxf array and merge the dict objects
+      chunkFromarr.forEach((item) => {
+        const dict = item.dict;
+        for (const key in dict) {
+          if (dict.hasOwnProperty(key)) {
+            currentDict[key] = dict[key];
+          }
+        }
+      });
+
+      document.getElementById("english-lesson").innerHTML = oxford3000Html;
+    }
+
+    document.querySelectorAll(".en-word").forEach(item => item.addEventListener("click", e => wordExplainPopup(e, currentDict, popupBox, popupArrow)))
+    document.querySelectorAll(".ar-sentence").forEach(element => {
+      element.addEventListener("click", (e) => {
+        const speech = new SpeechSynthesisUtterance();
+        speech.lang = "ar-SA";
+        speech.text = e.target.innerText;
+        speechSynthesis.speak(speech);
+      })
+    });
+  </script>
+</body>
+
+</html>

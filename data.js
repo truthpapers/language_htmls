@@ -175,7 +175,7 @@ export const oxford3000 = [
         }
     },
     {
-        "key": "actree",
+        "key": "actress",
 
         "dict": { "actress": "ممثلة أو فاعلة (حسب السياق)" }
     },
@@ -796,7 +796,10 @@ export const oxford3000 = [
     {
         "key": "below",
 
-        "related": " Above فوق \n Low منخفض \n Law قانون \n High عالي"
+        "related": " Above فوق \n Low منخفض \n Law قانون \n High عالي",
+        "dict":{
+            "below":"تحت"
+        }
     },
     {
         "key": "both",
@@ -816,7 +819,7 @@ export const oxford3000 = [
 
         "dict": {
             "both": "كلاهما",
-
+            "below": "تحت",
             "good": "طيب",
             "i": "أنا",
             "have": "عندي",
@@ -889,6 +892,7 @@ export const oxford3000 = [
         ],
 
         "dict": {
+            "build":"يبني",
             "i": "أنا",
             "like": "أحب",
             "software": "السوفتوير(البرمجة)",
@@ -1037,11 +1041,20 @@ export const oxford3000 = [
     },
     {
         "key": "choose",
-        "translation": "يختار",
         "related": "مرادفات :  \n select ▪ pick ▪ decide ▪ opt ▪ go for",
-        "examples": ["Which one will you go for, red or blue?", "Which one will you choose, red or blue?"],
-        "examplesToAr": ["أي واحد سوف تختار، أحمر أم أزرق؟", "أي واحد سوف تختار، أحمر أم أزرق؟"],
+        "examples": [
+            {
+                "enSentence": "Which one will you go for, red or blue?",
+                "arSentence": "أي واحد سوف تختار، أحمر أم أزرق؟",
 
+            },
+            {
+                "enSentence": "Which one will you choose, red or blue?",
+                "arSentence": "أي واحد سوف تختار، أحمر أم أزرق؟",
+
+            },
+        ],
+    
         "dict": {
             "which": "أي",
             "one": "واحد",
@@ -1169,11 +1182,15 @@ export const oxford3000 = [
     },
     {
         "key": "clothes",
-        "translation": "ملابس",
-
-        "examples": ["Put on your cloth, we have to go",],
-        "examplesToAr": ["ألبس ملابسك يجب أن نذهب",],
-        "notes": ["put ضع <br> on على <br> put on ألبس <br> take off اخلع <br> have to يجب/لازم",],
+       
+        
+        "examples": [
+            {
+                "enSentence" : "Put on your cloth, we have to go",
+                "arSentence" : "ألبس ملابسك يجب أن نذهب",
+                "note": "put ضع <br> on على <br> put on ألبس <br> take off اخلع <br> have to يجب/لازم",
+            }
+        ],
         "dict": {
             "put": "ضع",
             "on": "على",
@@ -1263,8 +1280,7 @@ export const oxford3000 = [
             {
                 "enSentence": "Facebook collects a lot of data from users",
                 "arSentence": "فيسبوك يجمع الكثير من ال الداتا(معلومات) من المستخدمين",
-                "note": "thick سميك , thickly بشكل سميك",
-                "picture": "/pictures_dict/cookies.jpg",
+               
 
             },
         ],
@@ -1487,7 +1503,7 @@ export const oxford3000 = [
         }
     },
 
-    {
+    /* {
         "key": "",
         "related": "",
         "examples": [
@@ -1508,7 +1524,7 @@ export const oxford3000 = [
             "": "",
             "": "",
         }
-    },
+    }, */
 
 ]
 

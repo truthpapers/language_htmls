@@ -1,4 +1,4 @@
-export const header = function (activeTab) {
+export const Header = function (activeTab) {
     return `
         <a ${activeTab === 'alphabet' ? 'style="border-bottom: 1px solid gray"' : ''} href="alphabet.html">درس الحروف والهجاء</a>
         <a ${activeTab === 'airport' ? 'style="border-bottom: 1px solid gray"' : ''} href="airport.html"> في المطار </a>
@@ -9,3 +9,4 @@ export const header = function (activeTab) {
         <a ${activeTab === 'conversations' ? 'style="border-bottom: 1px solid gray"' : ''} href="conversations.html">محادثات</a>
     `;
 }
+

@@ -94,36 +94,28 @@
     const prevBtn = document.getElementById("prev-btn");
     const nextBtn = document.getElementById("next-btn");
     let lastVisited = parseInt(localStorage.getItem("oxford3000LastVisited")) || 0;
-    if (lastVisited === 0) {
-      prevBtn.disabled = true
-    }
-    else if (lastVisited === oxford3000.length - 1) {
-      nextBtn.disabled = true
-    }
-    
-
+      console.log(lastVisited)
     nextBtn.addEventListener("click", () => {
-      if (lastVisited < oxford3000.length - 1) {
-        lastVisited++;
-        prevBtn.disabled = false
-        if (lastVisited === oxford3000.length - 1) {
-          nextBtn.disabled = true
-          prevBtn.disabled = false
-        }
+      
+      if (lastVisited >= oxford3000.length - 1) {
+        lastVisited = -1
       }
+      lastVisited++;
+      
       console.log(lastVisited)
       localStorage.setItem("oxford3000LastVisited", lastVisited)
       renderChunck(lastVisited, oxford3000)
     })
     prevBtn.addEventListener("click", () => {
-      if (lastVisited > 0) {
-        lastVisited--;
-        nextBtn.disabled = false
-        if (lastVisited === 0) {
-          nextBtn.disabled = false
-          prevBtn.disabled = true
+      
+        
+        if (lastVisited <= 0) {
+          lastVisited = oxford3000.length 
         }
-      }
+      
+        lastVisited--;
+      
+      
       console.log(lastVisited)
       localStorage.setItem("oxford3000LastVisited", lastVisited)
       renderChunck(lastVisited, oxford3000)

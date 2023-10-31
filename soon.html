@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="components.js"></script>
+    <title>Document</title>
+    <style>
+        body{
+            background-color: black;
+            color: white;
+        }
+
+        a {
+            margin: 10px;
+            text-decoration: none;
+            color: lightblue;
+        }
+
+        h2{
+            display: flex;
+            justify-content: space-around;
+            
+        }
+
+        .h2h2{
+            max-width: 500px;
+            margin: 60px auto;
+        }
+        .en-ar{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+    </style>
+</head>
+<body>
+    <script>Header()</script>
+      <div class="h2h2">
+    <h2>
+        <div class="en-ar"><span class="en">Soon</span><span class="ar">قريباً</span></div>
+        <div class="en-ar"><span class="en">the</span><span class="ar">الـ</span></div>
+        <div class="en-ar"><span class="en">page</span><span class="ar">صفحة</span></div>
+        <div class="en-ar"><span class="en">will</span><span class="ar">سـ</span></div>
+    </h2>
+    <h2>
+        <div class="en-ar"><span class="en">be</span><span class="ar">تكون</span></div>
+        <div class="en-ar"><span class="en">ready</span><span class="ar">جاهزة</span></div>
+        <div class="en-ar"><span class="en">God willing</span><span class="ar">إن شاء الله</span></div>
+    </h2>
+</div>
+    <script>
+        document.querySelectorAll(".en").forEach(element => {
+            element.addEventListener("click", (e) => {
+                const speech = new SpeechSynthesisUtterance();
+                speech.lang = "en-GB";
+                speech.text = e.target.innerText;
+                speechSynthesis.speak(speech);
+            })
+        });
+
+        document.querySelectorAll(".ar").forEach(element => {
+            element.addEventListener("click", (e) => {
+                const speech = new SpeechSynthesisUtterance();
+                speech.lang = "ar-SA";
+                speech.text = e.target.innerText;
+                speechSynthesis.speak(speech);
+            })
+        });
+    </script>
+</body>
+</html>

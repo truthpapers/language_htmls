@@ -61,6 +61,14 @@
       padding-bottom: 0;
 
     }
+
+    /* Add this to your existing styles */
+    .content-transition {
+      transition: transform 0.5s, opacity 0.5s;
+      opacity: 0;
+      transform: translateX(-100%);
+      /* Start the content 100% to the left */
+    }
   </style>
   <script src="components.js"></script>
 </head>
@@ -94,32 +102,34 @@
     const prevBtn = document.getElementById("prev-btn");
     const nextBtn = document.getElementById("next-btn");
     let lastVisited = parseInt(localStorage.getItem("oxford3000LastVisited")) || 0;
-      console.log(lastVisited)
+    console.log(lastVisited)
+
     nextBtn.addEventListener("click", () => {
-      
+
       if (lastVisited >= oxford3000.length - 1) {
         lastVisited = -1
       }
       lastVisited++;
-      
+
       console.log(lastVisited)
       localStorage.setItem("oxford3000LastVisited", lastVisited)
-      renderChunck(lastVisited, oxford3000)
+      swipeToNextContent()
     })
     prevBtn.addEventListener("click", () => {
-      
-        
-        if (lastVisited <= 0) {
-          lastVisited = oxford3000.length 
-        }
-      
-        lastVisited--;
-      
-      
+
+
+      if (lastVisited <= 0) {
+        lastVisited = oxford3000.length
+      }
+
+      lastVisited--;
+
+
       console.log(lastVisited)
       localStorage.setItem("oxford3000LastVisited", lastVisited)
-      renderChunck(lastVisited, oxford3000)
+      swipeToPrevContent()
     })
+
     //////////////////////////////////////////////////////////////////////////////
     renderChunck(lastVisited, oxford3000)
     function renderChunck(indexStart, arr) {
@@ -176,7 +186,7 @@
         `;
       //Math.min(indexStart + 2, arr.length)
       for (let i = indexStart; i < indexStart + 2 && i < arr.length; i++) {
-       
+
         chunck.push(arr[i])
 
         oxford3000Html += `
@@ -225,6 +235,53 @@
 
       document.getElementById("english-lesson").innerHTML = oxford3000Html;
     }
+
+    ///////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+    function swipeToNextContent() {
+      const englishLesson = document.getElementById("english-lesson");
+      const contentTransitionClass = "content-transition";
+
+      englishLesson.classList.add(contentTransitionClass);
+      englishLesson.style.transform = "translateX(100%"; // Swipe out to the right
+
+      setTimeout(() => {
+        renderChunck(lastVisited, oxford3000);
+
+        // Reset the transform and opacity after rendering
+        englishLesson.style.transform = "translateX(0)"; // Swipe in from the left
+        englishLesson.style.opacity = 1;
+
+        // Remove the transition class after the swipe-in animation
+        setTimeout(() => {
+          englishLesson.classList.remove(contentTransitionClass);
+        }, 500); // Adjust this delay to match your transition duration
+      }, 500); // Adjust this delay to match your transition duration
+    }
+
+    function swipeToPrevContent() {
+      const englishLesson = document.getElementById("english-lesson");
+      const contentTransitionClass = "content-transition";
+
+      englishLesson.classList.add(contentTransitionClass);
+      englishLesson.style.transform = "translateX(-100%)"; // Swipe out to the left
+
+      setTimeout(() => {
+        renderChunck(lastVisited, oxford3000);
+
+        // Reset the transform and opacity after rendering
+        englishLesson.style.transform = "translateX(0)"; // Swipe in from the right
+        englishLesson.style.opacity = 1;
+
+        // Remove the transition class after the swipe-in animation
+        setTimeout(() => {
+          englishLesson.classList.remove(contentTransitionClass);
+        }, 500); // Adjust this delay to match your transition duration
+      }, 500); // Adjust this delay to match your transition duration
+    }
+
+
+    ///////////////////////////////////////////////////////////////////////////////////////////////////////////
 
     document.querySelectorAll(".en-word").forEach(item => item.addEventListener("click", e => wordExplainPopup(e, currentDict, popupBox, popupArrow)))
     document.querySelectorAll(".ar-sentence").forEach(element => {

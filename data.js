@@ -1584,18 +1584,47 @@ export const conversations = [
     },
     ],
 
-    [[
-        "a",
-        "b",
-        "c",
-    ],
     [
-        "a1",
-        "b1",
-        "c1",
-    ],
-
-    ],
-
+        [
+            "Hello my friend",
+            "Where are you now",
+            "I am at work",
+            "When can I see you",
+            "I am busy now",
+            "When will you come",
+            "At four o'clock"
+        ],
+        [
+            "سلام صديقي",
+            "أين أنت الآن؟",
+            "أنا في العمل",
+            "متى يمكنني رؤيتك؟",
+            "أنا مشغول الآن",
+            "متى ستأتي؟",
+            "في الساعة الرابعة"
+        ],
+        {
+            "hello": "سلام",
+            "my": "ـي",
+            "friend": "صديق",
+            "where": "أين",
+            "are": "تكون",
+            "you": "أنت",
+            "now": "الآن",
+            "i": "أنا",
+            "am": "أكون",
+            "at": "في/عند",
+            "work": "العمل",
+            "when": "متى",
+            "can": "يمكن",
+            "see": "يرى",
+            "busy": "مشغول",
+            "come":"تعال",
+            "will": "سـ",
+            "four": "أربعة",
+            "o'clock": "الساعة"
+        }
+    ]
+    
 
 ]

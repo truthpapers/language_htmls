@@ -82,10 +82,10 @@
         export let dict = {};
         const popupBox = document.getElementById("popupBox")
         const popupArrow = document.getElementById("popupArrow")
-        const start = 0; // Index of the first item in the chunk
-        const end = 1;   // Index of the last item in the chunk (not inclusive)
+        const start = 1; // Index of the first item in the chunk
+          // Index of the last item in the chunk (not inclusive)
 
-        const chunkFromConversations = conversations.slice(start, end);
+        const chunkFromConversations = conversations.slice(start, start+1);
         chunkFromConversations.forEach(item => {
             // Check if item[2] is an object
             if (typeof item[2] === 'object') {

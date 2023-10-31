@@ -1586,18 +1586,17 @@ export const conversations = [
 
     [
         [
-            "Hello my friend",
-            "Where are you now?",
-            "I am at work",
+            "Hello my friend, Where are you now?",
+            "Hello, I am at work",
             "When can I see you?",
             "I am busy now",
             "When will you come?",
             "At four o'clock"
         ],
         [
-            "سلام صديقي",
-            "أين أنت الآن؟",
-            "أنا في العمل",
+            "سلام صديقي، أين أنت الآن؟",
+            
+            "سلام، أنا في العمل",
             "متى يمكنني رؤيتك؟",
             "أنا مشغول الآن",
             "متى ستأتي؟",

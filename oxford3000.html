@@ -66,11 +66,14 @@
     .content-transition {
       transition: transform 0.5s, opacity 0.5s;
       opacity: 0;
-      transform: translateX(-100%);
+      transform: translateX(-80%);
       /* Start the content 100% to the left */
     }
   </style>
   <script src="components.js"></script>
+  <!-- Include Hammer.js via CDN -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/hammer.js/2.0.8/hammer.min.js"></script>
+
 </head>
 
 <body>
@@ -279,6 +282,46 @@
         }, 500); // Adjust this delay to match your transition duration
       }, 500); // Adjust this delay to match your transition duration
     }
+
+
+    ///////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+    // Get the element you want to enable touch swipe on
+const swipeElement = document.getElementById("english-lesson");
+
+// Initialize Hammer.js on the element
+const hammer = new Hammer(swipeElement);
+
+// Enable swipe gestures
+hammer.get("swipe").set({ direction: Hammer.DIRECTION_HORIZONTAL });
+
+// Detect left and right swipe gestures
+hammer.on("swiperight", () => {
+  if (lastVisited >= oxford3000.length - 1) {
+        lastVisited = -1
+      }
+      lastVisited++;
+
+      console.log(lastVisited)
+      localStorage.setItem("oxford3000LastVisited", lastVisited)
+      swipeToNextContent()
+});
+
+hammer.on("swipeleft", () => {
+  console.log("swipeleft")
+  
+
+  if (lastVisited <= 0) {
+        lastVisited = oxford3000.length
+      }
+
+      lastVisited--;
+
+
+      console.log(lastVisited)
+      localStorage.setItem("oxford3000LastVisited", lastVisited)
+      renderChunck(lastVisited, oxford3000)
+});
 
 
     ///////////////////////////////////////////////////////////////////////////////////////////////////////////

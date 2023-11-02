@@ -35,14 +35,6 @@
       display: none;
     }
 
-    .popup-body {
-      margin-left: 10px;
-      font-weight: lighter;
-    }
-
-    .popup-heading {
-      font-weight: bolder;
-    }
 
     #popupArrow {
       position: absolute;
@@ -85,8 +77,8 @@
   <button id="next-btn">Next</button>
   <div id="english-lesson" class="todays-lesson"></div>
 
-  <div id="popupArrow"></div>
-  <div id="popupBox" dir="auto"></div>
+<!--   <div id="popupArrow"></div>
+  <div id="popupBox" dir="auto"></div> -->
 
 
 
@@ -96,8 +88,7 @@
 
     import { wordExplainPopup } from "/funcs.js";
     //const punctuationRegex = /[.,\/#!$%^&*;:{}=\-_`~()?!]/;
-    const popupBox = document.getElementById("popupBox")
-    const popupArrow = document.getElementById("popupArrow")
+    const currentDict = {};
 
     //const randomIndex = Math.floor( Math.random() * oxford3000.length );
     // for (let i = randomIndex; i < Math.min(randomIndex + 2, oxford3000.length); i++) {
@@ -224,7 +215,7 @@
             </div>
         `;
       }
-      const currentDict = {};
+     
 
       // Iterate through the oxf array and merge the dict objects
       chunck.forEach((item) => {
@@ -326,7 +317,7 @@ hammer.on("swipeleft", () => {
 
     ///////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-    document.querySelectorAll(".en-word").forEach(item => item.addEventListener("click", e => wordExplainPopup(e, currentDict, popupBox, popupArrow)))
+    document.querySelectorAll(".en-word").forEach(item => item.addEventListener("click", e => wordExplainPopup(e, currentDict)))
     document.querySelectorAll(".ar-sentence").forEach(element => {
       element.addEventListener("click", (e) => {
         const speech = new SpeechSynthesisUtterance();

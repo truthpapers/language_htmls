@@ -1623,7 +1623,116 @@ export const conversations = [
             "four": "أربعة",
             "o'clock": "الساعة"
         }
+    ],
+    
+ /*    [
+        [
+            "Are you American?",
+            "No.",
+            "Do you speak English?",
+            "A little.",
+            "How long have you been here?",
+            "2 months.",
+         
+        ],
+        [
+            "هل أنت أمريكي؟",
+            "لا.",
+            "هل تتحدث الإنجليزية؟",
+            "قليلاً",
+            "منذ متى أنت هنا؟",
+            "شهرين.",
+         
+        ],
+        {
+            "excuse": "عذرًا",
+            "me": "أنا",
+            "are": "هل",
+            "you": "أنت",
+            "american": "أمريكي",
+            "no": "لا",
+            "do": "هل",
+            "speak": "تتحدث",
+            "english": "الإنجليزية",
+            "a": "قليلاً",
+            "little": "قليلاً",
+            "but": "ولكن",
+            "not": "ليس",
+            "very": "جيد جدًا",
+            "well": "جيد جدًا",
+            "how": "منذ متى",
+            "long": "شهرين",
+            "have": "منذ متى",
+            "been": "شهرين",
+            "here": "هنا",
+            "what": "ماذا",
+            "for": "في",
+            "work": "العمل",
+            "I’m": "أنا",
+            "a": "طالب",
+            "student": "طالب",
+            "how": "ماذا",
+            "about": "عنك",
+            "too": "أيضًا"
+        }
+    ] */
+    
+    [
+        [
+            "Can you tell me how to get to the airport?",
+            "No, sorry. I don't know.",
+            "I think I can take the subway to the airport. Do you know where the subway is?",
+            "Go straight. When you reach the main road, turn left",
+            "Thank you."
+        ],
+        [
+            "هل يمكن تخبرني كيف أصل إلى المطار؟",
+            "لا، آسف. لا أعرف.",
+            "أظن أنني أستطيع أخذ المترو إلى المطار. هل تعرف أين المترو يكون؟",
+            "أمشي ساوي، وعندما تصل إلى الشارع الرئيسي، انعطف يسارًا",
+            "شكرًا."
+        ],
+        {
+            "i": "أنا",
+            "looking": "أبحث",
+            "for": "عن",
+            "the": "الـ",
+            "airport": "مطار",
+            "can": "يستطيع",
+            "you": "أنت",
+            "tell": "يخبر",
+            "me": "ني",
+            "how": "كيف",
+            "to": "إلى",
+            "get": "يصل",
+            "there": "هناك",
+            "no": "لا",
+            "sorry": "آسف",
+            
+            "don't": "لا",
+            "know": "يعرف",
+            "think": "أظن",
+           
+            
+            "take": "يأخذ",
+          
+            "subway": "قطار تحت الأرض/المترو",
+            "do": "هل",
+            "where": "أين",
+            "is": "يكون",
+            "go": "أمشي/أذهب",
+            "straight": "ساوي/مستقيم/مباشرة",
+            "and": "و",
+            
+            "when": "عندما أو أين",
+           
+            "reach": "يصل",
+            "main": "رئيسي",
+            "road": "شارع",
+            "turn": "انعطف",
+            "left": "يسار",
+            "thank": "شكر/يشكر"
+        }
     ]
     
-
 ]

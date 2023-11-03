@@ -1733,6 +1733,39 @@ export const conversations = [
             "left": "يسار",
             "thank": "شكر/يشكر"
         }
-    ]
+    ],
+    [
+        [
+            "Hi, my name is Max",
+            "Hi, my name is Adam",
+            "How long have you been in London?",
+            "I have been in London for about a year."
+        ],
+        [
+            "سلام، اسمي ماكس",
+            "سلام، اسمي آدم",
+            "كم صار لك في لندن؟",
+            "صار لي في لندن حوالي عاماً. <br>  صار لي I have been "
+        ],
+        {
+            "hi": "مرحبًا",
+            "my": "ـي",
+            "name": "اسم",
+            "is": "يكون",
+            "max": "ماكس",
+            "adam": "آدم",
+            "how": "كم",
+            "long": "مدة",
+            "have": "have been صار",
+            "you": "أنت",
+            "been": "have been صار",
+            "in": "في",
+            "london": "لندن",
+            "for": "لـ",
+            "about": "حوالي",
+            "a": "ـاً",
+            "year": "عام"
+        }
+    ],    
     
 ]

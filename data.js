@@ -1739,13 +1739,16 @@ export const conversations = [
             "Hi, my name is Max",
             "Hi, my name is Adam",
             "How long have you been in London?",
-            "I have been in London for about a year."
+            "I have been in London for about a year. You?",
+            "I have been in London for about 3 year."
         ],
         [
             "سلام، اسمي ماكس",
             "سلام، اسمي آدم",
             "كم صار لك في لندن؟",
-            "صار لي في لندن حوالي عاماً. <br>  صار لي I have been "
+            "صار لي في لندن حوالي عاماً. أنت؟. <br>  صار لي I have been ",
+            "صار لي في لندن حوالي 3 سنوات. <br>  صار لي I have been ",
+          
         ],
         {
             "hi": "مرحبًا",

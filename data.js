@@ -1770,5 +1770,39 @@ export const conversations = [
             "year": "عام"
         }
     ],    
+    [
+        [
+            "I'm a student. What about you?",
+            "I'm a teacher. I teach English.",
+            "That's great! How long have you been a teacher?",
+            "I've been a teacher for three years."
+        ],
+        [
+            "أنا طالب. ماذا عنك؟",
+            "أنا معلم. أنا أدرس الإنجليزية للأطفال.",
+            "ذلك رائع! منذ متى أنت معلم؟",
+            "لقد كنت معلمًا لمدة ثلاث سنوات. إنها وظيفة مجزية."
+        ],
+        {
+            "i": "أنا",
+            "a": "ـٌ",
+            "student": "طالب",
+            "what": "ماذا",
+            "about": "عن",
+            "you": "ـك",
+            "teacher": "معلم",
+            "teach": "أُعلم",
+            "english": "إنچليزي/إنچليزية",
+            "that's": "ذلك",
+            "great": "عظيم",
+            "how": "كم/كيف",
+            "long": "طويل/مدة",
+            "have": "have been صار",
+            "been": "have been صار",
+            "three": "ثلاث",
+            "years": "سنوات",
+        }
+    ],
+    
     
 ]

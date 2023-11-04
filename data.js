@@ -1798,8 +1798,8 @@ export const conversations = [
             "great": "عظيم",
             "how": "كم/كيف",
             "long": "طويل/مدة",
-            "have": "have been صار",
-            "been": "have been صار",
+            "have": "have been صارلي",
+            "been": "have been صارلي",
             "three": "ثلاث",
             "years": "سنوات",
         }

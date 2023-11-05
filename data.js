@@ -1804,6 +1804,49 @@ export const conversations = [
             "years": "سنوات",
         }
     ],
+    [
+        [
+            "Are you married?",
+            "Yes, I am married.",
+            "Do you have children?",
+            "Yes. I have 2 boys. What about you?",
+            "I am not married.",
+            "When will you marry?",
+            "Soon, God willing."
+        ],
+        [
+            "هل أنت متزوج؟",
+            "نعم، أنا متزوج.",
+            "هل لديك أطفال؟",
+            "نعم. لدي صبيان. ماذا عنك؟",
+            "أنا غير متزوج.",
+            "متى ستتزوج؟",
+            "قريبًا، إن شاء الله."
+        ],
+        {
+            "are": "هل",
+            "am": "تجي مع I ، بمعنى أكون",
+            "you": "أنت/ ـك",
+            "married": "متزوج",
+            "yes": "نعم",
+            "no": "لا",
+            "do": "هل",
+            "have": "يملك",
+            "children": "أطفال",
+            "I": "أنا",
+            "2": "2",
+            "boys": "صبيان",
+            "and": "و",
+            "what": "ماذا",
+            "about": "عن",
+            "not": "غير/ليس/لا",
+            "when": "متى",
+            "will": "سـ",
+            "soon": "قريبًا",
+            "god": "الله",
+            "willing": "شاء/مشيئة"
+        }
+    ]
     
     
 ]

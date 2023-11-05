@@ -1825,6 +1825,7 @@ export const conversations = [
         ],
         {
             "are": "هل",
+            "i":"أنا",
             "am": "تجي مع I ، بمعنى أكون",
             "you": "أنت/ ـك",
             "married": "متزوج",

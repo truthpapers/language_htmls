@@ -1624,58 +1624,7 @@ export const conversations = [
             "o'clock": "الساعة"
         }
     ],
-    
- /*    [
-        [
-            "Are you American?",
-            "No.",
-            "Do you speak English?",
-            "A little.",
-            "How long have you been here?",
-            "2 months.",
-         
-        ],
-        [
-            "هل أنت أمريكي؟",
-            "لا.",
-            "هل تتحدث الإنجليزية؟",
-            "قليلاً",
-            "منذ متى أنت هنا؟",
-            "شهرين.",
-         
-        ],
-        {
-            "excuse": "عذرًا",
-            "me": "أنا",
-            "are": "هل",
-            "you": "أنت",
-            "american": "أمريكي",
-            "no": "لا",
-            "do": "هل",
-            "speak": "تتحدث",
-            "english": "الإنجليزية",
-            "a": "قليلاً",
-            "little": "قليلاً",
-            "but": "ولكن",
-            "not": "ليس",
-            "very": "جيد جدًا",
-            "well": "جيد جدًا",
-            "how": "منذ متى",
-            "long": "شهرين",
-            "have": "منذ متى",
-            "been": "شهرين",
-            "here": "هنا",
-            "what": "ماذا",
-            "for": "في",
-            "work": "العمل",
-            "I’m": "أنا",
-            "a": "طالب",
-            "student": "طالب",
-            "how": "ماذا",
-            "about": "عنك",
-            "too": "أيضًا"
-        }
-    ] */
+
     
     [
         [
@@ -1740,7 +1689,7 @@ export const conversations = [
             "Hi, my name is Adam",
             "How long have you been in London?",
             "I have been in London for about a year. You?",
-            "I have been in London for about 3 year."
+            "I have been in London for about 3 years."
         ],
         [
             "سلام، اسمي ماكس",
@@ -1847,7 +1796,36 @@ export const conversations = [
             "god": "الله",
             "willing": "شاء/مشيئة"
         }
+    ],
+    [
+        [
+            "What day is it?",
+            "Monday.",
+            "What time is it?",
+            "It's 11:25"
+            
+        ],
+        [
+            "ما اليوم؟",
+           "الاثنين",
+            "ما هو الوقت؟",
+            "إنها  11:25"
+        ],
+        {
+            "what": "ما",
+            "day": "يوم",
+            "is": "يكون",
+            "it": "هو/هي لغير العاقل",
+            "monday": "الاثنين",
+            "time": "وقت",
+            "it's": "إنها",
+            "eleven":"11",
+            "twenty":"20",
+            "five":"5",
+            "11:25":"11:25",
+        }
     ]
+    
     
     
 ]

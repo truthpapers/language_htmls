@@ -1824,7 +1824,36 @@ export const conversations = [
             "five":"5",
             "11:25":"11:25",
         }
+    ],
+    [
+        [
+            "What is your name?",
+            "My name is Adam.",
+            "What is your favorite food?",
+            "My favorite food is pizza. What is yours?",
+            "My favorite food is sushi."
+        ],
+        [
+            "ما هو اسمك؟",
+            "اسمي آدم.",
+            "ما هو طعامك المفضل؟",
+            "طعامي المفضل هو البيتزا. ما هو تبعك؟",
+            "طعامي المفضل هو السوشي."
+        ],
+        {
+            "what": "ما ",
+            "is": "يكون",
+            "your": "ـك/أنت؟",
+            "name": "hsl",
+            "my": "ـي",
+            "favorite": "مفضل",
+            "food": "طعام",
+            "pizza": "بيتزا",
+            "yours": "تبعك",
+            "sushi": "سوشي"
+        }
     ]
+    
     
     
     

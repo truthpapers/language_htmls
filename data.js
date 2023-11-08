@@ -1857,11 +1857,11 @@ export const conversations = [
     [
         [
             "I am going to the grocery store. Do you need anything?",
-            "Yes, I need some milk and eggs",
+            "Yes, I need some milk and eggs.",
         ],
         [
             "أنا ذاهب إلى متجر البقالة. هل تحتاج أي شيء؟",
-            "نعم، هل يمكنك أن تحضر لي بعض الحليب والبيض؟",
+            "نعم، أنا أحتاج بعض الحليب والبيض.",
             "بالتأكيد."
         ],
         {

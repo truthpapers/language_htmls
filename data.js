@@ -1852,9 +1852,69 @@ export const conversations = [
             "yours": "تبعك",
             "sushi": "سوشي"
         }
-    ]
+    ],
+    //8
+    [
+        [
+            "I am going to the grocery store. Do you need anything?",
+            "Yes, I need some milk and eggs",
+        ],
+        [
+            "أنا ذاهب إلى متجر البقالة. هل تحتاج أي شيء؟",
+            "نعم، هل يمكنك أن تحضر لي بعض الحليب والبيض؟",
+            "بالتأكيد."
+        ],
+        {
+            "i": "أنا",
+            "am": "I am going أنا ذاهب ",
+            "going": "I am going أنا ذاهب ",
+            "to": "إلى",
+            "the": "الـ",
+            "grocery": "بقالة/سوبرماركيت",
+            "store": "محل",
+            "do": "هل",
+            "you": "أنت",
+            "need": "تحتاج ",
+            "anything": "أي شي",
+            "yes": "نعم",
+            "could": "هلا/استطاع",
+            "need": "يحتاج",
+            "get": "يجلب",
+            "me": "ـي ",
+            "some": "بعض",
+            "sure": "بالتأكيد",
+            "milk": "حليب",
+            "and": "و",
+            "eggs": "egg بيض <br> نحط s تصير جمع",
+        }
+    ],
+    //9
     
-    
-    
+    [
+        [
+            "I am going to the library. Do you want to come with me?",
+            "Yes, I want."
+        ],
+        [
+            "أنا ذاهب إلى المكتبة. هل تريد أن تأتي معي؟",
+            "نعم، أريد."
+        ],
+        {
+            "i": "أنا",
+            "am": "I am going أنا ذاهب",
+            "going": "I am going أنا ذاهب",
+            "to": "إلى",
+            "the": "الـ",
+            "library": "مكتبة",
+            "do": "هل",
+            "you": "أنت",
+            "want": "تريد",
+            "to": "إلى",
+            "come": "تعال",
+            "with": "مع",
+            "me": "ـي",
+            "yes": "نعم",
+        }
+    ]  
     
 ]

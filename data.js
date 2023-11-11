@@ -1938,7 +1938,7 @@ export const conversations = [
         "what":"ماذا",
         "is":"يكون",
         "that":"ذلك",
-        "its":"أنه",
+        "it's":"إنه",
         "a":"علامة النكرة",
         "chatbot":"روبوت محادثة",
         "can":"تستطيع",

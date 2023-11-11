@@ -56,15 +56,19 @@
             padding-bottom: 0;
             background-color: rgb(6, 16, 92)
         }
+
+        
+        
     </style>
 </head>
 
 <body>
     <script>Header()</script>
-    
+
     <h1>محادثة اليوم</h1>
 
     <div id="en-lesson-conversations"></div>
+
 
     <script type="module">
 
@@ -73,10 +77,9 @@
         export let dict = {};
         const popupBox = document.getElementById("popupBox")
         const popupArrow = document.getElementById("popupArrow")
-        const start = 9; // Index of the first item in the chunk
-          // Index of the last item in the chunk (not inclusive)
+        const start = conversations.length - 1;
 
-        const chunkFromConversations = conversations.slice(start, start+1);
+        const chunkFromConversations = conversations.slice(start, start + 1);
         chunkFromConversations.forEach(item => {
             // Check if item[2] is an object
             if (typeof item[2] === 'object') {
@@ -108,25 +111,25 @@
                 .en-ar-div > p{
                     margin: 0;
                 }
-
+               
                
             </style>
         `
 
-        
+
         chunkFromConversationsHtml += chunkFromConversations.flatMap(([language1, language2]) => {
             return '<div class="conversation">' + language1.map((item1, index) => {
                 const item2 = language2[index];
-                
+
                 return `<div class="en-ar-div" ${index % 2 === 1 ? 'style="align-self:flex-end; background-color:rgb(6, 16, 92);"' : 'style="align-self:flex-start; background-color:#333;"'}>
-                            <p class="en-sentence"> ${item1.split(" ").map(word => `<span class="en-word">${word}</span>`).join(" ")}</p>
+                            <p class="en-sentence"> ${item1.split(" ").map(word => word.includes("<") ? word : `<span class="en-word">${word}</span>`).join(" ")}</p>
                             <p class="ar-sentence" dir="rtl">${item2}</p>
                         </div>`;
             }).join('') + "</div>";
         }).join('');
 
         document.getElementById("en-lesson-conversations").innerHTML = chunkFromConversationsHtml
-        document.querySelectorAll(".en-word").forEach( item => item.addEventListener( "click", e=>wordExplainPopup(e,dict,popupBox,popupArrow) ) )
+        document.querySelectorAll(".en-word").forEach(item => item.addEventListener("click", e => wordExplainPopup(e, dict, popupBox, popupArrow)))
         document.querySelectorAll(".ar-sentence").forEach(element => {
             element.addEventListener("click", (e) => {
                 const speech = new SpeechSynthesisUtterance();

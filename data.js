@@ -1914,6 +1914,41 @@ export const conversations = [
             "me": "ـي",
             "yes": "نعم",
         }
-    ]  
+    ],
+    [
+    [
+        "Have you used <a href='https://chat.openai.com'>chat.openai.com</a> ?",
+        "No. What is that?",
+        "It's a chatbot.",
+        "I will try it.",
+        
+        
+    ],
+    [
+        " هل استتخدمت <a href='https://chat.openai.com'>chat.openai.com</a> ؟",
+        "لا. ما يكون ذلك؟",
+        "إنه روبوت محادثة.",
+        "أنا سأجربه.",
+    ],
+    {
+        "have":"هل",
+        "you":"انت",
+        "used":"استخدم",
+        "no":"لا",
+        "what":"ماذا",
+        "is":"يكون",
+        "that":"ذلك",
+        "its":"أنه",
+        "a":"علامة النكرة",
+        "chatbot":"روبوت محادثة",
+        "can":"تستطيع",
+        "ask":"سأل",
+        "it":"ـها/ـه",
+        "questions":"أسألة",
+        "I":"أنا",
+        "will":"سوف",
+        "try":"يجرب/يحاول",
+    }
+]
     
 ]

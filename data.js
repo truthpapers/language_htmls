@@ -1957,16 +1957,16 @@ export const conversations = [
         "Yes, I have washed the dishes.",
         "Have you eaten?",
         "Yes, I have eaten.",
-        "Have you used chat.openai.com ?",
-        "Yes, I have"
+        "Have you tried chat.openai.com ?",
+        "Yes, I have."
     ],
     [
-        "هل قمت بغسل الصحون؟",
-        "نعم، قد قمت بغسل الصحون. <br> الصحون الآن نظيفة لذلك استخدم have",
+        "هل غسلت الصحون؟",
+        "نعم، قد غسلت الصحون. <br> الصحون الآن نظيفة لذلك استخدم have",
         "هل أكلت؟",
-        "نعم، قد أكلت <br> الآن هو شبعان لذلك استخدم have",
-        " هل استخدمت chat.openai.com ؟",
-        "نعم، أنا (فعلت)"
+        "نعم، قد أكلت. <br> الآن هو شبعان لذلك استخدم have",
+        " هل جربت chat.openai.com ؟ <br> try يحاول  <br> tried (ماضي) حاول",
+        "نعم، أنا (فعلت)."
     ],
     {
         "have": "فعل مساعد يدل على أن الصحون الآن نضيفة مثلاً",
@@ -1978,6 +1978,8 @@ export const conversations = [
         "i": "أنا",
         "eaten": "أكل",
         "used":"استخدم",
+        "tried":"حاول"
+
     }
 ],
 

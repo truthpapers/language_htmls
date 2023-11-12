@@ -1950,5 +1950,36 @@ export const conversations = [
         "try":"يجرب/يحاول",
     }
 ],
+
+[
+    [
+        "Have you washed the dishes?",
+        "Yes, I have washed the dishes.",
+        "Have you eaten?",
+        "Yes, I have eaten.",
+        "Have you used chat.openai.com ?",
+        "Yes, I have"
+    ],
+    [
+        "هل قمت بغسل الصحون؟",
+        "نعم، قد قمت بغسل الصحون. <br> الصحون الآن نظيفة لذلك استخدم have",
+        "هل أكلت؟",
+        "نعم، قد أكلت <br> الآن هو شبعان لذلك استخدم have",
+        " هل استخدمت chat.openai.com ؟",
+        "نعم، أنا (فعلت)"
+    ],
+    {
+        "have": "فعل مساعد يدل على أن الصحون الآن نضيفة مثلاً",
+        "you": "أنت",
+        "washed": "غسل",
+        "the": "الـ",
+        "dishes": "صحون",
+        "yes": "نعم",
+        "i": "أنا",
+        "eaten": "أكل",
+        "used":"استخدم",
+    }
+],
+
     
 ]

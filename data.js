@@ -1917,7 +1917,7 @@ export const conversations = [
     ],
     [
     [
-        "Have you used <a href='https://chat.openai.com'>chat.openai.com</a> ?",
+        "Have you used chat.openai.com ?",
         "No. What is that?",
         "It's a chatbot.",
         "I will try it.",
@@ -1925,7 +1925,7 @@ export const conversations = [
         
     ],
     [
-        " هل استتخدمت <a href='https://chat.openai.com'>chat.openai.com</a> ؟",
+        " هل استخدمت chat.openai.com ؟",
         "لا. ما يكون ذلك؟",
         "إنه روبوت محادثة.",
         "أنا سأجربه.",
@@ -1949,6 +1949,6 @@ export const conversations = [
         "will":"سوف",
         "try":"يجرب/يحاول",
     }
-]
+],
     
 ]

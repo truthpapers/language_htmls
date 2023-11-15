@@ -2052,7 +2052,7 @@ export const conversations = [
         "coughing": "أسعل",
         "and": "و",
         "having": "لدي",
-        "phlegm": "بلغم",
+        "phlegm": "بلغم (لا تلفظ الـ g)",
         "what": "ماذا",
         "do": "فعل مساعد بمعنى بشكل عام",
         "you": "أنت",

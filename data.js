@@ -1982,6 +1982,112 @@ export const conversations = [
 
     }
 ],
+[
+    [
+        "I have an idea for you.",
+        "What is your idea?",
+        "When you peel a lemon or an orange, don't throw away the peel. Put the peel in water to add flavor to it.",
+        "That is a good advice to make someone drink more water."
+    ],
+    [
+        "لدي فكرةٌ لك.",
+        "ما هي فكرتك؟",
+        "عندما تقشر ليمونًا أو برتقالًا، لا ترمي القشر. ضع القشر في الماء لتضيف له نكهة.",
+        "هذه نصيحةٌ طيبة لجعل شخص ما يشرب المزيد من الماء."
+    ],
+    {
+        "i": "أنا",
+        "have": "لدي",
+        "an": "ـٌ",
+        "idea": "فكزة",
+        "for": "لـ",
+        "you": "أنت",
+        "what": "ماذا",
+        "is": "يكون / ـٌ",
+        "your": "ـك",
+        "when": "عندما",
+        "peel": "يقشر/قِشْر",
+        "a": "ـٌ",
+        "lemon": "ليمون",
+        "or": "أو",
+        
+        "orange": "برتقال",
+        "don't": "لا",
+     
+        "throw": "يرمي",
+        "away": "بعيداً",
+        "the": "الـ",
+        "put": "ضع",
+        "in": "في",
+        "water": "ماء",
+        "to": "لـ",
+        "flavor": "نكهة/ينكه",
+        "it": "ـه / ـها",
+        "that": "ذلك",
+        "good": "طيب",
+        "advice": "نصيحة",
+        "make": "يجعل/يصنع/يسوي",
+        "someone": "شخص ما",
+        "drink": "يشرب ",
+        "more": "مزيد / أكثر ",
+    }
+],
+[
+    [
+        "I am coughing and having phlegm. <br> What do you advise?",
+        "Place a bit of ginger, a quarter of cinnamon stick, and a clove into a cup of boiling water or tea (any type of tea). <br><br> Chamomile, rosemary and anise are also good.",
+        "Thank you.",
+        "May God heal you."
+    ],
+    [
+        "أنا عم أسعل ولدي بلغم.<br> ماذا تنصح؟",
+        "ضع قليلاً من الزنجبيل وربع عود قرفة وقرنفلة في كوب من الماء يغلي أو الشاي (أي نوع من الشاي).  <br><br>البابونج، إكليل الجبل، واليانسون كمان جيد.",
+        "شكرًا لك.",
+        "الله يشفيك."
+    ],
+    {
+        "i": "أنا",
+        "am": "عم أو يكون",
+        "are": "عم أو يكون",
+        "coughing": "أسعل",
+        "and": "و",
+        "having": "لدي",
+        "phlegm": "بلغم",
+        "what": "ماذا",
+        "do": "فعل مساعد بمعنى بشكل عام",
+        "you": "أنت",
+        "advise": "نصيحة/ينصح",
+        "place": "مكان<br>ضع",
+        "into":"في",
+        "type": "نوع",
+        "any": "أي",
+        "a": "نكرة يقابلها بالعربي التنوين",
+        "bit": "اشوي",
+        "of": "من",
+        "ginger": "زنجبيل",
+        "quarter": "ربع",
+        "cinnamon": "قرفة",
+        "stick": "عود",
+        "clove": "قرنفل",
+        "cup": "كوب",
+        "boiling": "يغلي",
+        "water": "ماء",
+        "or": "أو",
+        "tea": "شاي",
+        "chamomile": "بابونج",
+        "rosemary": "إكليل الجبل",
+        "anise": "يانسون (شكله مثل نجمة)",
+       "also":"أيضاً",
+        "good": "جيد",
+        "thank": "شكر",
+        "you": "أنت/ـك",
+        "may": "تستخدم في الدعاء أو السؤال",
+        "god": "الله",
+        "heal": "يشفي"
+    }
+]
+
 
     
 ]
+

@@ -2095,7 +2095,7 @@ export const conversations = [
         "I am eating Granola with milk.",
         "Do you eat Granola every morning?",
         "Yes. <span class='red'>  What do </span> you eat every morning?",
-        "I eat cheese with a hot drink and a salad. <span class='red'> When will </span> you come?",
+        "I eat cheese with a hot drink and a salad. <br><br> <span class='red'> When will </span> you come?",
         "I <span class='red'> will </span> come in the evening."
     ],
     [
@@ -2105,7 +2105,7 @@ export const conversations = [
         "أنا  عم آكل چرانولا مع حليب.",
         "هل تأكل جرانولا كل صباح؟",
         "نعم. ماذا أنت  تأكل كل صباح؟",
-        "أنا آكل جبن مع مشروب ساخن وسلطة. متى سوف تأتي؟",
+        "أنا آكل جبن مع مشروب ساخن وسلطة. <br><br> متى سوف تأتي؟",
         "أنا سوف آتي في المساء."
     ],
     {

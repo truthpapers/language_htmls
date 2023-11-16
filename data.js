@@ -2085,8 +2085,60 @@ export const conversations = [
         "god": "الله",
         "heal": "يشفي"
     }
-]
+],
 
+[
+    [
+        "Can you come now?",
+        "No. I am eating.",
+        "<span class='red'> What are </span> you eating?",
+        "I am eating Granola with milk.",
+        "Do you eat Granola every morning?",
+        "Yes. <span class='red'>  What do </span> you eat every morning?",
+        "I eat cheese with a hot drink and a salad. <span class='red'> When will </span> you come?",
+        "I <span class='red'> will </span> come in the evening."
+    ],
+    [
+        " يمكنك تأتي الآن؟",
+        "لا. أنا عم آكل.",
+        "شو عم تأكل؟",
+        "أنا  عم آكل چرانولا مع حليب.",
+        "هل تأكل جرانولا كل صباح؟",
+        "نعم. ماذا أنت  تأكل كل صباح؟",
+        "أنا آكل جبن مع مشروب ساخن وسلطة. متى سوف تأتي؟",
+        "أنا سوف آتي في المساء."
+    ],
+    {
+        "can": "تستطيع",
+        "you": "أنت",
+        "come": "تعال",
+        "now": "الآن",
+        "no": "لا",
+        "i": "أنا",
+        "eating": "أكل",
+        "what": "ماذا",
+        "are": "عم",
+        "granola": "چرانولا",
+        "with": "مع",
+        "milk": "حليب",
+        "do": "فعل مساعد بمعنى بشكل عام",
+        "every": "كل",
+        "morning": "صباح",
+        "yes": "نعم",
+        "eat": "يأكل",
+        "cheese": "جبن",
+        "a": "تنوين",
+        "hot": "ساخن",
+        "drink": "مشروب",
+        "and": "و",
+        "salad": "سلطة",
+        "when": "متى",
+        "will": "سوف",
+        "evening": "مساء",
+        "i": "أنا",
+        "the": "الـ"
+    }
+],
 
     
 ]

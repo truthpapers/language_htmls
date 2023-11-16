@@ -2115,6 +2115,7 @@ export const conversations = [
         "now": "الآن",
         "no": "لا",
         "i": "أنا",
+        "am":"عم",
         "eating": "أكل",
         "what": "ماذا",
         "are": "عم",

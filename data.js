@@ -2091,12 +2091,12 @@ export const conversations = [
     [
         "Can you come now?",
         "No. I am eating.",
-        "<span class='red'> What are </span> you eating?",
+        "<span class='red'> What are you </span> eating?",
         "I am eating Granola with milk.",
         "Do you eat Granola every morning?",
-        "Yes. <span class='red'>  What do </span> you eat every morning?",
-        "I eat cheese with a hot drink and a salad. <br><br> <span class='red'> When will </span> you come?",
-        "I <span class='red'> will </span> come in the evening."
+        "Yes. <span class='red'>  What do you </span> eat every morning?",
+        "I eat cheese with a hot drink and a salad. <br><br> <span class='red'> When will you </span> come?",
+        "I will come in the evening."
     ],
     [
         " يمكنك تأتي الآن؟",

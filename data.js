@@ -2147,13 +2147,13 @@ export const conversations = [
         "Can you recommend a good book?",
         "Yes, I recommend a book called 'Fath Al-Majid' (فتح المجيد شرح كتاب التوحيد). <br> <br> Try finding it in a mosque or buy it.",
         "Can you send me a PDF version?",
-        "Yes, here drive.google.com/file/d/1Ax8CQ7UDjitfKsiw9Hh9Al3W4zEf1FP9"
+        "Yes. here drive.google.com/file/d/1Ax8CQ7UDjitfKsiw9Hh9Al3W4zEf1FP9"
     ],
     [
         "تقدر تنصح (تزكي/توصي) بكتابٍ كويس؟",
         "نعم، أوصي بكتاب يسمى 'فتح المجيد' (فتح المجيد شرح كتاب التوحيد). <br> <br> حاول  إيجاده في مسجدٍ ما أو أشتريه.",
         "تقدر ترسل لي نسخة PDF؟",
-        "نعم، هنا drive.google.com/file/d/1Ax8CQ7UDjitfKsiw9Hh9Al3W4zEf1FP9."
+        "نعم. هنا drive.google.com/file/d/1Ax8CQ7UDjitfKsiw9Hh9Al3W4zEf1FP9."
     ],
     {
         "can": "هل",

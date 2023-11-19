@@ -2162,6 +2162,7 @@ export const conversations = [
         "a": "تنوين",
         "good": "كويس",
         "book": "كتاب",
+        "i":"أنا",
         "called": "يسمى",
         "fath": "'فتح",
         "al-majid": "المجيد",

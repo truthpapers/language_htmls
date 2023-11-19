@@ -2156,8 +2156,8 @@ export const conversations = [
         "نعم. هنا drive.google.com/file/d/1Ax8CQ7UDjitfKsiw9Hh9Al3W4zEf1FP9."
     ],
     {
-        "can": "هل",
-        "you": "يمكنك",
+        "can": "تقدر",
+        "you": "أنت",
         "recommend": "توصي/تزكي/تنصح",
         "a": "تنوين",
         "good": "كويس",

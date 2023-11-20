@@ -55,9 +55,10 @@
         .bottom-0 {
             margin-bottom: 0;
             padding-bottom: 0;
-            background-color: rgb(6, 16, 92)
+            background-color: rgb(6, 16, 92);
+            
         }
-        .red{
+        .highlight{
             color: red;
         }
     </style>
@@ -67,6 +68,34 @@
     <script>Header()</script>
 
     <h1>محادثة اليوم</h1>
+    <p dir="rtl">
+إذا كان الفاعل he أو she أو it ، فإننا نضيف للفعل s
+
+    </p>
+    <p dir="rtl">
+مثلاً الفعل  work يصير works  
+ 
+    </p>
+    <p dir="rtl">
+        الفعل المساعد do 
+        نضيف لها s يصير does 
+        
+        <br>
+        الفعل المساعد are 
+        نضيف لها s يصير is
+    </p>
+
+    <p dir="rtl">
+في السؤال نستخدم الفعل المساعد do أو are 
+    </p>
+    <p dir="rtl">
+are للدلالة على أن الفعل عم يصير أو بمثابة التنوين في المبتدأ والخبر ( مثل: زيدٌ كريمٌ )
+    </p>
+
+  
+    <p dir="rtl">
+do ليس الآن ، بل بشكل العام
+    </p>
 
     <div id="en-lesson-conversations"></div>
 
@@ -78,9 +107,9 @@
         export let dict = {};
         const popupBox = document.getElementById("popupBox")
         const popupArrow = document.getElementById("popupArrow")
-        const start = conversations.length - 1;
+        const start = conversations.length - 2;
 
-        const chunkFromConversations = conversations.slice(start, start + 1);
+        const chunkFromConversations = conversations.slice(start, start + 2);
         chunkFromConversations.forEach(item => {
             // Check if item[2] is an object
             if (typeof item[2] === 'object') {
@@ -97,7 +126,11 @@
                     gap: 50px;
                    /* max-width:500px; */
                     margin:auto;
-                    
+                    border: 1px solid gray;
+                    margin-bottom: 50px;
+                    padding-top:20px;
+                    padding-bottom: 20px;
+                    border-radius: 15px;
                 }
                 .en-ar-div{
                     max-width: 95vw;
@@ -118,15 +151,17 @@
                }
                
             </style>
+            
         `
 
 
         chunkFromConversationsHtml += chunkFromConversations.flatMap(([language1, language2]) => {
-            return '<div class="conversation">' + language1.map((item1, index) => {
+            return '<div class="conversation"><h3 style="text-align:center ; color:aqua;">محادثة</h3>' + language1.map((item1, index) => {
                 const item2 = language2[index];
 
-                return `<div class="en-ar-div" ${index % 2 === 1 ? 'style="align-self:flex-end; background-color:rgb(6, 16, 92);"' : 'style="align-self:flex-start; background-color:#333;"'}>
-                            <p class="en-sentence"> ${item1.trim().split(" ").map(word =>
+                return ` <div class="en-ar-div" ${index % 2 === 1 ? 'style="align-self:flex-end; background-color:rgb(6, 16, 92);"' : 'style="align-self:flex-start; background-color:#333;"'}>
+                            
+                    <p class="en-sentence"> ${item1.trim().split(" ").map(word =>
                                 /\w\.\w/.test(word) ? `<a href="https://${word.replace(/[^a-zA-Z0-9/._-]/g, '')}">${word}</a>`
                                 : /[<>]/.test(word) ? word : `<span class="en-word">${word}</span>`
                             ).join(" ")}</p>

@@ -1188,7 +1188,7 @@ export const oxford3000 = [
             {
                 "enSentence" : "Put on your cloth, we have to go",
                 "arSentence" : "ألبس ملابسك يجب أن نذهب",
-                "note": "put ضع <br> on على <br> put on ألبس <br> take off اخلع <br> have to يجب/لازم",
+                "note": "put ضع  <br>  on على  <br>  put on ألبس  <br>  take off اخلع  <br>  have to يجب/لازم",
             }
         ],
         "dict": {
@@ -1450,7 +1450,7 @@ export const oxford3000 = [
             {
                 "enSentence": "Scientists have established a connection between cholesterol levels and heart disease.",
                 "arSentence": "العلماء ثبتوا علاقةً بين مستويات الكوليسترول ومرض القلب.",
-                "note": "Science علم <br> لا تلفظ e في heart",
+                "note": "Science علم  <br>  لا تلفظ e في heart",
                 "picture": "",
             }
         ],
@@ -1695,8 +1695,8 @@ export const conversations = [
             "سلام، اسمي ماكس",
             "سلام، اسمي آدم",
             "كم صار لك في لندن؟",
-            "صار لي في لندن حوالي عاماً. أنت؟. <br>  صار لي I have been ",
-            "صار لي في لندن حوالي 3 سنوات. <br>  صار لي I have been ",
+            "صار لي في لندن حوالي عاماً. أنت؟.  <br>   صار لي I have been ",
+            "صار لي في لندن حوالي 3 سنوات.  <br>   صار لي I have been ",
           
         ],
         {
@@ -1730,7 +1730,7 @@ export const conversations = [
             "أنا طالبٌ. ماذا عنك؟",
             "أنا معلم. أنا أُعلم الإنجليزية.",
             "ذلك رائع! كم صار أنت معلم؟ (كم صارلك؟) ",
-            "أنا صارلي أدرس ثلاث سنوات <br> ( أنا صارلي I have been)"
+            "أنا صارلي أدرس ثلاث سنوات  <br>  ( أنا صارلي I have been)"
         ],
         {
             "i": "أنا",
@@ -1884,7 +1884,7 @@ export const conversations = [
             "sure": "بالتأكيد",
             "milk": "حليب",
             "and": "و",
-            "eggs": "egg بيض <br> نحط s تصير جمع",
+            "eggs": "egg بيض  <br>  نحط s تصير جمع",
         }
     ],
     //9
@@ -1962,10 +1962,10 @@ export const conversations = [
     ],
     [
         "هل غسلت الصحون؟",
-        "نعم، قد غسلت الصحون. <br> الصحون الآن نظيفة لذلك استخدم have",
+        "نعم، قد غسلت الصحون.  <br>  الصحون الآن نظيفة لذلك استخدم have",
         "هل أكلت؟",
-        "نعم، قد أكلت. <br> الآن هو شبعان لذلك استخدم have",
-        " هل جربت chat.openai.com ؟ <br> try يحاول  <br> tried (ماضي) حاول",
+        "نعم، قد أكلت.  <br>  الآن هو شبعان لذلك استخدم have",
+        " هل جربت chat.openai.com ؟  <br>  try يحاول   <br>  tried (ماضي) حاول",
         "نعم، أنا (فعلت)."
     ],
     {
@@ -2034,14 +2034,14 @@ export const conversations = [
 ],
 [
     [
-        "I am coughing and having phlegm. <br> What do you advise?",
-        "Place a bit of ginger, a quarter of cinnamon stick, and a clove into a cup of boiling water or tea (any type of tea). <br><br> Chamomile, rosemary and anise are also good.",
+        "I am coughing and having phlegm.  <br>  What do you advise?",
+        "Place a bit of ginger, a quarter of cinnamon stick, and a clove into a cup of boiling water or tea (any type of tea).  <br>  <br>  Chamomile, rosemary and anise are also good.",
         "Thank you.",
         "May God heal you."
     ],
     [
-        "أنا عم أسعل ولدي بلغم.<br> ماذا تنصح؟",
-        "ضع قليلاً من الزنجبيل وربع عود قرفة وقرنفلةً في كوبٍ من ماءٍ يغلي أو الشاي (أي نوع من الشاي).  <br><br>البابونج، إكليل الجبل، واليانسون كمان جيد.",
+        "أنا عم أسعل ولدي بلغم. <br>  ماذا تنصح؟",
+        "ضع قليلاً من الزنجبيل وربع عود قرفة وقرنفلةً في كوبٍ من ماءٍ يغلي أو الشاي (أي نوع من الشاي).   <br>  <br> البابونج، إكليل الجبل، واليانسون كمان جيد.",
         "شكرًا لك.",
         "الله يشفيك."
     ],
@@ -2057,7 +2057,7 @@ export const conversations = [
         "do": "فعل مساعد بمعنى: بشكل عام",
         "you": "أنت",
         "advise": "نصيحة/ينصح",
-        "place": "مكان<br>ضع",
+        "place": "مكان <br> ضع",
         "into":"في",
         "type": "نوع",
         "any": "أي",
@@ -2087,25 +2087,69 @@ export const conversations = [
     }
 ],
 
+
+
+[
+    [
+        "Can you recommend a good book?",
+        "Yes, I recommend a book called 'Fath Al-Majid' (فتح المجيد شرح كتاب التوحيد).  <br>   <br>  Try finding it in a mosque or buy it.",
+        "Can you send me a PDF version?",
+        "Yes. here drive.google.com/file/d/1Ax8CQ7UDjitfKsiw9Hh9Al3W4zEf1FP9"
+    ],
+    [
+        "تقدر تنصح (تزكي/توصي) بكتابٍ كويس؟",
+        "نعم، أوصي بكتاب يسمى 'فتح المجيد' (فتح المجيد شرح كتاب التوحيد).  <br>   <br>  حاول  إيجاده في مسجدٍ ما أو أشتريه.",
+        "تقدر ترسل لي نسخة PDF؟",
+        "نعم. هنا drive.google.com/file/d/1Ax8CQ7UDjitfKsiw9Hh9Al3W4zEf1FP9."
+    ],
+    {
+        "can": "تقدر",
+        "you": "أنت",
+        "recommend": "توصي/تزكي/تنصح",
+        "a": "تنوين",
+        "good": "كويس",
+        "book": "كتاب",
+        "i":"أنا",
+        "called": "يسمى",
+        "fath": "'فتح",
+        "al-majid": "المجيد",
+       
+        "try": "حاول",
+        "finding": "إيجاد",
+        "it": "ـه / ـها ",
+        "in": "في",
+        "mosque": "مسجد",
+        "or": "أو",
+        "buy": "يشتري",
+        "send": "يرسل",
+        "me": "لي",
+        
+        "pdf": "pdf",
+        "version": "نسخة",
+        "yes": "نعم",
+        "here": "هنا",
+    }
+],
+
 [
     [
         "Can you come now?",
         "No. I am eating.",
-        "<span class='red'> What are you </span> eating?",
+        " <span class='highlight'>  What are you  </span>  eating?",
         "I am eating Granola with milk.",
         "Do you eat Granola every morning?",
-        "Yes. <span class='red'>  What do you </span> eat every morning?",
-        "I eat cheese with a hot drink and a salad. <br><br> <span class='red'> When will you </span> come?",
+        "Yes.  <span class='highlight'>   What do you  </span>  eat every morning?",
+        "I eat cheese with a hot drink and a salad.  <br>  <br>   <span class='highlight'>  When will you  </span>  come?",
         "I will come in the evening."
     ],
     [
         " يمكنك تأتي الآن؟",
-        "لا. أنا عم آكل <br> eating لا تلفظ g.",
+        "لا. أنا عم آكل  <br>  eating لا تلفظ g.",
         "شو عم تأكل؟",
-        " أنا  عم آكل <a href='https://www.youtube.com/results?search_query=جرانولا'>چرانولا</a> مع حليب. ",
-        "هل تأكل جرانولا كل صباح؟ <br> لا تلفظ g في morning",
+        " أنا  عم آكل  <a href='https://www.youtube.com/results?search_query=جرانولا'> چرانولا </a>  مع حليب. ",
+        "هل تأكل جرانولا كل صباح؟  <br>  لا تلفظ g في morning",
         "نعم. ماذا أنت  تأكل كل صباح؟",
-        "أنا آكل جبن مع مشروب ساخن وسلطةً. <br><br> متى سوف تأتي؟",
+        "أنا آكل جبن مع مشروب ساخن وسلطةً.  <br>  <br>  متى سوف تأتي؟",
         "أنا سوف آتي في المساء."
     ],
     {
@@ -2144,45 +2188,33 @@ export const conversations = [
 
 [
     [
-        "Can you recommend a good book?",
-        "Yes, I recommend a book called 'Fath Al-Majid' (فتح المجيد شرح كتاب التوحيد). <br> <br> Try finding it in a mosque or buy it.",
-        "Can you send me a PDF version?",
-        "Yes. here drive.google.com/file/d/1Ax8CQ7UDjitfKsiw9Hh9Al3W4zEf1FP9"
+        " <span class='highlight'>  What do you  </span>  work?",
+        " <span class='highlight'>  I work  </span>  in IT branch.",
+        " <span class='highlight'>  What does your father </span>  work?  <br>   <span class='highlight'>  What does he  </span>  work?",
+        " <span class='highlight'>  He works </span>  in the construction branch."
     ],
     [
-        "تقدر تنصح (تزكي/توصي) بكتابٍ كويس؟",
-        "نعم، أوصي بكتاب يسمى 'فتح المجيد' (فتح المجيد شرح كتاب التوحيد). <br> <br> حاول  إيجاده في مسجدٍ ما أو أشتريه.",
-        "تقدر ترسل لي نسخة PDF؟",
-        "نعم. هنا drive.google.com/file/d/1Ax8CQ7UDjitfKsiw9Hh9Al3W4zEf1FP9."
+        "ماذا آنت تعمل؟",
+        "أنا أعمل في مجال ال IT (معلوماتية).",
+        "ماذا يعمل والدك؟ <br>  ماذا يعمل هو؟",
+        "هو يعمل في مجال البناء."
     ],
     {
-        "can": "تقدر",
+        "what": "ماذا",
+        "do": "are للدلالة على أن الفعل عم يصير أو بمثابة التنوين في المبتدأ والخبر ( مثل: زيدٌ كريمٌ )  <br>  do ليس الآن ، بل بشكل العام",
         "you": "أنت",
-        "recommend": "توصي/تزكي/تنصح",
-        "a": "تنوين",
-        "good": "كويس",
-        "book": "كتاب",
-        "i":"أنا",
-        "called": "يسمى",
-        "fath": "'فتح",
-        "al-majid": "المجيد",
-       
-        "try": "حاول",
-        "finding": "إيجاد",
-        "it": "ـه / ـها ",
+        "work": "يعمل/عمل",
+        "works": "يعمل (أضفنا s لأن الفاعل ضمير مفرد غائب)",
         "in": "في",
-        "mosque": "مسجد",
-        "or": "أو",
-        "buy": "يشتري",
-        "send": "يرسل",
-        "me": "لي",
-        
-        "pdf": "pdf",
-        "version": "نسخة",
-        "yes": "نعم",
-        "here": "هنا",
+        "it": "معلوماتية",
+        "branch": "فرع/مجال",
+        "does": "الفعل المساعد do نضيف لها s يصير does <br> (أضفنا s لأن الفاعل ضمير مفرد غائب)",
+        "your": "ـك",
+        "father": "أب",
+        "he": "هو",
+        "construction": "بناء"
     }
-],
+]
 
     
 ]

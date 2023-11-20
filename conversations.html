@@ -107,9 +107,9 @@ do ليس الآن ، بل بشكل العام
         export let dict = {};
         const popupBox = document.getElementById("popupBox")
         const popupArrow = document.getElementById("popupArrow")
-        const start = conversations.length - 2;
+        const start = conversations.length - 3;
 
-        const chunkFromConversations = conversations.slice(start, start + 2);
+        const chunkFromConversations = conversations.slice(start, start + 3);
         chunkFromConversations.forEach(item => {
             // Check if item[2] is an object
             if (typeof item[2] === 'object') {

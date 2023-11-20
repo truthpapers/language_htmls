@@ -2185,9 +2185,46 @@ export const conversations = [
         "in":"في"
     }
 ],
+[
+    [
+        "Hi, <span class='highlight'> What are you </span> doing?",
+        "I am reading a book. You?",
+        "Nothing. We will play football at 16:30. Can you come?",
+        "Yes, I will come."
+    ],
+    [
+        "مرحبًا، شو عم تساوي؟",
+        "أنا عم أقرأ كتاب. وأنت؟",
+        "لا شيء. سوف نــلعب كرة القدم بالـ 16:30. يمكنــك القدوم؟",
+        "نعم، سوف آتي."
+    ],
+    {
+        "hi": "سلام",
+        "what": "ماذا",
+        "are": "عم",
+        "you": "أنت / ـك",
+        "doing": "عم تساوي",
+        "reading": "عم أقرأ",
+        "a": "تنوين",
+        "book": "كتاب",
+        "nothing": "لا شيء",
+        "we": "نحن",
+        "will": "سوف",
+        "play": "يلعب",
+        "football": "كرة القدم",
+        "at": "بـ/في",
+        "can": "تقدر",
+        "come": "تعال",
+        "yes": "نعم",
+        "I": "أنا",
+        "will": "سوف"
+    }
+],
+
 
 [
     [
+        
         " <span class='highlight'>  What do you  </span>  work?",
         " <span class='highlight'>  I work  </span>  in IT branch.",
         " <span class='highlight'>  What does your father </span>  work?  <br>   <span class='highlight'>  What does he  </span>  work?",

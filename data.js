@@ -2228,13 +2228,13 @@ export const conversations = [
         
         " <span class='highlight'>  What do you  </span>  work?",
         " <span class='highlight'>  I work  </span>  in IT branch.",
-        " <span class='highlight'>  What does your father </span>  work?  <br>   <span class='highlight'>  What does he  </span>  work?",
+        " <span class='highlight'>  What does </span> <span class='highlight2'>  your father </span>  work?  <br>   <span class='highlight'>  What does </span> <span class='highlight2'> he  </span>  work?",
         " <span class='highlight'>  He works </span>  in the construction branch."
     ],
     [
         "ماذا آنت تعمل؟",
         "أنا أعمل في مجال ال IT (معلوماتية).",
-        "ماذا يعمل والدك؟ <br>  ماذا يعمل هو؟",
+        "ماذا يعمل والد  <span class='highlight2'>ك</span> ؟ <br>  ماذا يعمل <span class='highlight2'>هو</span> ؟",
         "هو يعمل في مجال البناء."
     ],
     {

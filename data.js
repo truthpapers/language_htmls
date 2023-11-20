@@ -2226,27 +2226,28 @@ export const conversations = [
 [
     [
         
-        " <span class='highlight'>  What do you  </span>  work?",
-        " <span class='highlight'>  I work  </span>  in IT branch.",
-        " <span class='highlight'>  What does </span> <span class='highlight2'>  your father </span>  work?  <br>   <span class='highlight'>  What does </span> <span class='highlight2'> he  </span>  work?",
-        " <span class='highlight'>  He works </span>  in the construction branch."
+        "What do you  work?",
+        "I work in IT branch.",
+        "  What <span class='underline'> does </span> <span class='highlight2'>  your father </span>  work?  <br>    What <span class='underline'> does </span>  <span class='highlight2'> he  </span>  work?",
+        "<span class='underline'> He works </span> in the construction branch."
     ],
     [
         "ماذا آنت تعمل؟",
         "أنا أعمل في مجال ال IT (معلوماتية).",
-        "ماذا يعمل والد  <span class='highlight2'>ك</span> ؟ <br>  ماذا يعمل <span class='highlight2'>هو</span> ؟",
-        "هو يعمل في مجال البناء."
+        "ماذا يعمل والد ك؟  <br>  ماذا يعمل  هو؟ <br> أضفنا s للفعل المساعد do لأن الفاعل he (الفاعل مفرد وغائب غائب)",
+        "هو يعمل في مجال البناء. <br> أضفنا s للفعل work لأن الفاعل he (الفاعل مفرد وغائب غائب)"
     ],
     {
         "what": "ماذا",
         "do": "are للدلالة على أن الفعل عم يصير أو بمثابة التنوين في المبتدأ والخبر ( مثل: زيدٌ كريمٌ )  <br>  do ليس الآن ، بل بشكل العام",
         "you": "أنت",
         "work": "يعمل/عمل",
-        "works": "يعمل (أضفنا s لأن الفاعل ضمير مفرد غائب)",
+        "works": "يعمل (أضفنا s للفعل لأن الفاعل ضمير الفاعل مفرد وغائب غائب)",
         "in": "في",
+        "the":"الـ",
         "it": "معلوماتية",
         "branch": "فرع/مجال",
-        "does": "الفعل المساعد do نضيف لها s يصير does <br> (أضفنا s لأن الفاعل ضمير مفرد غائب)",
+        "does": "الفعل المساعد do نضيف لها s يصير does <br> (أضفنا s للفعل لأن الفاعل ضمير الفاعل مفرد وغائب غائب)",
         "your": "ـك",
         "father": "أب",
         "he": "هو",

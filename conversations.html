@@ -56,9 +56,10 @@
             margin-bottom: 0;
             padding-bottom: 0;
             background-color: rgb(6, 16, 92);
-            
+
         }
-        .highlight{
+
+        .highlight {
             color: red;
         }
     </style>
@@ -68,35 +69,39 @@
     <script>Header()</script>
 
     <h1>محادثة اليوم</h1>
-    <p dir="rtl">
-إذا كان الفاعل he أو she أو it ، فإننا نضيف للفعل s
 
-    </p>
-    <p dir="rtl">
-مثلاً الفعل  work يصير works  
- 
-    </p>
-    <p dir="rtl">
-        الفعل المساعد do 
-        نضيف لها s يصير does 
-        
-        <br>
-        الفعل المساعد are 
-        نضيف لها s يصير is
-    </p>
+
+
+    <ul dir="rtl">
+        <p>
+            إذا كان الفاعل he أو she أو it ، فإننا نضيف للفعل s
+
+        </p>
+        مثلاً:
+
+        <li> الفعل work يصير works
+        </li>
+        <li> الفعل المساعد do
+            نضيف لها s يصير does </li>
+        <li>الفعل المساعد are
+            نضيف لها s يصير is</li>
+    </ul>
 
     <hr>
-    <p dir="rtl">
-في السؤال نستخدم الفعل المساعد do أو are 
-    </p>
-    <p dir="rtl">
-are للدلالة على أن الفعل عم يصير أو بمثابة التنوين في المبتدأ والخبر ( مثل: زيدٌ كريمٌ )
-    </p>
+    <ul dir="rtl">
+        <p>
+            في السؤال نستخدم الفعل المساعد do أو are
+        </p>
+        <li>
+            are للدلالة على أن الفعل عم يصير أو بمثابة التنوين في المبتدأ والخبر ( مثل: زيدٌ كريمٌ )
+        </li>
 
-  
-    <p dir="rtl">
-do ليس الآن ، بل بشكل العام
-    </p>
+
+        <li>
+            do ليس الآن ، بل بشكل العام
+        </li>
+    </ul>
+
 
     <div id="en-lesson-conversations"></div>
 
@@ -163,9 +168,9 @@ do ليس الآن ، بل بشكل العام
                 return ` <div class="en-ar-div" ${index % 2 === 1 ? 'style="align-self:flex-end; background-color:rgb(6, 16, 92);"' : 'style="align-self:flex-start; background-color:#333;"'}>
                             
                     <p class="en-sentence"> ${item1.trim().split(" ").map(word =>
-                                /\w\.\w/.test(word) ? `<a href="https://${word.replace(/[^a-zA-Z0-9/._-]/g, '')}">${word}</a>`
-                                : /[<>]/.test(word) ? word : `<span class="en-word">${word}</span>`
-                            ).join(" ")}</p>
+                    /\w\.\w/.test(word) ? `<a href="https://${word.replace(/[^a-zA-Z0-9/._-]/g, '')}">${word}</a>`
+                        : /[<>]/.test(word) ? word : `<span class="en-word">${word}</span>`
+                ).join(" ")}</p>
                             <p class="ar-sentence" dir="rtl">${item2}</p>
                         </div>`;
             }).join('') + "</div>";

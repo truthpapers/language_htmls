@@ -2217,7 +2217,8 @@ export const conversations = [
         "come": "تعال",
         "yes": "نعم",
         "I": "أنا",
-        "will": "سوف"
+        "will": "سوف",
+        "diligent":"مثابر/مجتهد"
     }
 ],
 

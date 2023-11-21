@@ -179,7 +179,7 @@
 
 
         chunkFromConversationsHtml += chunkFromConversations.flatMap(([language1, language2]) => {
-            return '<div class="conversation"><h3 style="text-align:center ; color:aqua;">محادثة</h3>' + language1.map((item1, index) => {
+            return '<h3 style="text-align:center ; color:aqua;">محادثة</h3><div class="conversation">' + language1.map((item1, index) => {
                 const item2 = language2[index];
 
                 return ` <div class="en-ar-div" ${index % 2 === 1 ? 'style="align-self:flex-end; background-color:rgb(6, 16, 92);"' : 'style="align-self:flex-start; background-color:#333;"'}>

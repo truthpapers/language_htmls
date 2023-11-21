@@ -75,7 +75,7 @@
 <body>
     <script>Header()</script>
 
-    <h1>محادثة اليوم</h1>
+    <h1>درس اليوم</h1>
 
 
 
@@ -130,9 +130,9 @@
         export let dict = {};
         const popupBox = document.getElementById("popupBox")
         const popupArrow = document.getElementById("popupArrow")
-        const start = conversations.length - 3;
+        const start = conversations.length - 2;
 
-        const chunkFromConversations = conversations.slice(start, start + 3);
+        const chunkFromConversations = conversations.slice(start, start + 2);
         chunkFromConversations.forEach(item => {
             // Check if item[2] is an object
             if (typeof item[2] === 'object') {

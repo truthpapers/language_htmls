@@ -2317,6 +2317,7 @@ export const conversations = [
         "plants": "نباتات",
         "with": "بـ/مع",
         "fertilizers":"أسمدة",
+        "does": "دلالة 'بشكل عام'"
     }
 ]
 

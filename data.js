@@ -2260,7 +2260,7 @@ export const conversations = [
         "I have pain in my stomach and problems in digestion.",
         "I advise you to eat organic whole-grain bread.",
         "What does 'organic' mean?",
-        "'Organic' means that chemicals were not used on plants.",
+        "'Organic' means that chemical fertilizers were not used on plants.",
         "What is 'whole-grain'?",
         "Whole grain bread is made from grains with germ and bran not removed."
     ],
@@ -2268,7 +2268,7 @@ export const conversations = [
         "أنا لدي ألم في معدتي ومشاكل في الهضم.",
         "أنا أنصحـك بتناول الخبز العضوي كامل-الحبة.",
         "ماذا يعني 'عضوي'؟",
-        "'عضوي' يعني أن الكيمياويات لم تُستخدم على النباتات.",
+        "'عضوي' يعني أن الأسمدة الكيمياوية لم تُستخدم على النباتات.",
         "شو 'كامل-الحبة'؟",
         "الخبز كامل-الحبة مصنوع من حبوب غير منزوعة الجرم والقشر."
     ],
@@ -2316,6 +2316,7 @@ export const conversations = [
         "on": "على",
         "plants": "نباتات",
         "with": "بـ/مع",
+        "fertilizers":"أسمدة",
     }
 ]
 

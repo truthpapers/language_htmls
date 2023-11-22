@@ -75,10 +75,10 @@
 <body>
     <script>Header()</script>
 
-    <h1>درس اليوم</h1>
+    <h1>محادثة اليوم</h1>
 
 
-
+<!-- 
     <ul dir="rtl">
         <p>
             إذا كان الفاعل he أو she أو it ، فإننا نضيف للفعل s
@@ -118,8 +118,8 @@
             do ليس الآن ، بل بشكل العام
         </li>
     </ul>
-
-
+for item 17 and item 18 
+ -->
     <div id="en-lesson-conversations"></div>
 
 
@@ -130,9 +130,10 @@
         export let dict = {};
         const popupBox = document.getElementById("popupBox")
         const popupArrow = document.getElementById("popupArrow")
-        const start = conversations.length - 2;
+        console.log(conversations.length)
+        const start = conversations.length - 1;
 
-        const chunkFromConversations = conversations.slice(start, start + 2);
+        const chunkFromConversations = conversations.slice(start, start + 1);
         chunkFromConversations.forEach(item => {
             // Check if item[2] is an object
             if (typeof item[2] === 'object') {
@@ -149,7 +150,7 @@
                     gap: 50px;
                    /* max-width:500px; */
                     margin:auto;
-                    border: 1px solid gray;
+                   
                     margin-bottom: 60px;
                     padding-top:10px;
                     padding-bottom: 10px;
@@ -179,7 +180,7 @@
 
 
         chunkFromConversationsHtml += chunkFromConversations.flatMap(([language1, language2]) => {
-            return '<h3 style="text-align:center ; color:aqua;">محادثة</h3><div class="conversation">' + language1.map((item1, index) => {
+            return '<div class="conversation">' + language1.map((item1, index) => {
                 const item2 = language2[index];
 
                 return ` <div class="en-ar-div" ${index % 2 === 1 ? 'style="align-self:flex-end; background-color:rgb(6, 16, 92);"' : 'style="align-self:flex-start; background-color:#333;"'}>

@@ -2253,7 +2253,72 @@ export const conversations = [
         "he": "هو",
         "construction": "بناء"
     }
+],
+
+[
+    [
+        "I have pain in my stomach and problems in digestion.",
+        "I advise you to eat organic whole-grain bread.",
+        "What does 'organic' mean?",
+        "'Organic' means that chemicals were not used on plants.",
+        "What is 'whole-grain'?",
+        "Whole grain bread is made from grains with germ and bran not removed."
+    ],
+    [
+        "أنا لدي ألم في معدتي ومشاكل في الهضم.",
+        "أنا أنصحـك بتناول الخبز العضوي كامل-الحبة.",
+        "ماذا يعني 'عضوي'؟",
+        "'عضوي' يعني أن الكيمياويات لم تُستخدم على النباتات.",
+        "شو 'كامل-الحبة'؟",
+        "الخبز كامل-الحبة مصنوع من حبوب غير منزوعة الجرم والقشر."
+    ],
+    {
+        "i": "أنا",
+        "have": "لدي",
+        "pain": "ألم",
+        "my": "ـي",
+        "stomach": "معدة",
+        "problems": "مشاكل",
+        "digestion": "هضم",
+        "you": "أنت / ـك",
+        "to": "أن / بـ",
+        "eat": "يأكل",
+        "only": "فقط",
+        "organic": "عضوي",
+        "and": "و",
+        "whole": "كامل",
+        "grain": "حبة",
+        "grains": "حبوب",
+        "bread": "خبز",
+        "'organic'": "عضوي",
+        "means": "يعني",
+        "that": "أن",
+        "chemicals": "كيماويات",
+        "were": "ـُ",
+        "not": "نفي",
+        "used": "استخدم",
+        "what": "ماذا",
+        "'whole": "كامل",
+        "'whole-grain'": "حبة-كاملة",
+        "whole-grain": "حبة-كاملة",
+        "mean": "يعني",
+        "is": "يكون",
+        "made": "مصنوع/صنع",
+        "from": "من",
+        "the": "الـ",
+       
+        "germ": "جنين/جرم",
+        "and": "و",
+        "bran": "قشر",
+       
+        "removed": "أزال",
+        "in": "في",
+        "on": "على",
+        "plants": "نباتات",
+        "with": "بـ/مع",
+    }
 ]
+
 
     
 ]

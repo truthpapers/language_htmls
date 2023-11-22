@@ -2293,7 +2293,7 @@ export const conversations = [
         "'organic'": "عضوي",
         "means": "يعني",
         "that": "أن",
-        "chemicals": "كيماويات",
+        "chemical": "كيميائي",
         "were": "ـُ",
         "not": "نفي",
         "used": "استخدم",

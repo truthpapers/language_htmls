@@ -2340,6 +2340,7 @@ export const conversations = [
         "how": "كيف",
         "can": "تقدر",
         "i": "أنا / ـني",
+        "advice":"ينصح/نصيحة",
         "book": "يحجز",
         "a": "تنوين",
         "ticket": "تكيت/تذكرة",

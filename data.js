@@ -2319,7 +2319,67 @@ export const conversations = [
         "fertilizers":"أسمدة",
         "does": "دلالة 'بشكل عام'"
     }
+],
+
+[
+    [
+        "How can I book a ticket to Malta?",
+        "I advise you to book using Google Flights.",
+        "Can you send me a link?",
+        "Just write in Google 'Google Flights'.",
+        "Ok. Thank you.",
+    ],
+    [
+        "كيف يمكنـني حجز تذكرةً إلى مالطا؟",
+        "أنا أنصحك أن تحجز مستخدماً موقع 'رحلات جوجل'",
+        "تقدر ترسل لي رابطاً",
+        "فقط اكتب في جوجل 'رحلات جوجل'",
+        "تمام. شكراً لك.",
+    ],
+    {
+        "how": "كيف",
+        "can": "تقدر",
+        "i": "أنا / ـني",
+        "book": "يحجز",
+        "a": "تنوين",
+        "ticket": "تكيت/تذكرة",
+        "to": "أن/إلى",
+        "malta": "مالطا",
+        "using": "مستخدماً",
+        "google": "چوچل",
+        "flights": "رحلات",
+        "you": "آنت / ـك",
+        "send": "يرسل",
+        "me": "لي",
+        "link": "رابط",
+        "just": "فقط",
+        "write": "اكتب",
+        "in": "في",
+        "'google": "چوچل",
+        "ok": "تمام/حسناً",
+        "thank": "شكر/يشكر ",
+      
+        "by": "بـ/عن طريق/من قِبل",
+        "the": "الـ",
+        "way": "طريق",
+        "it": "أن",
+        "is": "ـه / فعل كون",
+        "better": "أفضل",
+       
+        "go": "يذهب",
+        "official": "رسمي",
+        "website": "موقع",
+        "than": "من",
+        "clicking": "ضغط",
+        "on": "على",
+     
+        
+        "sent": "أُرسل",
+       
+  
+    }
 ]
+
 
 
     

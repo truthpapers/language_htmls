@@ -2349,6 +2349,7 @@ export const conversations = [
         "using": "مستخدماً",
         "google": "چوچل",
         "flights": "رحلات",
+        "flights'": "رحلات",
         "you": "آنت / ـك",
         "send": "يرسل",
         "me": "لي",

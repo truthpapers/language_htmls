@@ -2324,16 +2324,16 @@ export const conversations = [
 [
     [
         "How can I book a ticket to Malta?",
-        "I advise you to book using Google Flights.",
+        "I advise you to book using 'Google Flights'.",
         "Can you send me a link?",
         "Just write in Google 'Google Flights'.",
         "Ok. Thank you.",
     ],
     [
         "كيف يمكنـني حجز تذكرةً إلى مالطا؟",
-        "أنا أنصحك أن تحجز مستخدماً موقع 'رحلات جوجل'",
+        "أنا أنصحك أن تحجز مستخدماً موقع 'رحلات جوجل'.",
         "تقدر ترسل لي رابطاً",
-        "فقط اكتب في جوجل 'رحلات جوجل'",
+        "فقط اكتب في جوجل 'رحلات جوجل'.",
         "تمام. شكراً لك.",
     ],
     {

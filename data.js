@@ -2384,13 +2384,13 @@ export const conversations = [
 [
     [
         "Do you know which bus goes to the airport?",
-        "I don't know. <br><br> Just open 'Google Maps' , and write 'Sofia airport' , <br><br> then press on the blue button . <br><br>  This app will tell you which bus goes to Sofia airport . <br><br> ",
+        "I don't know. <br><br> Just open 'Google Maps' , and write 'airport' , <br><br> then press on the blue button . <br><br>  This app will tell you which bus goes to the airport . <br><br> ",
         "Thank you.",
         "You are welcome."
     ],
     [
         " تعرف أي باص يذهب إلى المطار؟<br><br> اضفنا s للفعل go فصار goe. لأن الفاعل مفرد وغائب. حتى لو ما أضفت s فسيفهموا عليك.",
-        "لا أعرف. <br><br> فقط افتح برنامج 'خرائط چوچل' ، واكتب 'مطار صوفيا' ، <br><br>  ثم اضغط على الزر الأزرق .  <br><br> هذا التطبيق سيخبرك أي باص يذهب إلى مطار صوفيا .",
+        "لا أعرف. <br><br> فقط افتح برنامج 'خرائط چوچل' ، واكتب 'مطار' ، <br><br>  ثم اضغط على الزر الأزرق .  <br><br> هذا التطبيق سيخبرك أي باص يذهب إلى المطار.",
         "شكراً لك.",
         "على الرحب والسعة.",
     ],

@@ -2380,7 +2380,57 @@ export const conversations = [
        
   
     }
-]
+],
+[
+    [
+        "Do you know which bus goes to the airport?",
+        "I don't know. <br><br> Just open 'Google Maps' , and write 'Sofia airport' , <br><br> then press on the blue button . <br><br>  This app will tell you which bus goes to Sofia airport . <br><br> ",
+        "Thank you.",
+        "You are welcome."
+    ],
+    [
+        " تعرف أي باص يذهب إلى المطار؟<br><br> اضفنا s للفعل go فصار goe. لأن الفاعل مفرد وغائب. حتى لو ما أضفت s فسيفهموا عليك.",
+        "لا أعرف. <br><br> فقط افتح برنامج 'خرائط چوچل' ، واكتب 'مطار صوفيا' ، <br><br>  ثم اضغط على الزر الأزرق .  <br><br> هذا التطبيق سيخبرك أي باص يذهب إلى مطار صوفيا .",
+        "شكراً لك.",
+        "على الرحب والسعة.",
+    ],
+    {
+        "do": "فعل مساعد، لدلالة على أن السؤال بشكل عام. نقدر نترجمه هنا إلى 'هل'",
+        "you": "أنت / ـك",
+        "know":"يعرف",
+        "which": "أي",
+        "bus": "باص",
+        "goes": "يذهب",
+        "to": "إلى",
+        "the": "الـ",
+        "just": "فقط",
+        "open": "افتح",
+        "'google": "چوچل",
+        "maps'": "خرائط",
+        "write":"يكتب",
+        "'sofia": "صوفيا",
+        "sofia": "صوفيا",
+        "airport'": "مطار",
+        "airport": "مطار",
+        "and": "و",
+        "then": "ثم",
+        "press": "اضغط",
+        "on": "على",
+        "blue": "أزرق",
+        "button": "زر",
+        "this": "هذا",
+        "app": "البرنامج/التطبيق",
+        "will": "سـ",
+        "tell": "يخبر",
+        
+        "which": "أي",
+        "thank":"يشكر/شكر",
+        "are":"يكون",
+        "welcome":"مرحب",
+       
+    }
+],
+
 
 
 

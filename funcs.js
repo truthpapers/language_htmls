@@ -50,19 +50,19 @@ export function wordExplainPopup(e, dict) {
         const popupRightEdge = rectOfPopup.right;
         const xOfLeftBorderOfPopup = middleOfWordCoord - rectOfPopup.width / 2 - 2;
         if (xOfLeftBorderOfPopup < 0) {
-            popupArrow.style.left = middleOfWordCoord - 13 + "px";
+            popupArrow.style.left = middleOfWordCoord - 10 + "px";
             popupArrow.style.top = rect.bottom + 3 + "px";
 
             popupBox.style.top = rect.bottom + 8 + "px";
             popupBox.style.left = 0;
         } else if (popupRightEdge >= window.innerWidth) {
-            popupArrow.style.left = middleOfWordCoord - 13 + "px";
+            popupArrow.style.left = middleOfWordCoord - 10 + "px";
             popupArrow.style.top = rect.bottom + 3 + "px";
 
             popupBox.style.top = rect.bottom + 8 + "px";
             popupBox.style.right = window.innerWidth;
-        } else if (popupRightEdge < window.innerWidth) {
-            popupArrow.style.left = middleOfWordCoord - 13 + "px";
+        } else /* if (popupRightEdge < window.innerWidth) */ {
+            popupArrow.style.left = middleOfWordCoord - 10 + "px";
             popupArrow.style.top = rect.bottom + 3 + "px";
 
             popupBox.style.left = middleOfWordCoord - rectOfPopup.width / 2 - 2 + "px";

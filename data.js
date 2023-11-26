@@ -2447,7 +2447,7 @@ export const conversations = [
         "ماذا تنصحني أن أدرس؟ <br> do للدلالة على أن السؤال بشكل عام. ",
         "يوجد كثير كورسات على يوتيوب. <br>يوجد = there are ",
         "ماذا توصي؟",
-        "تعلم كيف تبني مواقع وبرامج www.youtube.com/watch?v=o3lXuw3jRAo&list=PLPrGWEF_l-5NWKkwmivJnnbA6u6xxZNJ_ ",
+        "تعلم كيف تبني مواقع وبرامج <br> www.youtube.com/watch?v=o3lXuw3jRAo&list=PLPrGWEF_l-5NWKkwmivJnnbA6u6xxZNJ_ ",
     ],
     {
         "what": "ماذا",

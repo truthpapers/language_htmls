@@ -186,7 +186,7 @@ for item 17 and item 18
                 return ` <div class="en-ar-div" ${index % 2 === 1 ? 'style="align-self:flex-end; background-color:rgb(6, 16, 92);"' : 'style="align-self:flex-start; background-color:#333;"'}>
                             
                     <p class="en-sentence"> ${item1.split(" ").map(word =>
-                    /\w\.\w/.test(word) ? `<a href="https://${word.replace(/[^a-zA-Z0-9/._-]/g, '')}">${word}</a>`
+                    /\w\.\w/.test(word) ? `<a href="https://${word/* .replace(/[^a-zA-Z0-9/._-]/g, '') */}">${word}</a>`
                         : /[<>]/.test(word) ? word : `<span class="en-word">${word}</span>`
                 ).join(" ")}</p>
                             <p class="ar-sentence" dir="rtl">${item2}</p>

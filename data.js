@@ -2441,7 +2441,7 @@ export const conversations = [
         "What do you advise me to study?",
         "There are many courses on Youtube.",
         "What do you recommend?",
-        "Learn how to build websites and apps https://www.youtube.com/watch?v=o3lXuw3jRAo&list=PLPrGWEF_l-5NWKkwmivJnnbA6u6xxZNJ_ </a>"
+        "Learn how to build websites and apps <br><br> https://www.youtube.com/watch?v=o3lXuw3jRAo&list=PLPrGWEF_l-5NWKkwmivJnnbA6u6xxZNJ_ </a>"
     ],
     [
         "ماذا تنصحني أن أدرس؟ <br> do للدلالة على أن السؤال بشكل عام. ",
@@ -2469,6 +2469,7 @@ export const conversations = [
         "web": "ويب/شبكة",
         "learn":"يتعلم",
         "how":"كيف",
+        "and":"و",
         "build":"يبني",
         "websites":"مواقع",
         "apps":"تطبيقات/برامج",

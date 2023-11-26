@@ -2441,13 +2441,13 @@ export const conversations = [
         "What do you advise me to study?",
         "There are many courses on Youtube.",
         "What do you recommend?",
-        "Learn how to build websites and apps <br><br> https://youtube.com/playlist?list=PLPrGWEF_l-5NWKkwmivJnnbA6u6xxZNJ_&si=qKcuuk00g01Gryl7 </a>"
+        "Learn how to build websites and apps <br><br> youtube.com/playlist?list=PLPrGWEF_l-5NWKkwmivJnnbA6u6xxZNJ_&si=qKcuuk00g01Gryl7 </a>"
     ],
     [
         "ماذا تنصحني أن أدرس؟ <br> do للدلالة على أن السؤال بشكل عام. ",
         "يوجد كثير كورسات على يوتيوب. <br>يوجد = there are ",
         "ماذا توصي؟",
-        "تعلم كيف تبني مواقع وبرامج <br> https://youtube.com/playlist?list=PLPrGWEF_l-5NWKkwmivJnnbA6u6xxZNJ_&si=qKcuuk00g01Gryl7 ",
+        "تعلم كيف تبني مواقع وبرامج <br> youtube.com/playlist?list=PLPrGWEF_l-5NWKkwmivJnnbA6u6xxZNJ_&si=qKcuuk00g01Gryl7 ",
     ],
     {
         "what": "ماذا",

@@ -2185,6 +2185,7 @@ export const conversations = [
         "in":"في"
     }
 ],
+
 [
     [
         "Hi, What are you doing?",
@@ -2381,6 +2382,7 @@ export const conversations = [
   
     }
 ],
+
 [
     [
         "Do you know which bus goes to the airport?",
@@ -2434,6 +2436,44 @@ export const conversations = [
     }
 ],
 
+[
+    [
+        "What do you advise me to study?",
+        "There are many courses on Youtube.",
+        "What do you recommend?",
+        "<a href='https://www.youtube.com/watch?v=o3lXuw3jRAo&list=PLPrGWEF_l-5NWKkwmivJnnbA6u6xxZNJ_'>Learn how to build websites and apps</a>"
+    ],
+    [
+        "ماذا تنصحني أن أدرس؟ <br> do للدلالة على أن السؤال بشكل عام. ",
+        "يوجد كثير كورسات على يوتيوب. <br> there are يوجد",
+        "ماذا توصي؟",
+        "تعلم كيف تبني مواقع وبرامج",
+    ],
+    {
+        "what": "ماذا",
+        "do": "do للدلالة على أن السؤال بشكل عام.",
+        "you": "أنت",
+        "advise": "ينصح",
+        "me": "ـني",
+        "to": "أن",
+        "study": "يدرس",
+        "there": "هناك",
+        "are": "يكون",
+        "many": "كثير",
+        "courses": "كورسات (دورات)",
+        "on": "على",
+        "youtube": "يتيوب",
+        "any": "أي",
+        "course": "كورس/دورة",
+        "recommend": "تزكي/توصي",
+        "web": "ويب/شبكة",
+        "learn":"يتعلم",
+        "how":"كيف",
+        "build":"يبني",
+        "websites":"مواقع",
+        "apps":"تطبيقات/برامج",
+    }
+],
 
 
 

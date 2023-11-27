@@ -2477,6 +2477,41 @@ export const conversations = [
 ],
 
 
+[
+    [
+        "Hi! Have you tried the new sushi restaurant?",
+        "No. How was your experience?",
+        "It was fantastic! The sushi was fresh and delicious."
+    ],
+    [
+        "سلام! هل جربت مطعم السوشي الجديد؟",
+        "لا. كيف كانت تجربتك؟",
+        "كانت رائعة! السوشي كان طازجًا ولذيذًا."
+    ],
+    {
+        "hi": "سلام",
+        "have": "هل",
+        "you": "أنت",
+        "tried": "جربت",
+        "the": "الـ",
+        "new": "جديد",
+        "restaurant": "مطعم",
+        "that": "الذي",
+        "opened": "فتح",
+       "no":"لا",
+        "how": "كيف",
+        "was": "كان",
+        "your": "ـك",
+        "experience": "خبرة",
+        "it": "هي/هو لغير العاقل",
+        "fantastic": "رائعة",
+        
+        "sushi": "سوشي",
+        "fresh": "طازج",
+        "and": "و",
+        "delicious": "لذيذ"
+    }
+],
 
     
 ]

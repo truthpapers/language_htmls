@@ -132,9 +132,9 @@
         const popupBox = document.getElementById("popupBox")
         const popupArrow = document.getElementById("popupArrow")
         console.log(conversations.length)
-        const start = 21;
+        const start = 1;
 
-        const chunkFromConversations = conversations.slice(start, start + 2);
+        const chunkFromConversations = conversations.slice(start, start + 1);
         chunkFromConversations.forEach(item => {
             // Check if item[2] is an object
             if (typeof item[2] === 'object') {
